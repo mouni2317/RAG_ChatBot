@@ -1,10 +1,8 @@
 import os
 from dotenv import load_dotenv
-from pydantic import BaseSettings
+from pydantic_settings import BaseSettings
 
 # app/app_config.py
-
-from pydantic import BaseSettings
 
 class AppConfig(BaseSettings):
     OPENAI_API_KEY: str = os.getenv("OPENAI_API_KEY", "your_openai_api_key")

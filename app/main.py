@@ -2,6 +2,13 @@ from fastapi import FastAPI, HTTPException, UploadFile, File
 from pydantic import BaseModel
 from app.document_processor import DocumentProcessor
 from app.DBServices.db_write_service import DBWriteService  # Import DBWriteService from the appropriate module
+import requests
+from bs4 import BeautifulSoup
+from urllib.parse import urljoin
+import os
+import json
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from app.WebCrawler import WebCrawlerManager, ConfluenceStrategy
 
 app = FastAPI(title="RAG-based Chatbot", version="1.0")
 
@@ -55,6 +62,11 @@ async def webcrawl():
     """Web crawling endpoint."""
     # Implement web crawling logic here
     # For now, just return a placeholder response
+    # write to DB
+    base_url = 'http://example.com/confluence-page'
+    strategy = ConfluenceStrategy()
+    manager = WebCrawlerManager(base_url, strategy, max_workers=10)
+    manager.crawl()
     # write to DB
     db_service = DBWriteService(db_type="mongo")
     db_service.process_event({"title": "Web crawling initiated", "content": "Crawling in progress..."})
