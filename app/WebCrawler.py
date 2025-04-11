@@ -168,8 +168,6 @@ class WebCrawlerManager:
                     url = futures[future]
                     try:
                         links, html_content = future.result()
-                        print(f"Links: {links}")
-                        print(f"HTML Content: {html_content}")
                         self.visited_urls.add(url)
                         self.to_visit_urls.update(links - self.visited_urls)
                         # Process the HTML content if needed
