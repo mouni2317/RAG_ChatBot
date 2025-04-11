@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException, UploadFile, File
 from pydantic import BaseModel
 from app.document_processor import DocumentProcessor
+from app.embeddings import create_faiss_index
 
 app = FastAPI(title="RAG-based Chatbot", version="1.0")
 
@@ -33,3 +34,18 @@ async def health_check():
 async def get_info():
     """Basic server info endpoint."""
     return {"app_name": "RAG-based Chatbot", "version": "1.0"}
+
+@app.post("/embedding")
+async def create_embedding(file: UploadFile = File(...)):
+    """Create embeddings from uploaded document."""
+    try:
+        # Read the file content
+        contents = await file.read()
+        text = contents.decode("utf-8")  # Assuming it's text-based (TXT/CSV/JSON with text)
+
+        # Create FAISS index from text
+        # index = create_faiss_index([text])  # Wrap in list to match expected input
+        create_faiss_index([text])
+        return {"message": f"Embeddings created for {file.filename}"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
