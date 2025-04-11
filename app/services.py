@@ -1,5 +1,5 @@
 import openai
-import app.app_config  as config
+import app_config  as config
 from database import FAISSDatabase
 
 # Load OpenAI API key
