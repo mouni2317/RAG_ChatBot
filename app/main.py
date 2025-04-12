@@ -63,7 +63,7 @@ async def webcrawl():
     # Implement web crawling logic here
     # For now, just return a placeholder response
     # write to DB
-    base_url = 'http://example.com/confluence-page'
+    base_url = 'https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/overview'
     strategy = ConfluenceStrategy()
     manager = WebCrawlerManager(base_url, strategy, max_workers=10)
     manager.crawl()

@@ -9,6 +9,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 class LinkParsingStrategy(ABC):
     @abstractmethod
     def parse_links(self, base_url, html_content):
+        print(f"Parsing links for {base_url}")
         pass
 
 class WebCrawler:
@@ -62,7 +63,15 @@ class AllLinksStrategy(LinkParsingStrategy):
             links.add(link)
         return links
 
-class ConfluenceStrategy(ABC):
+class ConfluenceStrategy(LinkParsingStrategy):
+    def parse_links(self, base_url, html_content):
+        soup = BeautifulSoup(html_content, 'html.parser')
+        links = set()
+        for anchor in soup.find_all('a', href=True):
+            link = urljoin(base_url, anchor['href'])
+            links.add(link)
+        return links
+    
     def parse_tables(self, html_content):
         """
         Extract Confluence tables from HTML content and return as JSON-like structure.
