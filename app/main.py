@@ -1,7 +1,14 @@
 from fastapi import FastAPI, HTTPException, UploadFile, File
 from pydantic import BaseModel
 from app.document_processor import DocumentProcessor
-from app.embeddings import create_faiss_index
+from app.DBServices.db_write_service import DBWriteService  # Import DBWriteService from the appropriate module
+import requests
+from bs4 import BeautifulSoup
+from urllib.parse import urljoin
+import os
+import json
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from app.WebCrawler import WebCrawlerManager, ConfluenceStrategy
 
 app = FastAPI(title="RAG-based Chatbot", version="1.0")
 
@@ -35,17 +42,32 @@ async def get_info():
     """Basic server info endpoint."""
     return {"app_name": "RAG-based Chatbot", "version": "1.0"}
 
-@app.post("/embedding")
-async def create_embedding(file: UploadFile = File(...)):
-    """Create embeddings from uploaded document."""
-    try:
-        # Read the file content
-        contents = await file.read()
-        text = contents.decode("utf-8")  # Assuming it's text-based (TXT/CSV/JSON with text)
+# @app.post("/embedding")
+# async def create_embedding(file: UploadFile = File(...)):
+#     """Create embeddings from uploaded document."""
+#     try:
+#         # Read the file content
+#         contents = await file.read()
+#         text = contents.decode("utf-8")  # Assuming it's text-based (TXT/CSV/JSON with text)
 
-        # Create FAISS index from text
-        # index = create_faiss_index([text])  # Wrap in list to match expected input
-        create_faiss_index([text])
-        return {"message": f"Embeddings created for {file.filename}"}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+#         # Create FAISS index from text
+#         # index = create_faiss_index([text])  # Wrap in list to match expected input
+#         create_faiss_index([text])
+#         return {"message": f"Embeddings created for {file.filename}"}
+#     except Exception as e:
+#         raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/webcrawl")
+async def webcrawl():
+    """Web crawling endpoint."""
+    # Implement web crawling logic here
+    # For now, just return a placeholder response
+    # write to DB
+    base_url = 'https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/overview'
+    strategy = ConfluenceStrategy()
+    manager = WebCrawlerManager(base_url, strategy, max_workers=10)
+    manager.crawl()
+    # write to DB
+    db_service = DBWriteService(db_type="mongo")
+    db_service.process_event({"title": "Web crawling initiated", "content": "Crawling in progress..."})
+    return {"message": "Web crawling initiated"}

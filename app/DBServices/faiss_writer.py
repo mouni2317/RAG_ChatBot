@@ -1,6 +1,6 @@
-from embeddings import load_faiss_index, create_faiss_index
+from ..embeddings import load_faiss_index, create_faiss_index
 
-class FAISSDatabase:
+class FaissWriter:
     def __init__(self):
         self.vector_db = load_faiss_index()
         if not self.vector_db:
