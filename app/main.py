@@ -81,9 +81,11 @@ async def create_embedding(file: UploadFile = File(...)):
 
 @app.post("/chat", response_model=QueryResponse)
 async def chat_rag(request: QueryRequest):
+    """Handle user queries using RAG."""
     try:
-        llm_service = LLMService()  # default Hugging Face model
-        response = llm_service.rag_query(request.question)
+        # Initialize the LLM service (you can customize the model name/provider here)
+        llm_service = LLMService()  # Optionally, pass model name/provider for more flexibility
+        response = llm_service.generate_response(request.question)
         return QueryResponse(response=response)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
