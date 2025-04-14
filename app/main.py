@@ -64,20 +64,20 @@ async def create_embedding(file: UploadFile = File(...)):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-# @app.get("/webcrawl")
-# async def webcrawl():
-#     """Web crawling endpoint."""
-#     # Implement web crawling logic here
-#     # For now, just return a placeholder response
-#     # write to DB
-#     base_url = 'https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/overview'
-#     strategy = ConfluenceStrategy()
-#     manager = WebCrawlerManager(base_url, strategy, max_workers=10)
-#     manager.crawl()
-#     # write to DB
-#     db_service = DBWriteService(db_type="mongo")
-#     db_service.process_event({"title": "Web crawling initiated", "content": "Crawling in progress..."})
-#     return {"message": "Web crawling initiated"}
+@app.get("/webcrawl")
+async def webcrawl():
+    """Web crawling endpoint."""
+    # Implement web crawling logic here
+    # For now, just return a placeholder response
+    # write to DB
+    base_url = 'https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/overview'
+    strategy = ConfluenceStrategy()
+    manager = WebCrawlerManager(base_url, strategy, max_workers=10)
+    manager.crawl()
+    # write to DB
+    db_service = DBWriteService(db_type="mongo")
+    db_service.process_event({"title": "Web crawling initiated", "content": "Crawling in progress..."})
+    return {"message": "Web crawling initiated"}
 
 @app.post("/chat", response_model=QueryResponse)
 async def chat_rag(request: QueryRequest):

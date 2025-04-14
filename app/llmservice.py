@@ -22,6 +22,7 @@ class LLMService:
         return load_faiss_index()
 
     def generate_response(self, query: str) -> str:
+    # we need to create different flows based on prompt context
         """Generate response using the LLM with retrieved context from FAISS."""
         if not self.vector_db:
             raise ValueError("Vector database (FAISS) is not loaded.")
