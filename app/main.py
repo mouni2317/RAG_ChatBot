@@ -11,6 +11,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from app.WebCrawler import WebCrawlerManager, ConfluenceStrategy
 from app.embeddings import create_faiss_index
 from app.llmservice import LLMService 
+from app.model_factory.factory import get_model
 
 app = FastAPI(title="RAG-based Chatbot", version="1.0")
 
@@ -50,19 +51,24 @@ async def get_info():
     return {"app_name": "RAG-based Chatbot", "version": "1.0"}
 
 @app.post("/embedding")
-async def create_embedding(file: UploadFile = File(...)):
+async def create_embedding():
     """Create embeddings from uploaded document."""
     try:
         # Read the file content
-        contents = await file.read()
-        text = contents.decode("utf-8")  # Assuming it's text-based (TXT/CSV/JSON with text)
-
+        # contents = await file.read()
+        # text = contents.decode("utf-8")  # Assuming it's text-based (TXT/CSV/JSON with text)
+        # HTML Files to embedding / Read from DB layer
         # Create FAISS index from text
         # index = create_faiss_index([text])  # Wrap in list to match expected input
-        create_faiss_index([text])
-        return {"message": f"Embeddings created for {file.filename}"}
+        db_service = DBWriteService(db_type="chroma")
+        #Finalise the event Schema
+        db_service.process_event({"title": "Web crawling initiated", "content": "Crawling in progress..."})
+        # Query
+
+        return {"message": f"Embeddings created for {results}"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
 
 @app.get("/webcrawl")
 async def webcrawl():
@@ -75,6 +81,7 @@ async def webcrawl():
     manager = WebCrawlerManager(base_url, strategy, max_workers=10)
     manager.crawl()
     # write to DB
+    #Refactor to handle by workers for event processing
     db_service = DBWriteService(db_type="mongo")
     db_service.process_event({"title": "Web crawling initiated", "content": "Crawling in progress..."})
     return {"message": "Web crawling initiated"}
@@ -87,5 +94,42 @@ async def chat_rag(request: QueryRequest):
         llm_service = LLMService()  # Optionally, pass model name/provider for more flexibility
         response = llm_service.generate_response(request.question)
         return QueryResponse(response=response)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/transfer-to-chroma")
+async def transfer_to_chroma():
+    """Fetch data from MongoDB and write to Chroma DB."""
+    try:
+        # Initialize MongoDB service
+        mongo_service = DBWriteService(db_type="mongo")
+        # Fetch data from MongoDB
+        # Assuming a method 'fetch_all' exists in MongoWriter to retrieve all documents
+        documents = mongo_service.db_writer.fetch_all() # Donot fetch unchanged events that is already vectorised 
+
+        #Define the Schmea fo Chroma
+        # Transform data for Chroma
+        texts = [doc.get('jwt', '') for doc in documents]  # Assuming 'content' is the field to be indexed
+        metadatas = [{'user_id': doc.get('user_id', '')} for doc in documents]  # Optional metadata
+
+        # Initialize Chroma DB service
+        chroma_service = DBWriteService(db_type="chroma")
+        # Write to Chroma DB
+        chroma_service.process_event({'texts': texts, 'metadatas': metadatas})
+        chroma_service
+
+        return {"message": "Data transferred to Chroma DB successfully"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    
+@app.get("/get-embeddings")
+async def get_embeddings(query: str):
+    """Retrieve embeddings similar to the query."""
+    try:
+        # Initialize Chroma DB service
+        chroma_service = DBWriteService(db_type="chroma")
+        # Get embeddings
+        results = chroma_service.db_writer.get_embeddings(query)
+        return {"results": results}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

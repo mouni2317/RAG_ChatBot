@@ -1,15 +1,19 @@
-from app.embeddings import load_faiss_index
 from app.model_factory.factory import get_model
+from app.DBServices.chroma_writer import ChromaWriter
 from langchain.chains import RetrievalQA
 from langchain.llms import HuggingFacePipeline
-from langchain.vectorstores import FAISS
+import requests
+from fastapi import HTTPException
+
+API_URL = "https://api-inference.huggingface.co/models/gpt2"
+headers = {"Authorization": f"Bearer "}
 
 class LLMService:
     def __init__(self, provider="huggingface", model_name=None):
         # You can change the default model here if needed
-        self.model_name = model_name or "tiiuae/falcon-7b-instruct"
-        self.provider = provider
-        self.llm = self._load_model()
+        self.model_name = None
+        self.provider = None
+        self.llm = None
         self.vector_db = self._load_vector_db()
 
     def _load_model(self):
@@ -17,24 +21,42 @@ class LLMService:
         return get_model(model_type="llm", model_name=self.model_name, provider=self.provider)
 
     def _load_vector_db(self):
-        """Load FAISS vector database."""
-        print("Loading FAISS index... ✅")
-        return load_faiss_index()
+        """Load Chroma vector database."""
+        print("Loading Chroma DB... ✅")
+        # Initialize ChromaWriter with appropriate parameters
+        return ChromaWriter(persist_directory="./chroma_data", embedding_function=get_model("embedding", "sentence-transformers/all-MiniLM-L6-v2", "huggingface"))
 
     def generate_response(self, query: str) -> str:
-    # we need to create different flows based on prompt context
-        """Generate response using the LLM with retrieved context from FAISS."""
+        """Generate response using the LLM with retrieved context from Chroma DB."""
         if not self.vector_db:
-            raise ValueError("Vector database (FAISS) is not loaded.")
+            raise ValueError("Vector database (Chroma) is not loaded.")
 
-        # Perform a similarity search on the FAISS index
-        print(f"Querying FAISS with: {query} ✅")
-        docs = self.vector_db.similarity_search(query, k=5)  # Adjust `k` as needed for more docs
+        # Perform a similarity search on the Chroma DB
+        print(f"Querying Chroma DB with: {query} ✅")
+        docs = self.vector_db.get_embeddings(query, k=5)  # Adjust `k` as needed for more docs
 
         # Combine the retrieved documents and the query into a prompt for the LLM
         context = "\n".join([doc.page_content for doc in docs])
         prompt = f"Context:\n{context}\n\nQuestion: {query}"
 
         # Generate response using the LLM
-        response = self.llm(prompt)
+        #response = self.llm(prompt)
+        response = self.generate_response_remote(prompt);
         return response
+
+    def generate_response_remote(self, query: str) -> str:
+        """Generate response using the Hugging Face API."""
+        API_URL = "https://api-inference.huggingface.co/models/gpt2"
+        headers = {"Authorization": f"Bearer YOUR_HUGGINGFACE_TOKEN"}
+
+        payload = {
+            "inputs": query,
+            "parameters": {"max_length": 50}
+        }
+
+        response = requests.post(API_URL, headers=headers, json=payload)
+        if response.status_code == 200:
+            return response.json()
+        else:
+            raise HTTPException(status_code=response.status_code, detail="Error in Hugging Face API call")
+        

@@ -21,7 +21,7 @@ embedding_model = get_model("embedding", "sentence-transformers/all-MiniLM-L6-v2
 
 def create_faiss_index(documents):
     """Convert documents to vector embeddings and store in FAISS."""
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50) #Refactor to custom chunk_szie and chunk_overlap
     split_docs = text_splitter.create_documents(documents)
 
      # Get raw embeddings
@@ -41,14 +41,16 @@ def create_faiss_index(documents):
     if dir_path:
         os.makedirs(dir_path, exist_ok=True)
 
+    # DB Write Service ot handle Local wrties or remote writes
     # Store embeddings in FAISS
     vector_db = FAISS.from_documents(split_docs, embedding_model)
     vector_db.save_local(CONFIG.FAISS_INDEX_PATH)
 
-    # return vector_db
+    # return vector_db -> Croma Neo4j FAISS
 
 def load_faiss_index():
     """Load FAISS index from disk."""
+    #Config from cloud or local
     if os.path.exists(CONFIG.FAISS_INDEX_PATH):
         return FAISS.load_local(CONFIG.FAISS_INDEX_PATH, embedding_model)
     return None
