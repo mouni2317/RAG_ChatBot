@@ -142,44 +142,54 @@ async def transfer_to_chroma():
         # Initialize MongoDB service
         mongo_service = DBWriteService(db_type="mongo")
         # Fetch data from MongoDB
-        # Assuming a method 'fetch_all' exists in MongoWriter to retrieve all documents
-        documents = mongo_service.db_writer.fetch_all() # Donot fetch unchanged events that is already vectorised 
+        documents = mongo_service.db_writer.fetch_all()  # Do not fetch unchanged events that are already vectorized
 
-        #Define the Schmea fo Chroma
+        # Define the Schema for Chroma
         chroma_service = DBWriteService(db_type="chroma")
         chroma_service.db_writer.clear()
+
         for doc in documents:
             texts = []
             metadatas = []
             ids = []
-            # Extract all non-empty text fields from the 'data' list
-            content_texts = [entry['text'] for entry in doc.get('data', []) if isinstance(entry.get('text'), str) and entry['text'].strip()]
-            
-            if content_texts:
+
+            # Use the content field directly for Investopedia and Confluence
+            content_texts = [doc.get('content', '')]
+
+            # Log to verify content is being used
+            print(f"Size of Extracted Content Texts: {len(content_texts[0]) if content_texts[0] else 0} characters")
+
+            # Check if content is not empty or just whitespace
+            if content_texts and content_texts[0].strip():
                 # Join all text segments into a single string (optional: use separator like \n)
                 combined_text = '\n'.join(content_texts)
                 texts.append(combined_text)
 
                 # Add metadata like page_id or others as needed
-                print(f"Page ID: {doc.get('page_id', '')}")
-                metadatas.append({
-                    'page_id': doc.get('page_id', ''),
-                    # Add more metadata if needed
-                })
                 page_id = str(doc.get('page_id', ''))
-                
+                metadatas.append({'page_id': page_id})
+
                 ids = [page_id]  # Use page_id as the unique ID for Chroma
 
-                print(f"ids: {ids}")
+                print(f"Metadatas: {metadatas}")
+                print(f"IDs: {ids}")
+            else:
+                # If content is empty, log the skipping and continue
+                print(f"Skipping document with Page ID: {doc.get('page_id', '')} due to empty content.")
+                continue  # Skip to the next document
 
-            # Initialize Chroma DB service
-            # Write to Chroma DB
-            chroma_service.process_event({'texts': texts, 'ids':ids, 'metadatas': metadatas})  # Assuming 'process_event' handles the writing logic
-            chroma_service
-            
+            # Ensure texts are non-empty before writing to Chroma
+            if texts:
+                # Write to Chroma DB
+                chroma_service.process_event({'texts': texts, 'ids': ids, 'metadatas': metadatas})
+                print(f"Successfully written to Chroma for Page ID: {doc.get('page_id', '')}")
+            else:
+                print(f"Skipping document with Page ID: {doc.get('page_id', '')} due to empty texts.")
+
         return {"message": "Data transferred to Chroma DB successfully"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
     
 @app.get("/get-embeddings")
 async def get_embeddings(query: str):
@@ -208,7 +218,7 @@ async def clean_chroma():
         raise HTTPException(status_code=500, detail=str(e))
 
 # Folder path
-FOLDER_PATH = 'C:\\Users\\mouni\\rag\\confluence'
+FOLDER_PATH = 'C:\\Users\\mouni\\rag\\investopedia'
 
 @app.post("/insert_html_json/")
 async def insert_html_json_files():
@@ -235,6 +245,77 @@ async def insert_html_json_files():
 
     return {
         "status": "completed",
+        "inserted_files": inserted_files,
+        "skipped_files": skipped_files
+    }
+
+@app.post("/insertData/")
+async def insertData():
+    db_write_service = DBWriteService(db_type="mongo")  
+
+    inserted_files = []
+    skipped_files = []
+
+    for filename in os.listdir(FOLDER_PATH):
+        if filename.endswith('.json'):  # Assuming all json files are relevant
+            file_path = os.path.join(FOLDER_PATH, filename)
+            try:
+                with open(file_path, 'r', encoding='utf-8') as file:
+                    data = json.load(file)
+                    if data:
+                        # Determine if the file is Confluence or Investopedia based on its structure
+                        if 'data' in data:  # Confluence format
+                            content_texts = []
+                            # Process heading and link types
+                            for entry in data.get('data', []):
+                                if entry.get('type') in ['heading', 'link'] and 'text' in entry:
+                                    content_texts.append(entry['text'])
+                            
+                            # Check for confluence_tables and process them if present
+                            if 'confluence_tables' in data:
+                                for table in data['confluence_tables']:
+                                    # If there are actual table data, we process it
+                                    if table and isinstance(table, dict):
+                                        # Convert table into a readable string format (could be JSON or table-like string)
+                                        table_content = str(table)  # You can adjust this format based on your needs
+                                        content_texts.append(table_content)
+                            
+                            # Combine all content into a single string (optional separator)
+                            combined_content = '\n'.join(content_texts)
+                            
+                            # Prepare the data in the same format for MongoDB
+                            confluence_data = {
+                                "title": data.get("title", ""),
+                                "author": data.get("author", "Unknown"),
+                                "published_date": data.get("published_date", "Unknown"),
+                                "content": combined_content,
+                                "url": data.get("url", ""),
+                                "page_id": data.get("page_id", ""),
+                                "child_page_ids": data.get("child_page_ids", [])
+                            }
+                            db_write_service.process_event(confluence_data)
+
+                        elif 'content' in data:  # Investopedia format
+                            # Directly map the Investopedia data to MongoDB schema
+                            investopedia_data = {
+                                "title": data.get("title", ""),
+                                "author": data.get("author", "Unknown"),
+                                "published_date": data.get("published_date", "Unknown"),
+                                "content": data.get("content", ""),
+                                "url": data.get("url", "")
+                            }
+                            db_write_service.process_event(investopedia_data)
+                        else:
+                            skipped_files.append(filename)
+
+                        inserted_files.append(filename)
+                    else:
+                        skipped_files.append(filename)
+            except Exception as e:
+                skipped_files.append(filename)
+                print(f"⚠️ Error processing {filename}: {e}")
+
+    return {
         "inserted_files": inserted_files,
         "skipped_files": skipped_files
     }
