@@ -11,6 +11,7 @@ class AppConfig(BaseSettings):
     FAISS_INDEX_PATH: str = "indexes/faiss_index"
     MONGO_URI: str = os.getenv("MONGO_URI", "mongodb://localhost:27017")
     DB_NAME: str = os.getenv("DB_NAME", "rag_db")
+    connection_string: str = ""
 
     class Config:
         env_file = ".env"  # 👈 optional, load from .env

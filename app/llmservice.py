@@ -4,9 +4,10 @@ from langchain.chains import RetrievalQA
 from langchain.llms import HuggingFacePipeline
 import requests
 from fastapi import HTTPException
+from app.app_config import CONFIG
 
 API_URL = "https://api-inference.huggingface.co/models/gpt2"
-headers = {"Authorization": f"Bearer "}
+headers = {"Authorization": f"Bearer {CONFIG.HUGGING_FACE_API_KEY}"}
 
 class LLMService:
     def __init__(self, provider="huggingface", model_name=None):
@@ -15,6 +16,7 @@ class LLMService:
         self.provider = None
         self.llm = None
         self.vector_db = self._load_vector_db()
+        self.headers = {"Authorization": f"Bearer {CONFIG.HUGGING_FACE_API_KEY}"}
 
     def _load_model(self):
         print(f"Loading LLM from {self.provider} ✅")
@@ -33,30 +35,38 @@ class LLMService:
 
         # Perform a similarity search on the Chroma DB
         print(f"Querying Chroma DB with: {query} ✅")
-        docs = self.vector_db.get_embeddings(query, k=5)  # Adjust `k` as needed for more docs
+        docs = self.vector_db.get_embeddings(query, k=3)  # Retrieve top 3 documents
 
         # Combine the retrieved documents and the query into a prompt for the LLM
-        context = "\n".join([doc.page_content for doc in docs])
-        prompt = f"Context:\n{context}\n\nQuestion: {query}"
+        context = "\n".join([doc.page_content[:500] for doc in docs])  # Limit context size
+        prompt = f"Context:\n{context}\n\nQuestion: {query}\n\nAnswer:"
+        print(f"Prompt for LLM: {prompt}")
 
-        # Generate response using the LLM
-        #response = self.llm(prompt)
-        response = self.generate_response_remote(prompt);
-        return response
+        # Generate response using the Hugging Face API
+        response = self.generate_response_remote(prompt)
+        response_text = response.get("generated_text", "").strip()
+
+        if not response_text:
+            raise ValueError("Empty or invalid respons or invalide from the model")
+
+        return response_text
 
     def generate_response_remote(self, query: str) -> str:
         """Generate response using the Hugging Face API."""
         API_URL = "https://api-inference.huggingface.co/models/gpt2"
-        headers = {"Authorization": f"Bearer YOUR_HUGGINGFACE_TOKEN"}
+        headers = {"Authorization": f"Bearer {CONFIG.HUGGING_FACE_API_KEY}"}
 
         payload = {
             "inputs": query,
-            "parameters": {"max_length": 50}
+            "parameters": {
+                "max_length": 150,
+                "temperature": 0.7,
+                "top_p": 0.9
+            }
         }
 
-        response = requests.post(API_URL, headers=headers, json=payload)
+        response = requests.post(API_URL, headers=self.headers, json=payload)
         if response.status_code == 200:
             return response.json()
         else:
             raise HTTPException(status_code=response.status_code, detail="Error in Hugging Face API call")
-        
