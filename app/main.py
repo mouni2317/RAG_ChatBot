@@ -92,8 +92,15 @@ async def chat_rag(request: QueryRequest):
     try:
         # Initialize the LLM service (you can customize the model name/provider here)
         llm_service = LLMService()  # Optionally, pass model name/provider for more flexibility
-        response = llm_service.generate_response(request.question)
-        return QueryResponse(response=response)
+        raw_response = llm_service.generate_response(request.question)
+        
+        # Extract the string from the response (assuming the structure is [{'generated_text': '...'}])
+        if isinstance(raw_response, list) and len(raw_response) > 0 and 'generated_text' in raw_response[0]:
+            response_text = raw_response[0]['generated_text']
+        else:
+            raise ValueError("Unexpected response format from LLMService")
+
+        return QueryResponse(response=response_text)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -133,3 +140,37 @@ async def get_embeddings(query: str):
         return {"results": results}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+    
+
+
+# Folder path
+FOLDER_PATH = 'C:\\Users\\mouni\\rag\\confluence'
+
+@app.post("/insert_html_json/")
+async def insert_html_json_files():
+    
+    db_write_service = DBWriteService(db_type="mongo")  
+
+    inserted_files = []
+    skipped_files = []
+
+    for filename in os.listdir(FOLDER_PATH):
+        if filename.endswith('html.json'):
+            file_path = os.path.join(FOLDER_PATH, filename)
+            try:
+                with open(file_path, 'r', encoding='utf-8') as file:
+                    data = json.load(file)
+                    if data:
+                        db_write_service.process_event(data)
+                        inserted_files.append(filename)
+                    else:
+                        skipped_files.append(filename)
+            except Exception as e:
+                skipped_files.append(filename)
+                print(f"⚠️ Error processing {filename}: {e}")
+
+    return {
+        "status": "completed",
+        "inserted_files": inserted_files,
+        "skipped_files": skipped_files
+    }

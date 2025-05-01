@@ -1,16 +1,16 @@
 from pymongo import MongoClient
-
+from app.app_config import CONFIG
 # Replace the following with your MongoDB Atlas connection string
 
 
 # Create a MongoClient instance
-client = MongoClient(connection_string)
+client = MongoClient(CONFIG.connection_string)
 
 # Access a specific database
 db = client['sample_mflix']
 
 # Access a specific collection
-collection = db['sessions']
+collection = db['confluence_pages']
 
 class MongoWriter:
     def __init__(self):
@@ -20,9 +20,15 @@ class MongoWriter:
 
     def write(self, data):
         try:
-            return self.collection.insert_one(data).inserted_id
+            data.pop('_id', None)        # Remove any Mongo _id
+            data.pop('user_id', None)    # Remove user_id too
+            result = self.collection.insert_one(data)
+            return result.inserted_id
         except Exception as e:
+            print(f"Mongo insert error: {e}")
             return None
+
+
 
     def fetch_all(self):
         """Fetch all documents that are not yet vectorized."""

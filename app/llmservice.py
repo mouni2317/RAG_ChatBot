@@ -4,9 +4,10 @@ from langchain.chains import RetrievalQA
 from langchain.llms import HuggingFacePipeline
 import requests
 from fastapi import HTTPException
+from app.app_config import CONFIG
 
 API_URL = "https://api-inference.huggingface.co/models/gpt2"
-headers = {"Authorization": f"Bearer "}
+headers = {"Authorization": f"Bearer {CONFIG.HUGGING_FACE_API_KEY}"}
 
 class LLMService:
     def __init__(self, provider="huggingface", model_name=None):
@@ -15,6 +16,7 @@ class LLMService:
         self.provider = None
         self.llm = None
         self.vector_db = self._load_vector_db()
+        self.headers = {"Authorization": f"Bearer {CONFIG.HUGGING_FACE_API_KEY}"}
 
     def _load_model(self):
         print(f"Loading LLM from {self.provider} ✅")
@@ -47,14 +49,14 @@ class LLMService:
     def generate_response_remote(self, query: str) -> str:
         """Generate response using the Hugging Face API."""
         API_URL = "https://api-inference.huggingface.co/models/gpt2"
-        headers = {"Authorization": f"Bearer YOUR_HUGGINGFACE_TOKEN"}
+        headers = {"Authorization": f"Bearer {CONFIG.HUGGING_FACE_API_KEY}"}
 
         payload = {
             "inputs": query,
             "parameters": {"max_length": 50}
         }
 
-        response = requests.post(API_URL, headers=headers, json=payload)
+        response = requests.post(API_URL, headers=self.headers, json=payload)
         if response.status_code == 200:
             return response.json()
         else:
