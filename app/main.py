@@ -1,3 +1,4 @@
+import random
 from fastapi import FastAPI, HTTPException, UploadFile, File
 from pydantic import BaseModel
 from app.document_processor import DocumentProcessor
@@ -8,7 +9,7 @@ from urllib.parse import urljoin
 import os
 import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from app.WebCrawler import WebCrawlerManager, ConfluenceStrategy
+from app.WebCrawler import WebCrawlerManager, ConfluenceStrategy, AllLinksStrategy
 from app.embeddings import create_faiss_index
 from app.llmservice import LLMService 
 from app.model_factory.factory import get_model
@@ -72,7 +73,7 @@ async def create_embedding():
 
 @app.get("/webcrawl")
 async def webcrawl():
-    """Web crawling endpoint."""
+    print(f"""Web crawling endpoint.""")
     # Implement web crawling logic here
     # For now, just return a placeholder response
     # write to DB
@@ -85,6 +86,36 @@ async def webcrawl():
     db_service = DBWriteService(db_type="mongo")
     db_service.process_event({"title": "Web crawling initiated", "content": "Crawling in progress..."})
     return {"message": "Web crawling initiated"}
+
+@app.get("/webcrawl-all-links")
+async def webcrawl_all_links():
+    """Web crawling endpoint using AllLinksStrategy."""
+    try:
+        # Define the base URL for crawling
+        base_url = 'https://www.investopedia.com/articles/optioninvestor/02/091802.aspm'  # Replace with the desired base URL
+
+        # Use AllLinksStrategy for parsing links
+        strategy = AllLinksStrategy()
+        manager = WebCrawlerManager(base_url, strategy, max_workers=10)
+
+        # Start crawling and collect scraped data
+        scraped_data = manager.crawl()  # Assume this returns a list of scraped objects
+
+        # Initialize DBWriteService
+        db_service = DBWriteService(db_type="mongo")  # Change to "chroma" if using ChromaWriter
+
+        # Process each scraped object
+        for data in scraped_data:
+            event = {
+                "texts": [data.get("content", "")],  # Replace "content" with the actual field containing text
+                "ids": [data.get("id", str(random.randint(1000, 9999)))],  # Generate a random ID if not present
+                "metadatas": [{"url": data.get("url", "")}]  # Add metadata like URL
+            }
+            db_service.process_event(event)
+
+        return {"message": "Web crawling using AllLinksStrategy completed successfully"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/chat", response_model=QueryResponse)
 async def chat_rag(request: QueryRequest):
@@ -115,16 +146,37 @@ async def transfer_to_chroma():
         documents = mongo_service.db_writer.fetch_all() # Donot fetch unchanged events that is already vectorised 
 
         #Define the Schmea fo Chroma
-        # Transform data for Chroma
-        texts = [doc.get('jwt', '') for doc in documents]  # Assuming 'content' is the field to be indexed
-        metadatas = [{'user_id': doc.get('user_id', '')} for doc in documents]  # Optional metadata
-
-        # Initialize Chroma DB service
         chroma_service = DBWriteService(db_type="chroma")
-        # Write to Chroma DB
-        chroma_service.process_event({'texts': texts, 'metadatas': metadatas})
-        chroma_service
+        chroma_service.db_writer.clear()
+        for doc in documents:
+            texts = []
+            metadatas = []
+            ids = []
+            # Extract all non-empty text fields from the 'data' list
+            content_texts = [entry['text'] for entry in doc.get('data', []) if isinstance(entry.get('text'), str) and entry['text'].strip()]
+            
+            if content_texts:
+                # Join all text segments into a single string (optional: use separator like \n)
+                combined_text = '\n'.join(content_texts)
+                texts.append(combined_text)
 
+                # Add metadata like page_id or others as needed
+                print(f"Page ID: {doc.get('page_id', '')}")
+                metadatas.append({
+                    'page_id': doc.get('page_id', ''),
+                    # Add more metadata if needed
+                })
+                page_id = str(doc.get('page_id', ''))
+                
+                ids = [page_id]  # Use page_id as the unique ID for Chroma
+
+                print(f"ids: {ids}")
+
+            # Initialize Chroma DB service
+            # Write to Chroma DB
+            chroma_service.process_event({'texts': texts, 'ids':ids, 'metadatas': metadatas})  # Assuming 'process_event' handles the writing logic
+            chroma_service
+            
         return {"message": "Data transferred to Chroma DB successfully"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -141,7 +193,19 @@ async def get_embeddings(query: str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
     
-
+@app.delete("/clean-chroma")
+async def clean_chroma():
+    """Delete all data from Chroma DB."""
+    try:
+        # Initialize Chroma DB service
+        chroma_service = DBWriteService(db_type="chroma")
+        
+        # Clear Chroma DB
+        chroma_service.db_writer.clear()  # Assuming `clear` is a method in ChromaWriter to delete all data
+        
+        return {"message": "Chroma DB cleaned successfully"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 # Folder path
 FOLDER_PATH = 'C:\\Users\\mouni\\rag\\confluence'

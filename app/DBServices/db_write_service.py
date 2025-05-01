@@ -29,7 +29,8 @@ class DBWriteService:
                     # For Chroma, assume event contains 'texts' and optional 'metadatas'
                     texts = event.get('texts', [])
                     metadatas = event.get('metadatas', None)
-                    self.db_writer.write(texts, metadatas)
+                    ids = event.get('ids', [])
+                    self.db_writer.write(texts, ids, metadatas)
                     logging.info("✅ Chroma DB write successful")
                 else:
                     # For MongoDB and others, assume event is a single document

@@ -35,16 +35,21 @@ class LLMService:
 
         # Perform a similarity search on the Chroma DB
         print(f"Querying Chroma DB with: {query} ✅")
-        docs = self.vector_db.get_embeddings(query, k=5)  # Adjust `k` as needed for more docs
+        docs = self.vector_db.get_embeddings(query, k=3)  # Retrieve top 3 documents
 
         # Combine the retrieved documents and the query into a prompt for the LLM
-        context = "\n".join([doc.page_content for doc in docs])
-        prompt = f"Context:\n{context}\n\nQuestion: {query}"
+        context = "\n".join([doc.page_content[:500] for doc in docs])  # Limit context size
+        prompt = f"Context:\n{context}\n\nQuestion: {query}\n\nAnswer:"
+        print(f"Prompt for LLM: {prompt}")
 
-        # Generate response using the LLM
-        #response = self.llm(prompt)
-        response = self.generate_response_remote(prompt);
-        return response
+        # Generate response using the Hugging Face API
+        response = self.generate_response_remote(prompt)
+        response_text = response.get("generated_text", "").strip()
+
+        if not response_text:
+            raise ValueError("Empty or invalid respons or invalide from the model")
+
+        return response_text
 
     def generate_response_remote(self, query: str) -> str:
         """Generate response using the Hugging Face API."""
@@ -53,7 +58,11 @@ class LLMService:
 
         payload = {
             "inputs": query,
-            "parameters": {"max_length": 50}
+            "parameters": {
+                "max_length": 150,
+                "temperature": 0.7,
+                "top_p": 0.9
+            }
         }
 
         response = requests.post(API_URL, headers=self.headers, json=payload)
@@ -61,4 +70,3 @@ class LLMService:
             return response.json()
         else:
             raise HTTPException(status_code=response.status_code, detail="Error in Hugging Face API call")
-        
