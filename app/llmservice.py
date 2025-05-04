@@ -44,7 +44,10 @@ class LLMService:
 
         # Generate response using the Hugging Face API
         response = self.generate_response_remote(prompt)
-        response_text = response.get("generated_text", "").strip()
+        # Sample structure:
+# response = [{"generated_text": "Line 1\nLine 2"}, {"generated_text": "Line 3"}]
+
+        response_text=response
 
         if not response_text:
             raise ValueError("Empty or invalid respons or invalide from the model")
@@ -53,7 +56,7 @@ class LLMService:
 
     def generate_response_remote(self, query: str) -> str:
         """Generate response using the Hugging Face API."""
-        API_URL = "https://api-inference.huggingface.co/models/gpt2"
+        API_URL = "https://api-inference.huggingface.co/models/falcon-rw-1b"
         headers = {"Authorization": f"Bearer {CONFIG.HUGGING_FACE_API_KEY}"}
 
         payload = {

@@ -13,6 +13,8 @@ from app.WebCrawler import WebCrawlerManager, ConfluenceStrategy, AllLinksStrate
 from app.embeddings import create_faiss_index
 from app.llmservice import LLMService 
 from app.model_factory.factory import get_model
+from langchain_community.vectorstores.utils import filter_complex_metadata
+import uuid
 
 app = FastAPI(title="RAG-based Chatbot", version="1.0")
 
@@ -167,7 +169,18 @@ async def transfer_to_chroma():
 
                 # Add metadata like page_id or others as needed
                 page_id = str(doc.get('page_id', ''))
-                metadatas.append({'page_id': page_id})
+                if not page_id:
+                    page_id = str(uuid.uuid4())
+                metadata = {
+                    'page_id': page_id,
+                    'title': doc.get('title', ''),
+                    'author': doc.get('author', 'Unknown'),
+                    'published_date': doc.get('published_date', 'Unknown'),
+                    'url': doc.get('url', ''),
+                    #'child_page_ids': json.dumps(doc.get('child_page_ids', []))
+                }
+                metadatas.append(metadata)
+                
 
                 ids = [page_id]  # Use page_id as the unique ID for Chroma
 
@@ -284,7 +297,9 @@ async def insertData():
                             combined_content = '\n'.join(content_texts)
                             
                             # Prepare the data in the same format for MongoDB
+
                             confluence_data = {
+                                
                                 "title": data.get("title", ""),
                                 "author": data.get("author", "Unknown"),
                                 "published_date": data.get("published_date", "Unknown"),
