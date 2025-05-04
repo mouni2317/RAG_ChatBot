@@ -1,4 +1,5 @@
 import random
+from typing import List
 from fastapi import FastAPI, HTTPException, UploadFile, File
 from pydantic import BaseModel
 from app.document_processor import DocumentProcessor
@@ -18,15 +19,8 @@ import uuid
 
 app = FastAPI(title="RAG-based Chatbot", version="1.0")
 
-# @app.post("/chat", response_model=QueryResponse)
-# async def chat_rag(request: QueryRequest):
-#     """Handle user queries using RAG."""
-#     try:
-#         response = generate_rag_response(request.question)
-#         return QueryResponse(response=response)
-#     except Exception as e:
-#         raise HTTPException(status_code=500, detail=str(e))
-    
+RESTRICTED_KEYWORDS = ['abc', 'abc company']
+
 class DocumentRequest(BaseModel):
     path_or_url: str
 
@@ -35,6 +29,22 @@ class QueryRequest(BaseModel):
 
 class QueryResponse(BaseModel):
     response: str
+
+class AskRequest(BaseModel):
+    prompt: str
+
+class ChatMessage(BaseModel):
+    role: str  # 'user' or 'assistant'
+    content: str
+
+class ChatRequest(BaseModel):
+    messages: List[ChatMessage]
+
+def is_prompt_restricted(prompt: str, banned_words: List[str]) -> bool:
+    prompt_lower = prompt.lower()
+    return any(keyword in prompt_lower for keyword in banned_words)
+
+llm_service = LLMService()
 
 @app.post("/upload")
 async def upload_document(doc: DocumentRequest):
@@ -119,17 +129,67 @@ async def webcrawl_all_links():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.post("/chat")
-async def chat_rag(request: QueryRequest):
-    """Handle user queries using RAG."""
-    try:
-        # Initialize the LLM service (you can customize the model name/provider here)
-        llm_service = LLMService()  # Optionally, pass model name/provider for more flexibility
-        raw_response = llm_service.generate_response(request.question)
+# @app.post("/chat")
+# async def chat_rag(request: QueryRequest):
+#     """Handle user queries using RAG."""
+#     try:
+#         # Initialize the LLM service (you can customize the model name/provider here)
+#         llm_service = LLMService()  # Optionally, pass model name/provider for more flexibility
+#         raw_response = llm_service.generate_response(request.question)
 
-        return raw_response
+#         return raw_response
+#     except Exception as e:
+#         raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/ask")
+async def ask(query: AskRequest):
+    prompt = query.prompt
+
+    # Check if the prompt contains restricted keywords
+    if is_prompt_restricted(prompt, RESTRICTED_KEYWORDS):
+        return {"response": "Sorry, this topic is restricted."}
+
+    try:
+        # Try RAG first
+        rag_response = llm_service.generate_response(prompt)
+        if rag_response and "not found in the provided data" not in rag_response.lower():
+            return {"response": rag_response}
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        print("RAG failed:", e)
+
+    # Fallback to Web Search if RAG fails
+    web_response = llm_service.fetch_web_answer(prompt)
+    if web_response:
+        return {"response": f"This information is retrieved from the web: {web_response}"}
+
+    # Fallback to LLM if web search also fails
+    try:
+        fallback = llm_service.generate_response_remote(prompt)
+        return {"response": fallback}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"LLM fallback failed: {e}")
+
+# === CHAT Endpoint ===
+@app.post("/chat")
+async def chat(chat_data: ChatRequest):
+    if not chat_data.messages:
+        raise HTTPException(status_code=400, detail="No messages provided")
+
+    last_message = chat_data.messages[-1]
+    if last_message.role != "user":
+        raise HTTPException(status_code=400, detail="Last message must be from user")
+
+    # Check if the prompt contains restricted keywords
+    if is_prompt_restricted(last_message.content, RESTRICTED_KEYWORDS):
+        return {"response": "Sorry, this topic is restricted."}
+
+    try:
+        response = llm_service._call_hf_chat([
+            {"role": msg.role, "content": msg.content} for msg in chat_data.messages
+        ])
+        return {"response": response}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Chat API failed: {e}")
 
 @app.post("/transfer-to-chroma")
 async def transfer_to_chroma():
@@ -225,7 +285,7 @@ async def clean_chroma():
         raise HTTPException(status_code=500, detail=str(e))
 
 # Folder path
-FOLDER_PATH = 'C:\\Users\\mouni\\rag\\investopedia'
+FOLDER_PATH = 'C:\\Users\\mouni\\rag\\confluence_data'
 
 @app.post("/insert_html_json/")
 async def insert_html_json_files():
@@ -264,7 +324,7 @@ async def insertData():
     skipped_files = []
 
     for filename in os.listdir(FOLDER_PATH):
-        if filename.endswith('.json'):  # Assuming all json files are relevant
+        if filename.endswith('html.json'):  # Assuming all json files are relevant
             file_path = os.path.join(FOLDER_PATH, filename)
             try:
                 with open(file_path, 'r', encoding='utf-8') as file:
