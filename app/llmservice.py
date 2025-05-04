@@ -6,7 +6,7 @@ import requests
 from fastapi import HTTPException
 from app.app_config import CONFIG
 
-API_URL = "https://api-inference.huggingface.co/models/gpt2"
+API_URL = "https://router.huggingface.co/fireworks-ai/inference/v1/chat/completions"
 headers = {"Authorization": f"Bearer {CONFIG.HUGGING_FACE_API_KEY}"}
 
 class LLMService:
@@ -39,7 +39,11 @@ class LLMService:
 
         # Combine the retrieved documents and the query into a prompt for the LLM
         context = "\n".join([doc.page_content[:500] for doc in docs])  # Limit context size
-        prompt = f"Context:\n{context}\n\nQuestion: {query}\n\nAnswer:"
+        prompt = (
+            "You are an expert assistant. ONLY use the context below to answer the question. "
+            "If the answer is not in the context, respond with \"I don't know.\"\n\n"
+            f"Context:\n{context}\n\nQuestion: {query}\n\nAnswer:"
+        )
         print(f"Prompt for LLM: {prompt}")
 
         # Generate response using the Hugging Face API
@@ -56,16 +60,15 @@ class LLMService:
 
     def generate_response_remote(self, query: str) -> str:
         """Generate response using the Hugging Face API."""
-        API_URL = "https://api-inference.huggingface.co/models/falcon-rw-1b"
-        headers = {"Authorization": f"Bearer {CONFIG.HUGGING_FACE_API_KEY}"}
-
         payload = {
-            "inputs": query,
-            "parameters": {
-                "max_length": 150,
-                "temperature": 0.7,
-                "top_p": 0.9
-            }
+            "messages": [
+                {
+                    "role": "user",
+                    "content": query
+                }
+            ],
+            "max_tokens": 512,
+            "model": "accounts/fireworks/models/deepseek-v3-0324"
         }
 
         response = requests.post(API_URL, headers=self.headers, json=payload)

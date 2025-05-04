@@ -119,21 +119,15 @@ async def webcrawl_all_links():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.post("/chat", response_model=QueryResponse)
+@app.post("/chat")
 async def chat_rag(request: QueryRequest):
     """Handle user queries using RAG."""
     try:
         # Initialize the LLM service (you can customize the model name/provider here)
         llm_service = LLMService()  # Optionally, pass model name/provider for more flexibility
         raw_response = llm_service.generate_response(request.question)
-        
-        # Extract the string from the response (assuming the structure is [{'generated_text': '...'}])
-        if isinstance(raw_response, list) and len(raw_response) > 0 and 'generated_text' in raw_response[0]:
-            response_text = raw_response[0]['generated_text']
-        else:
-            raise ValueError("Unexpected response format from LLMService")
 
-        return QueryResponse(response=response_text)
+        return raw_response
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
