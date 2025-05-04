@@ -1,6 +1,8 @@
 import random
 from typing import List
 from fastapi import FastAPI, HTTPException, UploadFile, File
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from app.document_processor import DocumentProcessor
 from app.DBServices.db_write_service import DBWriteService  # Import DBWriteService from the appropriate module
@@ -18,6 +20,7 @@ from langchain_community.vectorstores.utils import filter_complex_metadata
 import uuid
 
 app = FastAPI(title="RAG-based Chatbot", version="1.0")
+app.mount("/static", StaticFiles(directory=os.path.join(os.getcwd(), "app", "static")), name="static")
 
 RESTRICTED_KEYWORDS = ['abc', 'abc company']
 
@@ -53,10 +56,12 @@ async def upload_document(doc: DocumentRequest):
     result = await processor.process()
     return {"message": "Document processed and stored", **result}
 
-@app.get("/")
-async def health_check():
-    """Health check endpoint."""
-    return {"status": "ok"}
+# Update the root endpoint to return your index.html file
+@app.get("/", response_class=HTMLResponse)
+async def read_index():
+    index_file_path = os.path.join(os.getcwd(), "app", "static", "index.html")
+    with open(index_file_path, "r") as f:
+        return f.read()
 
 @app.get("/info")
 async def get_info():
@@ -128,18 +133,6 @@ async def webcrawl_all_links():
         return {"message": "Web crawling using AllLinksStrategy completed successfully"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-
-# @app.post("/chat")
-# async def chat_rag(request: QueryRequest):
-#     """Handle user queries using RAG."""
-#     try:
-#         # Initialize the LLM service (you can customize the model name/provider here)
-#         llm_service = LLMService()  # Optionally, pass model name/provider for more flexibility
-#         raw_response = llm_service.generate_response(request.question)
-
-#         return raw_response
-#     except Exception as e:
-#         raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/ask")
 async def ask(query: AskRequest):
@@ -388,3 +381,9 @@ async def insertData():
         "inserted_files": inserted_files,
         "skipped_files": skipped_files
     }
+
+
+@app.get("/", response_class=HTMLResponse)
+async def home():
+    with open("app/static/index.html") as f:
+        return HTMLResponse(content=f.read())

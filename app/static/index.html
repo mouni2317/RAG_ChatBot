@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask the Assistant</title>
+    <!-- Link to the favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 50%; margin: 0 auto; padding: 20px; }
+        .question { width: 100%; padding: 10px; font-size: 16px; }
+        .submit-btn { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+        .answer { margin-top: 20px; padding: 10px; background-color: #f0f0f0; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Ask the Assistant</h2>
+        <form id="question-form">
+            <input type="text" id="question" class="question" placeholder="Type your question here..." required>
+            <button type="submit" class="submit-btn">Ask</button>
+        </form>
+
+        <div id="response" class="answer" style="display:none;">
+            <p><strong>Answer:</strong> <span id="answer-text"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // Handle form submission
+        document.getElementById('question-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const question = document.getElementById('question').value;
+
+            // Make the API call to the backend FastAPI
+            fetch('http://localhost:8000/ask', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ "prompt": question })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display the answer
+                document.getElementById('response').style.display = 'block';
+                document.getElementById('answer-text').textContent = data.response || 'No answer found.';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error fetching the answer. Please try again.');
+            });
+        });
+    </script>
+
+</body>
+</html>
