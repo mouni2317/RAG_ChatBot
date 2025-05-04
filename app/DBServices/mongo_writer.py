@@ -10,7 +10,7 @@ client = MongoClient(CONFIG.connection_string)
 db = client['sample_mflix']
 
 # Access a specific collection
-collection = db['confluence_pages']
+collection = db['final_pages']
 
 class MongoWriter:
     def __init__(self):
