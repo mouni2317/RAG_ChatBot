@@ -63,20 +63,20 @@ class LLMService:
         graded_results = []
         
         for result in results:
-            # Step 1: Basic similarity score (Cosine Similarity or other methods)
+            # Basic similarity score (Cosine Similarity or other methods)
             similarity_score = self.compute_similarity(query, result['snippet'])
             
-            # Step 2: Source trustworthiness
+            # Source trustworthiness
             trustworthiness_score = 0
             if any(source in result['source'] for source in self.trusted_sources):
                 trustworthiness_score = 1  # trusted source
 
-            # Step 3: Content freshness
+            #  Content freshness
             freshness_score = 0
             if 'date' in result and self.is_recent(result['date']):
                 freshness_score = 1
             
-            # Step 4: Combine all scores into an overall score
+            # Combine all scores into an overall score
             overall_score = (similarity_score * 0.4) + (trustworthiness_score * 0.4) + (freshness_score * 0.2)
             
             graded_results.append({
@@ -85,16 +85,17 @@ class LLMService:
                 "score": overall_score
             })
         
-        # Step 5: Sort results by score and return top results
+        #Sort results by score and return top results
         graded_results.sort(key=lambda x: x['score'], reverse=True)
         return graded_results
 
     def compute_similarity(self, query: str, snippet: str) -> float:
-        # Implement your similarity calculation (e.g., cosine similarity using sentence embeddings)
+        #we can implement a more sophisticated similarity measure here
+        # For now,using a simple keyword match or cosine similarity
         return 0.8  # Placeholder
 
     def is_recent(self, date_str: str) -> bool:
-        # Implement logic to check if the content is recent
+        # need to Implement logic to check if the content is recent
         return True  # Placeholder
 
     def fetch_web_answer(self, query: str) -> Optional[str]:
@@ -102,7 +103,7 @@ class LLMService:
             # Construct the request payload for Tavily's search API
             payload = {
                 "query": query,
-                "api_key": self.TAVILY_API_KEY  # Your Tavily API key
+                "api_key": self.TAVILY_API_KEY  # Tavily API key
             }
             
             # Call the Tavily API
@@ -114,7 +115,7 @@ class LLMService:
                     graded_results = self.grade_web_results(query, results)
                     if graded_results:
                         best_result = graded_results[0]  # Get the highest-scoring result
-                        return best_result['snippet']  # Return the snippet
+                        return best_result['snippet']  
                 return None
             else:
                 print(f"Error fetching from Tavily: {response.status_code}")

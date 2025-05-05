@@ -56,7 +56,6 @@ async def upload_document(doc: DocumentRequest):
     result = await processor.process()
     return {"message": "Document processed and stored", **result}
 
-# Update the root endpoint to return your index.html file
 @app.get("/", response_class=HTMLResponse)
 async def read_index():
     index_file_path = os.path.join(os.getcwd(), "app", "static", "index.html")
@@ -91,7 +90,6 @@ async def create_embedding():
 @app.get("/webcrawl")
 async def webcrawl():
     print(f"""Web crawling endpoint.""")
-    # Implement web crawling logic here
     # For now, just return a placeholder response
     # write to DB
     base_url = 'https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/overview'
@@ -109,7 +107,7 @@ async def webcrawl_all_links():
     """Web crawling endpoint using AllLinksStrategy."""
     try:
         # Define the base URL for crawling
-        base_url = 'https://www.investopedia.com/articles/optioninvestor/02/091802.aspm'  # Replace with the desired base URL
+        base_url = 'https://www.investopedia.com/articles/optioninvestor/02/091802.aspm' 
 
         # Use AllLinksStrategy for parsing links
         strategy = AllLinksStrategy()
@@ -271,7 +269,7 @@ async def clean_chroma():
         chroma_service = DBWriteService(db_type="chroma")
         
         # Clear Chroma DB
-        chroma_service.db_writer.clear()  # Assuming `clear` is a method in ChromaWriter to delete all data
+        chroma_service.db_writer.clear()  #not so useful rn, need to change
         
         return {"message": "Chroma DB cleaned successfully"}
     except Exception as e:
@@ -337,7 +335,7 @@ async def insertData():
                                     # If there are actual table data, we process it
                                     if table and isinstance(table, dict):
                                         # Convert table into a readable string format (could be JSON or table-like string)
-                                        table_content = str(table)  # You can adjust this format based on your needs
+                                        table_content = str(table)  
                                         content_texts.append(table_content)
                             
                             # Combine all content into a single string (optional separator)
