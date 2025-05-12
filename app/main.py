@@ -1,5 +1,8 @@
 import random
+from typing import List
 from fastapi import FastAPI, HTTPException, UploadFile, File
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from app.document_processor import DocumentProcessor
 from app.DBServices.db_write_service import DBWriteService  # Import DBWriteService from the appropriate module
@@ -17,16 +20,10 @@ from langchain_community.vectorstores.utils import filter_complex_metadata
 import uuid
 
 app = FastAPI(title="RAG-based Chatbot", version="1.0")
+app.mount("/static", StaticFiles(directory=os.path.join(os.getcwd(), "app", "static")), name="static")
 
-# @app.post("/chat", response_model=QueryResponse)
-# async def chat_rag(request: QueryRequest):
-#     """Handle user queries using RAG."""
-#     try:
-#         response = generate_rag_response(request.question)
-#         return QueryResponse(response=response)
-#     except Exception as e:
-#         raise HTTPException(status_code=500, detail=str(e))
-    
+RESTRICTED_KEYWORDS = ['abc', 'abc company']
+
 class DocumentRequest(BaseModel):
     path_or_url: str
 
@@ -36,6 +33,22 @@ class QueryRequest(BaseModel):
 class QueryResponse(BaseModel):
     response: str
 
+class AskRequest(BaseModel):
+    prompt: str
+
+class ChatMessage(BaseModel):
+    role: str  # 'user' or 'assistant'
+    content: str
+
+class ChatRequest(BaseModel):
+    messages: List[ChatMessage]
+
+def is_prompt_restricted(prompt: str, banned_words: List[str]) -> bool:
+    prompt_lower = prompt.lower()
+    return any(keyword in prompt_lower for keyword in banned_words)
+
+llm_service = LLMService()
+
 @app.post("/upload")
 async def upload_document(doc: DocumentRequest):
     """API Endpoint to handle file upload (TXT, JSON, CSV)."""
@@ -43,10 +56,11 @@ async def upload_document(doc: DocumentRequest):
     result = await processor.process()
     return {"message": "Document processed and stored", **result}
 
-@app.get("/")
-async def health_check():
-    """Health check endpoint."""
-    return {"status": "ok"}
+@app.get("/", response_class=HTMLResponse)
+async def read_index():
+    index_file_path = os.path.join(os.getcwd(), "app", "static", "index.html")
+    with open(index_file_path, "r") as f:
+        return f.read()
 
 @app.get("/info")
 async def get_info():
@@ -76,7 +90,6 @@ async def create_embedding():
 @app.get("/webcrawl")
 async def webcrawl():
     print(f"""Web crawling endpoint.""")
-    # Implement web crawling logic here
     # For now, just return a placeholder response
     # write to DB
     base_url = 'https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/overview'
@@ -94,7 +107,7 @@ async def webcrawl_all_links():
     """Web crawling endpoint using AllLinksStrategy."""
     try:
         # Define the base URL for crawling
-        base_url = 'https://www.investopedia.com/articles/optioninvestor/02/091802.aspm'  # Replace with the desired base URL
+        base_url = 'https://www.investopedia.com/articles/optioninvestor/02/091802.aspm' 
 
         # Use AllLinksStrategy for parsing links
         strategy = AllLinksStrategy()
@@ -119,17 +132,55 @@ async def webcrawl_all_links():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.post("/chat")
-async def chat_rag(request: QueryRequest):
-    """Handle user queries using RAG."""
-    try:
-        # Initialize the LLM service (you can customize the model name/provider here)
-        llm_service = LLMService()  # Optionally, pass model name/provider for more flexibility
-        raw_response = llm_service.generate_response(request.question)
+@app.post("/ask")
+async def ask(query: AskRequest):
+    prompt = query.prompt
 
-        return raw_response
+    # Check if the prompt contains restricted keywords
+    if is_prompt_restricted(prompt, RESTRICTED_KEYWORDS):
+        return {"response": "Sorry, this topic is restricted."}
+
+    try:
+        # Try RAG first
+        rag_response = llm_service.generate_response(prompt)
+        if rag_response and "not found in the provided data" not in rag_response.lower():
+            return {"response": rag_response}
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        print("RAG failed:", e)
+
+    # Fallback to Web Search if RAG fails
+    web_response = llm_service.fetch_web_answer(prompt)
+    if web_response:
+        return {"response": f"This information is retrieved from the web: {web_response}"}
+
+    # Fallback to LLM if web search also fails
+    try:
+        fallback = llm_service.generate_response_remote(prompt)
+        return {"response": fallback}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"LLM fallback failed: {e}")
+
+# === CHAT Endpoint ===
+@app.post("/chat")
+async def chat(chat_data: ChatRequest):
+    if not chat_data.messages:
+        raise HTTPException(status_code=400, detail="No messages provided")
+
+    last_message = chat_data.messages[-1]
+    if last_message.role != "user":
+        raise HTTPException(status_code=400, detail="Last message must be from user")
+
+    # Check if the prompt contains restricted keywords
+    if is_prompt_restricted(last_message.content, RESTRICTED_KEYWORDS):
+        return {"response": "Sorry, this topic is restricted."}
+
+    try:
+        response = llm_service._call_hf_chat([
+            {"role": msg.role, "content": msg.content} for msg in chat_data.messages
+        ])
+        return {"response": response}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Chat API failed: {e}")
 
 @app.post("/transfer-to-chroma")
 async def transfer_to_chroma():
@@ -218,14 +269,14 @@ async def clean_chroma():
         chroma_service = DBWriteService(db_type="chroma")
         
         # Clear Chroma DB
-        chroma_service.db_writer.clear()  # Assuming `clear` is a method in ChromaWriter to delete all data
+        chroma_service.db_writer.clear()  #not so useful rn, need to change
         
         return {"message": "Chroma DB cleaned successfully"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
 # Folder path
-FOLDER_PATH = 'C:\\Users\\mouni\\rag\\investopedia'
+FOLDER_PATH = 'C:\\Users\\mouni\\rag\\confluence_data'
 
 @app.post("/insert_html_json/")
 async def insert_html_json_files():
@@ -264,7 +315,7 @@ async def insertData():
     skipped_files = []
 
     for filename in os.listdir(FOLDER_PATH):
-        if filename.endswith('.json'):  # Assuming all json files are relevant
+        if filename.endswith('html.json'):  # Assuming all json files are relevant
             file_path = os.path.join(FOLDER_PATH, filename)
             try:
                 with open(file_path, 'r', encoding='utf-8') as file:
@@ -284,7 +335,7 @@ async def insertData():
                                     # If there are actual table data, we process it
                                     if table and isinstance(table, dict):
                                         # Convert table into a readable string format (could be JSON or table-like string)
-                                        table_content = str(table)  # You can adjust this format based on your needs
+                                        table_content = str(table)  
                                         content_texts.append(table_content)
                             
                             # Combine all content into a single string (optional separator)
@@ -328,3 +379,9 @@ async def insertData():
         "inserted_files": inserted_files,
         "skipped_files": skipped_files
     }
+
+
+@app.get("/", response_class=HTMLResponse)
+async def home():
+    with open("app/static/index.html") as f:
+        return HTMLResponse(content=f.read())
