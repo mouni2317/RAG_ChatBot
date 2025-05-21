@@ -4,11 +4,14 @@ from langchain_community.document_loaders import TextLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 import os
 import config
+from sentence_transformers import SentenceTransformer
 from .model_factory.factory import get_model
 import json
 from app.app_config import CONFIG 
 
-embedding_model = get_model("embedding", "sentence-transformers/all-MiniLM-L6-v2", "huggingface")
+# embedding_model = get_model("embedding", "sentence-transformers/all-MiniLM-L6-v2", "huggingface")
+LOCAL_MODEL_PATH = "models/all-MiniLM-L6-v2"  # Update this path as needed
+embedding_model = SentenceTransformer(LOCAL_MODEL_PATH)
 
 #to load google cloud embedding model
 # embedding_model = get_model(

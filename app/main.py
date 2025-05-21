@@ -1,9 +1,11 @@
 import random
 from typing import List
 from fastapi import FastAPI, HTTPException, UploadFile, File
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
+import numpy as np
 from pydantic import BaseModel
+from sentence_transformers import SentenceTransformer
 from app.document_processor import DocumentProcessor
 from app.DBServices.db_write_service import DBWriteService  # Import DBWriteService from the appropriate module
 import requests
@@ -385,3 +387,37 @@ async def insertData():
 async def home():
     with open("app/static/index.html") as f:
         return HTMLResponse(content=f.read())
+    
+MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
+MODEL_DIR = "models/all-MiniLM-L6-v2"  # Path to save the model
+
+@app.get("/download-model")
+async def download_model():
+    try:
+        if not os.path.exists(MODEL_DIR):
+            model = SentenceTransformer(MODEL_NAME)
+            model.save(MODEL_DIR)
+            return {"message": f"Model downloaded and saved to '{MODEL_DIR}'"}
+        else:
+            return {"message": f"Model already exists at '{MODEL_DIR}'"}
+    except Exception as e:
+        return JSONResponse(status_code=500, content={"error": str(e)})
+    
+
+MODEL_DIR = "models/all-MiniLM-L6-v2"  # Local path
+model = SentenceTransformer(MODEL_DIR)  # Load from disk
+
+
+class TextsInput(BaseModel):
+    texts: List[str]
+
+
+@app.post("/test-embed")
+async def embed_texts(input: TextsInput):
+    embeddings = model.encode(input.texts)
+    embeddings = np.array(embeddings)  # Explicitly convert to numpy array
+    return {
+        "num_sentences": len(input.texts),
+        "vector_dim": embeddings.shape[1],
+        "embeddings": embeddings.tolist()
+    }
