@@ -1,10 +1,7 @@
 from typing import List, Optional
 from app.model_factory.factory import get_model
 from app.DBServices.chroma_writer import ChromaWriter
-from langchain.chains import RetrievalQA
-from langchain.llms import HuggingFacePipeline
 import requests
-from fastapi import HTTPException
 from app.app_config import CONFIG
 
 API_URL = "https://router.huggingface.co/fireworks-ai/inference/v1/chat/completions"

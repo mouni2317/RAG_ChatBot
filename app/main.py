@@ -1,4 +1,5 @@
 import random
+import ssl
 from typing import List
 from fastapi import FastAPI, HTTPException, UploadFile, File
 from fastapi.responses import HTMLResponse, JSONResponse
@@ -20,9 +21,18 @@ from app.llmservice import LLMService
 from app.model_factory.factory import get_model
 from langchain_community.vectorstores.utils import filter_complex_metadata
 import uuid
+from langchain.vectorstores import Chroma
+from langchain.embeddings import SentenceTransformerEmbeddings
+from langchain.schema import Document
 
 app = FastAPI(title="RAG-based Chatbot", version="1.0")
 app.mount("/static", StaticFiles(directory=os.path.join(os.getcwd(), "app", "static")), name="static")
+
+# Disable Chroma telemetry
+os.environ["CHROMA_TELEMETRY_ANONYMOUS"] = "false"
+
+# Allow unverified SSL context
+ssl._create_default_https_context = ssl._create_unverified_context
 
 RESTRICTED_KEYWORDS = ['abc', 'abc company']
 
@@ -51,6 +61,109 @@ def is_prompt_restricted(prompt: str, banned_words: List[str]) -> bool:
 
 llm_service = LLMService()
 
+# Path to local sentence transformer model
+MODEL_DIR = "models/all-MiniLM-L6-v2"
+
+# Wrap the model with LangChain's embedding class
+embedding_model = SentenceTransformerEmbeddings(model_name=MODEL_DIR)
+
+# Initialize ChromaDB vector store
+persist_directory = "/chroma_data"
+vector_store = Chroma(persist_directory=persist_directory, embedding_function=embedding_model)
+
+@app.post("/add-document/")
+async def add_document():
+    """Add a document to the ChromaDB collection."""
+    try:
+        # Create a LangChain Document object with metadata
+        doc = Document(page_content="ABC")
+
+        # Add the document to the vector store
+        vector_store.add_documents([doc])
+
+        return {"message": "Document added successfully"}
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/get-similar-documents/")
+async def get_similar_documents(query: str, k: int = 5):
+    """Retrieve similar documents from the ChromaDB collection based on a query."""
+    try:
+        # Perform similarity search
+        results = vector_store.similarity_search(query, k=k)
+
+        return {
+            "results": [
+                {"content": doc.page_content, "metadata": doc.metadata}
+                for doc in results
+            ]
+        }
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    
+
+
+@app.post("/transfer-to-chroma")
+async def transfer_to_chroma():
+    """Fetch data from MongoDB and write to Chroma DB."""
+    try:
+        # Initialize MongoDB service
+        mongo_service = DBWriteService(db_type="mongo")
+        documents = mongo_service.db_writer.fetch_all()
+
+        for doc in documents:
+            content = doc.get('content', '').strip()
+
+            if not content:
+                print(f"Skipping document with Page ID: {doc.get('page_id', '')} due to empty content.")
+                continue
+
+            # Metadata
+            page_id = str(doc.get('page_id', '')) or str(uuid.uuid4())
+            # Fallback to page_id if URL is missing or empty (confluence)
+            url = doc.get('url', '').strip() or page_id
+            metadata = {
+                'page_id': page_id,
+                'title': doc.get('title', ''),
+                'author': doc.get('author', 'Unknown'),
+                'published_date': doc.get('published_date', 'Unknown'),
+                'url': url
+            }
+
+            print(f"Writing document: {page_id}")
+            print(f"Metadata: {metadata}")
+
+            # Add to Chroma
+            vector_store.add_texts(texts=[content], metadatas=[metadata], ids=[page_id])
+
+        return {"message": "Data transferred to Chroma DB successfully"}
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/get-embeddings")
+async def get_embeddings(query: str, k: int = 5):
+    """Retrieve the top-k documents from Chroma similar to the query."""
+    try:
+        # Perform similarity search using the global vector_store
+        results = vector_store.similarity_search(query, k=k)
+
+        return {
+            "results": [
+                {
+                    "content": doc.page_content,
+                    "metadata": doc.metadata
+                }
+                for doc in results
+            ]
+        }
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 @app.post("/upload")
 async def upload_document(doc: DocumentRequest):
     """API Endpoint to handle file upload (TXT, JSON, CSV)."""
@@ -68,26 +181,6 @@ async def read_index():
 async def get_info():
     """Basic server info endpoint."""
     return {"app_name": "RAG-based Chatbot", "version": "1.0"}
-
-@app.post("/embedding")
-async def create_embedding():
-    """Create embeddings from uploaded document."""
-    try:
-        # Read the file content
-        # contents = await file.read()
-        # text = contents.decode("utf-8")  # Assuming it's text-based (TXT/CSV/JSON with text)
-        # HTML Files to embedding / Read from DB layer
-        # Create FAISS index from text
-        # index = create_faiss_index([text])  # Wrap in list to match expected input
-        db_service = DBWriteService(db_type="chroma")
-        #Finalise the event Schema
-        db_service.process_event({"title": "Web crawling initiated", "content": "Crawling in progress..."})
-        # Query
-
-        return {"message": f"Embeddings created for {results}"}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
 
 @app.get("/webcrawl")
 async def webcrawl():
@@ -183,72 +276,6 @@ async def chat(chat_data: ChatRequest):
         return {"response": response}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Chat API failed: {e}")
-
-@app.post("/transfer-to-chroma")
-async def transfer_to_chroma():
-    """Fetch data from MongoDB and write to Chroma DB."""
-    try:
-        # Initialize MongoDB service
-        mongo_service = DBWriteService(db_type="mongo")
-        # Fetch data from MongoDB
-        documents = mongo_service.db_writer.fetch_all()  # Do not fetch unchanged events that are already vectorized
-
-        # Define the Schema for Chroma
-        chroma_service = DBWriteService(db_type="chroma")
-        chroma_service.db_writer.clear()
-
-        for doc in documents:
-            texts = []
-            metadatas = []
-            ids = []
-
-            # Use the content field directly for Investopedia and Confluence
-            content_texts = [doc.get('content', '')]
-
-            # Log to verify content is being used
-            print(f"Size of Extracted Content Texts: {len(content_texts[0]) if content_texts[0] else 0} characters")
-
-            # Check if content is not empty or just whitespace
-            if content_texts and content_texts[0].strip():
-                # Join all text segments into a single string (optional: use separator like \n)
-                combined_text = '\n'.join(content_texts)
-                texts.append(combined_text)
-
-                # Add metadata like page_id or others as needed
-                page_id = str(doc.get('page_id', ''))
-                if not page_id:
-                    page_id = str(uuid.uuid4())
-                metadata = {
-                    'page_id': page_id,
-                    'title': doc.get('title', ''),
-                    'author': doc.get('author', 'Unknown'),
-                    'published_date': doc.get('published_date', 'Unknown'),
-                    'url': doc.get('url', ''),
-                    #'child_page_ids': json.dumps(doc.get('child_page_ids', []))
-                }
-                metadatas.append(metadata)
-                
-
-                ids = [page_id]  # Use page_id as the unique ID for Chroma
-
-                print(f"Metadatas: {metadatas}")
-                print(f"IDs: {ids}")
-            else:
-                # If content is empty, log the skipping and continue
-                print(f"Skipping document with Page ID: {doc.get('page_id', '')} due to empty content.")
-                continue  # Skip to the next document
-
-            # Ensure texts are non-empty before writing to Chroma
-            if texts:
-                # Write to Chroma DB
-                chroma_service.process_event({'texts': texts, 'ids': ids, 'metadatas': metadatas})
-                print(f"Successfully written to Chroma for Page ID: {doc.get('page_id', '')}")
-            else:
-                print(f"Skipping document with Page ID: {doc.get('page_id', '')} due to empty texts.")
-
-        return {"message": "Data transferred to Chroma DB successfully"}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
 
     
 @app.get("/get-embeddings")
@@ -389,7 +416,6 @@ async def home():
         return HTMLResponse(content=f.read())
     
 MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
-MODEL_DIR = "models/all-MiniLM-L6-v2"  # Path to save the model
 
 @app.get("/download-model")
 async def download_model():
@@ -404,7 +430,6 @@ async def download_model():
         return JSONResponse(status_code=500, content={"error": str(e)})
     
 
-MODEL_DIR = "models/all-MiniLM-L6-v2"  # Local path
 model = SentenceTransformer(MODEL_DIR)  # Load from disk
 
 
