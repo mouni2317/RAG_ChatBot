@@ -1,0 +1,1635 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Areal-time component interfaceis available for PC-SPAN version 4. With this additional software module, licensed separately as SPAN Real-Time Component Interface (SPAN RTCI), you can develop programs which interface to PC-SPAN in real-time."
+        },
+        {
+            "type": "heading",
+            "text": "dispinterface ISpanCom"
+        },
+        {
+            "type": "heading",
+            "text": "methods:"
+        },
+        {
+            "type": "heading",
+            "text": "dispinterface ISpanComRM"
+        },
+        {
+            "type": "heading",
+            "text": "methods:"
+        },
+        {
+            "type": "link",
+            "text": "dispinterface ISpanCom",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-dispinterfaceISpanCom",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short Load(BSTR fileName, boolean replaceExc, boolean useExtLayout);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortLoad(BSTRfileName,booleanreplaceExc,booleanuseExtLayout);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short Save(BSTR fileName);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortSave(BSTRfileName);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short SelectPIT(BSTR busDate, short isSettle, short isFinal, BSTR busTime, BSTR description);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortSelectPIT(BSTRbusDate,shortisSettle,shortisFinal,BSTRbusTime,BSTRdescription);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short SelectPortfolio(BSTR firmCode, BSTR acctCode, BSTR segType);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortSelectPortfolio(BSTRfirmCode,BSTRacctCode,BSTRsegType);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "void ResetPIT();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-voidResetPIT();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "void ResetPortfolio();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-voidResetPortfolio();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short Calculate();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-CalculateshortCalculate();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "double GetPortfSpanReq(short pbClass, boolean isInitial);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-doubleGetPortfSpanReq(shortpbClass,booleanisInitial);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "double GetPortfTotalReq(short pbClass, boolean isInitial);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-doubleGetPortfTotalReq(shortpbClass,booleanisInitial);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "double GetCurPortfSpanReq(short pbClass, boolean isInitial, BSTR curCode);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-doubleGetCurPortfSpanReq(shortpbClass,booleanisInitial,BSTRcurCode);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "double GetCurPortfTotalReq(short pbClass, boolean isInitial, BSTR curCode);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-doubleGetCurPortfTotalReq(shortpbClass,booleanisInitial,BSTRcurCode);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "void Delete();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-voidDelete();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "double GetPortfLongFutValue();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-doubleGetPortfLongFutValue();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "double GetPortfShortFutValue();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-doubleGetPortfShortFutValue();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "double GetPortfLongOptValue();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-doubleGetPortfLongOptValue();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "double GetPortfShortOptValue();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-doubleGetPortfShortOptValue();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "void SetLogLevel(short processId, short priorityId);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-voidSetLogLevel(shortprocessId,shortpriorityId);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "void LogSave(BSTR fileName);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-voidLogSave(BSTRfileName);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "void LogClear();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-voidLogClear();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short CreatePortfolio(BSTR firmCode, BSTR acctCode, BSTR segType);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortCreatePortfolio(BSTRfirmCode,BSTRacctCode,BSTRsegType);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short SetPortfAcctType(BSTR acctType, boolean isClearing);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortSetPortfAcctType(BSTRacctType,booleanisClearing);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short SetPortfParent(BSTR firmCode, BSTR acctCode, BSTR segType);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortSetPortfParent(BSTRfirmCode,BSTRacctCode,BSTRsegType);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short SetPortfCurrency(BSTR currencyCode);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortSetPortfCurrency(BSTRcurrencyCode);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "BSTR GetPortfCurrency();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-BSTRGetPortfCurrency();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short SetPortfLedgerBalance(double value);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortSetPortfLedgerBalance(doublevalue);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "double GetPortfLedgerBalance();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-doubleGetPortfLedgerBalance();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short SavePortfolios(BSTR filename);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortSavePortfolios(BSTRfilename);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short SetPortfOpenTradeEquity(double value);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortSetPortfOpenTradeEquity(doublevalue);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "double GetPortfOpenTradeEquity();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-doubleGetPortfOpenTradeEquity();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short SetPortfSecurityOnDeposit(double value);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortSetPortfSecurityOnDeposit(doublevalue);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "double GetPortfSecurityOnDeposit();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-doubleGetPortfSecurityOnDeposit();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short SetPortfPosition(BSTR exchCmplxAcro, BSTR exchAcro, BSTR pfCode, short pfType, BSTR futPeriod, BSTR optPeriod, boolean isPut, double strike, long totalLong, long totalShort, long intraLong, long intraShort, long interLong, long interShort, long nakedLong, longnakedShort);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortSetPortfPosition(BSTRexchCmplxAcro,BSTRexchAcro,BSTRpfCode,shortpfType,BSTRfutPeriod,BSTRoptPeriod,booleanisPut,doublestrike,longtotalLong,longtotalShort,longintraLong,",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short ChangePortfPosition(BSTR exchCmplxAcro, BSTR exchAcro, BSTR pfCode, short pfType, BSTR futPeriod, BSTR optPeriod, boolean isPut, double strike, long totalLong, long totalShort, long intraLong, long intraShort, long interLong, long interShort, long nakedLong, longnakedShort);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortChangePortfPosition(BSTRexchCmplxAcro,BSTRexchAcro,BSTRpfCode,shortpfType,BSTRfutPeriod,BSTRoptPeriod,booleanisPut,doublestrike,longtotalLong,longtotalShort,longintraLo",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short SavePositions(BSTR fileName);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortSavePositions(BSTRfileName);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short LoadStream(SAFEARRAY(BYTE) data);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortLoadStream(SAFEARRAY(BYTE)data);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "dispinterface ISpanComRM",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-dispinterfaceISpanComRM",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short SelectExchangeComplex(BSTR excAcro);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortSelectExchangeComplex(BSTRexcAcro);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short SelectBFCC(BSTR ccCode);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortSelectBFCC(BSTRccCode);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short SelectProductFamily(BSTR exchCode, BSTR pfCode, short pfType);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortSelectProductFamily(BSTRexchCode,BSTRpfCode,shortpfType);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "void ResetExchangeComplex();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-voidResetExchangeComplex();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "void ResetBFCC();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-voidResetBFCC();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "void ResetProductFamily();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-voidResetProductFamily();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short CalcImpliedVolatility(boolean flatCabVol);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortCalcImpliedVolatility(booleanflatCabVol);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short CalcCallPutAverage(boolean outMoney, boolean acceptZero);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortCalcCallPutAverage(booleanoutMoney,booleanacceptZero);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short CalcSeriesVolatility(boolean useZero, double minExpTime, short maxIn, short maxOut, short minAccept);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortCalcSeriesVolatility(booleanuseZero,doubleminExpTime,shortmaxIn,shortmaxOut,shortminAccept);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short CalcPrice(short meth, boolean resetAll);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortCalcPrice(shortmeth,booleanresetAll);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short CalcRiskArray(short meth, short limitMeth, boolean useTheorPrice);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortCalcRiskArray(shortmeth,shortlimitMeth,booleanuseTheorPrice);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "void UpdatePrice(double value, short meth);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-voidUpdatePrice(doublevalue,shortmeth);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "void UpdateVolatility(double value, short meth);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-voidUpdateVolatility(doublevalue,shortmeth);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "void UpdatePriceScan(double value, short meth);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-voidUpdatePriceScan(doublevalue,shortmeth);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "void UpdateVolScan(double value, short meth);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-voidUpdateVolScan(doublevalue,shortmeth);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "void UpdateRiskFreeRate(double value, short meth);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-voidUpdateRiskFreeRate(doublevalue,shortmeth);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "void UpdateDividendYield(double value, short meth);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-voidUpdateDividendYield(doublevalue,shortmeth);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "void UpdateTimeToExpiration(double value, short meth);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-voidUpdateTimeToExpiration(doublevalue,shortmeth);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short UpdateCDSValue(short valueType, double value, short meth);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortUpdateCDSValue(shortvalueType,doublevalue,shortmeth);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short SetStartPeriod(BSTR periodCode);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortSetStartPeriod(BSTRperiodCode);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short SetEndPeriod(BSTR periodCode);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortSetEndPeriod(BSTRperiodCode);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "void ResetPeriods();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-voidResetPeriods();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short CopyPIT(BSTR description, BSTR busDate, short isSettle, short isFinal, BSTR busTime);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortCopyPIT(BSTRdescription,BSTRbusDate,shortisSettle,shortisFinal,BSTRbusTime);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "void DoMarketObservation();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-voidDoMarketObservation();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "void ResetMarketPrices();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-voidResetMarketPrices();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "double GetPortfMTMFut();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-doubleGetPortfMTMFut();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "double GetPortfMTMPrem();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-doubleGetPortfMTMPrem();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "double GetPortfMTMTFut();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-doubleGetPortfMTMTFut();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "double GetPortfMTMTPrem();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-doubleGetPortfMTMTPrem();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "double GetPortfUnrealizedPL();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-doubleGetPortfUnrealizedPL();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "double GetPortfRealizedPLOpen();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-doubleGetPortfRealizedPLOpen();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "double GetPortfRealizedPLLiq();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-doubleGetPortfRealizedPLLiq();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short SaveRegistryTo(BSTR fileName);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortSaveRegistryTo(BSTRfileName);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short ApplyWhatIf(BSTR fileName, boolean doCalc);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortApplyWhatIf(BSTRfileName,booleandoCalc);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short CalcValues();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortCalcValues();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short CalcGreeks(short meth);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortCalcGreeks(shortmeth);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short ReplicateBasePrices();",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortReplicateBasePrices();",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short ApplyVolatilitySkew(short meth);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortApplyVolatilitySkew(shortmeth);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short PostTrade(BSTR timeStamp, long tradeId, BSTR exchCmplxAcro, BSTR exchAcro, BSTR pfCode, short pfType, BSTR futPeriod, BSTR optPeriod, boolean isPut, double strike, double price, long tradeQty);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortPostTrade(BSTRtimeStamp,longtradeId,BSTRexchCmplxAcro,BSTRexchAcro,BSTRpfCode,shortpfType,BSTRfutPeriod,BSTRoptPeriod,booleanisPut,doublestrike,doubleprice,longtradeQty",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "short ResetPrices(short prodType);",
+            "url": "#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-shortResetPrices(shortprodType);",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "here",
+            "url": "https://www.cmegroup.com/confluence/display/pubspan/Layout+Guides",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "XML format",
+            "url": "https://www.cmegroup.com/confluence/display/pubspan/XML-based+Risk+Parameter+File",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Calculate",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313512/Component+Interface+for+Version+4+of+PC-SPAN+SPAN+Risk+Manager+and+SPAN+Risk+Manager+Clearing#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-Calculate",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Calculate",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313512/Component+Interface+for+Version+4+of+PC-SPAN+SPAN+Risk+Manager+and+SPAN+Risk+Manager+Clearing#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-Calculate",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Calculate",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313512/Component+Interface+for+Version+4+of+PC-SPAN+SPAN+Risk+Manager+and+SPAN+Risk+Manager+Clearing#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-Calculate",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Calculate",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313512/Component+Interface+for+Version+4+of+PC-SPAN+SPAN+Risk+Manager+and+SPAN+Risk+Manager+Clearing#ComponentInterfaceforVersion4ofPC-SPAN,SPANRiskManager,andSPANRiskManagerClearing-Calculate",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "confluence_tables",
+            "text": [
+                {
+                    "headers": [
+                        "PROC_ID_LOAD_RISK",
+                        "= 10;"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "PROC_ID_LOAD_POS",
+                                "= 20;"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "PROC_ID_LOAD_XML",
+                                "= 30;"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "PROC_ID_OMNIBUS",
+                                "= 40;"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "PROC_ID_CALC_START",
+                                "= 51;"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "PROC_ID_CALC_PBOND",
+                                "= 60;"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "PROC_ID_CALC_SPREAD",
+                                "= 70;"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "PROC_ID_CALC_LIQ_RISK",
+                                "= 80;"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "PROC_ID_CALC_DETAIL_START",
+                                "= 101;"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "PROC_ID_CALC_SPREAD_DETAIL",
+                                "= 110;"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "PROC_ID_CALC_LIQ_RISK_DETAIL",
+                                "= 120;"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "PROC_ID_CALC_POS_DETAIL",
+                                "= 130;"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "PROC_ID_UPPER",
+                                "= -1;"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "PRIORITY_ID_LOW",
+                        "= -1;"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "PRIORITY_ID_NORMAL",
+                                "= 10;"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "PRIORITY_ID_WARNING",
+                                "= 20;"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "PRIORITY_ID_ERROR",
+                                "= 30;"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "N",
+                        "- normal"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "M",
+                                "- member"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "H",
+                                "- hedge"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "S",
+                                "- speculator"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "O",
+                                "- omnibus (speculator)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "Q",
+                                "- omnibus (hedge)."
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "1",
+                        "- physical"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "- debt"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "- stock"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "11",
+                                "- future"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "12",
+                                "- equivalence debt"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "14",
+                                "- forward"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "15",
+                                "- interest rate swap"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "16",
+                                "- E-Debt"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "17",
+                                "- credit rate swap"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "21",
+                                "- option on physical"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "22",
+                                "- option on future"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "23",
+                                "- option on equity"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "31",
+                                "- combination"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "41",
+                                "- option on combination"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "1",
+                        "- physical"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "- debt"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "- stock"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "11",
+                                "- future"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "12",
+                                "- equivalence debt"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "14",
+                                "- forward"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "15",
+                                "- interest rate swap"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "16",
+                                "- E-Debt"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "17",
+                                "- credit rate swap"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "21",
+                                "- option on physical"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "22",
+                                "- option on future"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "23",
+                                "- option on equity"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "31",
+                                "- combination"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "41",
+                                "- option on combination"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "1",
+                        "- physical"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "- debt"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "- stock"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "11",
+                                "- future"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "12",
+                                "- equivalence debt"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "14",
+                                "- forward"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "15",
+                                "- interest rate swap"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "16",
+                                "- E-Debt"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "17",
+                                "- credit rate swap"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "21",
+                                "- option on physical"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "22",
+                                "- option on future"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "23",
+                                "- option on equity"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "31",
+                                "- combination"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "41",
+                                "- option on combination"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "1",
+                        "- Use option/series level volatility"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "- Use option level volatility only"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "- Use series level volatility only"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "1",
+                        "- Use option/series level volatility"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "- Use option level volatility only"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "- Use series level volatility only"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "0",
+                        "- Regular limit"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "1",
+                                "- Limit Loss Option"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "- Limit Gain Option"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "- Limit Option"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "- Limit Range"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "- Limit Loss Option Range"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "- Limit Gain Option Range"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "- Limit Option Range"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "0",
+                        "(SET) - Set price tovalue."
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "1",
+                                "(CHG) - Change price byvalue"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "(PCNT) - Change price byvalue%"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "0",
+                        "(SET) - Set volatility tovalue."
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "1",
+                                "(CHG) - Change volatility byvalue"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "(PCNT) - Change volatility byvalue%"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "0",
+                        "(SET) - Set price scan tovalue."
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "1",
+                                "(CHG) - Change price scan byvalue"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "(PCNT) - Change price scan byvalue%"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "0",
+                        "(SET) - Set volatility scan tovalue."
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "1",
+                                "(CHG) - Change volatility scan byvalue"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "(PCNT) - Change volatility scan byvalue%"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "0",
+                        "(SET) - Set risk free rate tovalue."
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "1",
+                                "(CHG) - Change risk free rate byvalue"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "(PCNT) - Change risk free rate byvalue%"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "0",
+                        "(SET) - Set dividend yield tovalue."
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "1",
+                                "(CHG) - Change dividend yield byvalue"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "(PCNT) - Change dividend yield byvalue%"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "0",
+                        "(SET) - Set time to expiration tovalue."
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "1",
+                                "(CHG) - Change time to expiration byvalue"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "(PCNT) - Change time to expiration byvalue%"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "1",
+                        "- Systematic shock - Applies to combined commodity level"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "- Convergence shock (IG_COMP) - Applies to Exchange Complex level"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "- Divergence shock (HY_COMP) - Applies to Exchange Complex level"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "- Sector shock - Applies to combined commodity level"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "0",
+                        "(SET) - Set dividend yield tovalue."
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "1",
+                                "(CHG) - Change dividend yield byvalue"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "(PCNT) - Change dividend yield byvalue%"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "1",
+                        "- Use option/series level volatility"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "- Use option level volatility only"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "- Use series level volatility only"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "0",
+                        "- Shifts the curve horizontally only"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "1",
+                                "- Shifts the curve horizontally, vertical shift by Call/Put"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "- Shifts the curve horizontally, vertical shift by closest at the money or the average of Call/Put"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "1",
+                        "- physical"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "- debt"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "- stock"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "11",
+                                "- future"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "12",
+                                "- equivalence debt"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "14",
+                                "- forward"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "15",
+                                "- interest rate swap"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "16",
+                                "- E-Debt"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "17",
+                                "- credit rate swap"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "21",
+                                "- option on physical"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "22",
+                                "- option on future"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "23",
+                                "- option on equity"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "31",
+                                "- combination"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "41",
+                                "- option on combination"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "-1",
+                        "- All future based products"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "-2",
+                                "- All Option based products"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "- physical"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "- debt"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "- stock"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "11",
+                                "- future"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "12",
+                                "- equivalence debt"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "14",
+                                "- forward"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "15",
+                                "- interest rate swap"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "16",
+                                "- E-Debt"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "17",
+                                "- credit rate swap"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "21",
+                                "- option on physical"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "22",
+                                "- option on future"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "23",
+                                "- option on equity"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "31",
+                                "- combination"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "41",
+                                "- option on combination"
+                            ],
+                            "links": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_id": "457313512",
+    "child_page_ids": []
+}

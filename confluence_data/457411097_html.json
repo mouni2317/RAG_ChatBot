@@ -1,0 +1,246 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "This type of task can be accomplished using several utilities included with PC-SPAN --spanit,spanReport,spanProducts, andspanProductsReport."
+        },
+        {
+            "type": "heading",
+            "text": "Using the spanReport UtilityOutput of the spanReport UtilityUsing the spanProducts UtilityOutput of the spanProducts UtilityUsing the spanProductsReport UtilityOutput of the spanProductsReport UtilityLoggingContents of the Datafiles Produced by spanProducts"
+        },
+        {
+            "type": "heading",
+            "text": "Thespanitutility allows you to create a simple script file which accomplishes loading of SPAN file(s), loading of position file(s), calculation of performance bond requirements, and saving the results to an XML-based SPAN document file (a.spnfile)."
+        },
+        {
+            "type": "heading",
+            "text": "ThespanReportutility allows you to take that SPAN document file and in one operation generate three reports:"
+        },
+        {
+            "type": "heading",
+            "text": "ThespanProductsutility similarly allows you to take the SPAN document file as input, and in one operation generate four comma-delimited datafiles which can then easily be imported into other applications:"
+        },
+        {
+            "type": "heading",
+            "text": "ThespanProductsReportutility allows you to take the SPAN document file as input and in one operation generate four reports:"
+        },
+        {
+            "type": "heading",
+            "text": "ThespanReport,spanProducts, andspanProductsReportutilities are all examples of PC-SPAN's batch reporting capability, and their use is described herein."
+        },
+        {
+            "type": "heading",
+            "text": "The executions ofspanit,spanReportspanProducts, and/orspanProductsReportcan themselves be accomplished from within a batch file.\u00a0\u00a0By creating such a batch file, and by placing a shortcut to this batch file on the Windows desktop, you can initiate entire production processes with one mouseclick."
+        },
+        {
+            "type": "heading",
+            "text": "Using thespanReportUtility"
+        },
+        {
+            "type": "heading",
+            "text": "The full name of this utility isspanReport.htaand it is located in therptModulesubdirectory of the directory where PC-SPAN is installed.\u00a0\u00a0Typically this would bec:\\span4\\rptModule.\u00a0\u00a0The.htastands for \"hyper-text application.\""
+        },
+        {
+            "type": "heading",
+            "text": "You can run the utility either (a) from within therptModuledirectory, or (b) by providing the path to therptModuledirectory.\u00a0\u00a0The syntax is:"
+        },
+        {
+            "type": "heading",
+            "text": "\\span4\\rptModule\\spanReport.htaxmlFileName[busDate] [firm]"
+        },
+        {
+            "type": "heading",
+            "text": "For example, suppose that the SPAN document filespan.spncontains results for a single business date, November 11, 2000.\u00a0\u00a0The following command would generate the three reports for all portfolios for that business day."
+        },
+        {
+            "type": "heading",
+            "text": "spanReport.hta span.spn"
+        },
+        {
+            "type": "heading",
+            "text": "The following command would generate the three reports for all accounts for firm001for that business day:"
+        },
+        {
+            "type": "heading",
+            "text": "spanReport.hta span.spn 20001111 001"
+        },
+        {
+            "type": "heading",
+            "text": "Ifspan.spncontained data for November 11th and November 12th, the following command would generate reports for all accounts for the 12th:"
+        },
+        {
+            "type": "heading",
+            "text": "spanReport.hta span.spn 20001112"
+        },
+        {
+            "type": "heading",
+            "text": "and the following command would generate reports for all accounts for firm001for the 12th:"
+        },
+        {
+            "type": "heading",
+            "text": "spanReport.hta span.spn 20001112 001"
+        },
+        {
+            "type": "heading",
+            "text": "Output of thespanReportUtility"
+        },
+        {
+            "type": "heading",
+            "text": "When you runspanReport.hta, if the reports could be successfully generated, the results are created as three files in theReportssubdirectory of the application directory, typically\\span4\\Reports.\u00a0\u00a0The files are:"
+        },
+        {
+            "type": "heading",
+            "text": "Using thespanProductsUtility"
+        },
+        {
+            "type": "heading",
+            "text": "UsingspanProductsis almost exactly analogous to usingspanReport.\u00a0\u00a0The full name of the utility isspanProducts.htaand it is located in therptModulesubdirectory of the directory where PC-SPAN is installed.\u00a0\u00a0Typically this would bec:\\span4\\rptModule."
+        },
+        {
+            "type": "heading",
+            "text": "You can run the utility either (a) from within therptModuledirectory, or (b) by providing the path to therptModuledirectory.\u00a0\u00a0The syntax is:"
+        },
+        {
+            "type": "heading",
+            "text": "\\span4\\rptModule\\spanProducts.htaxmlFileName[busDate]"
+        },
+        {
+            "type": "heading",
+            "text": "Output of thespanProductsUtility"
+        },
+        {
+            "type": "heading",
+            "text": "When you runspanProducts.hta, if the datafiles could be successfully generated, the results are created as four files in theReportssubdirectory of the application directory, typically\\span4\\Reports.\u00a0\u00a0The files are:"
+        },
+        {
+            "type": "heading",
+            "text": "Using thespanProductsReportUtility"
+        },
+        {
+            "type": "heading",
+            "text": "The full name of the utility isspanProductsReport.htaand it is located in therptModulesubdirectory of the directory where PC-SPAN is installed.\u00a0\u00a0As with the other utilities, you can run it either (a) from within therptModuledirectory, or (b) by providing the path to therptModuledirectory.\u00a0\u00a0The syntax is:"
+        },
+        {
+            "type": "heading",
+            "text": "\\span4\\rptModule\\spanProductsReport.htaxmlFileName[busDate[ec[cc] ] ]"
+        },
+        {
+            "type": "heading",
+            "text": "Output of thespanProductsReportUtility"
+        },
+        {
+            "type": "heading",
+            "text": "When you runspanProductsReport.hta, if the reports could be successfully generated, the results are created as various files in theReportssubdirectory of the application directory, typically\\span4\\Reports.\u00a0\u00a0The files are:"
+        },
+        {
+            "type": "heading",
+            "text": "where<xx>identifies the exchange complex and combined commodity for which the report was generated."
+        },
+        {
+            "type": "heading",
+            "text": "Logging"
+        },
+        {
+            "type": "heading",
+            "text": "A log file is also created in theReportssubdirectory, namedrptBatch.log.\u00a0\u00a0Any previous version of this logfile is overwritten.\u00a0\u00a0The following is an example of a log file:"
+        },
+        {
+            "type": "heading",
+            "text": "rptBatch.log"
+        },
+        {
+            "type": "heading",
+            "text": "However, if errors were detected, such that the reports cannot be created, the utility generates an error log that describes what went wrong.\u00a0\u00a0The error log is also created in theReportssubdirectory and is namedrptBatch.err.\u00a0\u00a0(Any previous version of the error log is overwritten.)\u00a0\u00a0The following is an example of an error log file:"
+        },
+        {
+            "type": "heading",
+            "text": "rptBatch.err"
+        },
+        {
+            "type": "heading",
+            "text": "Contents of the Datafiles Produced byspanProducts"
+        },
+        {
+            "type": "heading",
+            "text": "As described above,spanProductsproduces four comma-delimited datafiles:"
+        },
+        {
+            "type": "heading",
+            "text": "Products.txt:\u00a0\u00a0these contains a record for everyproduct familyfor the selected point in time.\u00a0\u00a0For example, if CME data is loaded, there would be records for product families including S&P 500 futures, options on S&P 500 futures, E-Mini S&P 500 futures, and options on E-Mini S&P 500 futures.\u00a0\u00a0Specific data elements are:"
+        },
+        {
+            "type": "heading",
+            "text": "Futures-Physicals-Combinations.txt:contains a record for every tradeable instrument at the specified point in time which is not an option.\u00a0\u00a0Specific data elements are as shown.\u00a0\u00a0Descriptions are provided only for those elements which are not present in theProductsdatafile."
+        },
+        {
+            "type": "heading",
+            "text": "Series.txt:\u00a0\u00a0contains a record for every option series for the specified point in time.\u00a0\u00a0Descriptions are provided only for those elements which are not present in theFutures-Physicals-Combinationsdatafile.\u00a0\u00a0Specific data elements are:"
+        },
+        {
+            "type": "heading",
+            "text": "Options.txt:\u00a0\u00a0contains a record for every option for the specified point in time.\u00a0\u00a0Descriptions are provided only for those elements which are not present in theSeriesdatafile.\u00a0\u00a0Data elements are:"
+        },
+        {
+            "type": "link",
+            "text": "Using the spanReport Utility",
+            "url": "#RunningPC-SPANReportsandExportDatafilesinBatch-UsingthespanReportUtility",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Output of the spanReport Utility",
+            "url": "#RunningPC-SPANReportsandExportDatafilesinBatch-OutputofthespanReportUtility",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Using the spanProducts Utility",
+            "url": "#RunningPC-SPANReportsandExportDatafilesinBatch-UsingthespanProductsUtility",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Output of the spanProducts Utility",
+            "url": "#RunningPC-SPANReportsandExportDatafilesinBatch-OutputofthespanProductsUtility",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Using the spanProductsReport Utility",
+            "url": "#RunningPC-SPANReportsandExportDatafilesinBatch-UsingthespanProductsReportUtility",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Output of the spanProductsReport Utility",
+            "url": "#RunningPC-SPANReportsandExportDatafilesinBatch-OutputofthespanProductsReportUtility",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Logging",
+            "url": "#RunningPC-SPANReportsandExportDatafilesinBatch-Logging",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Contents of the Datafiles Produced by spanProducts",
+            "url": "#RunningPC-SPANReportsandExportDatafilesinBatch-ContentsoftheDatafilesProducedbyspanProducts",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "confluence_tables",
+            "text": []
+        }
+    ],
+    "page_id": "457411097",
+    "child_page_ids": []
+}

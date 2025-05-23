@@ -1,0 +1,164 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Figure 1.2"
+        },
+        {
+            "type": "heading",
+            "text": "Figure 1.3"
+        },
+        {
+            "type": "heading",
+            "text": "1) Underlying:"
+        },
+        {
+            "type": "heading",
+            "text": "Filtering Underlying by Series"
+        },
+        {
+            "type": "heading",
+            "text": "2) Option Delta (Opt.Delta)"
+        },
+        {
+            "type": "heading",
+            "text": "Also, by using the 'Product' drop-down box, you can filter for net delta by individual Product Series."
+        },
+        {
+            "type": "heading",
+            "text": "Filtering Delta\u00a0 by Series"
+        },
+        {
+            "type": "heading",
+            "text": "3) Net Delta"
+        },
+        {
+            "type": "heading",
+            "text": "4) Gamma"
+        },
+        {
+            "type": "heading",
+            "text": "5) Vega"
+        },
+        {
+            "type": "heading",
+            "text": "6) Theta"
+        },
+        {
+            "type": "heading",
+            "text": "7) Rho"
+        },
+        {
+            "type": "heading",
+            "text": "8) Risk"
+        },
+        {
+            "type": "heading",
+            "text": "*Important note on Index-based and Yield-based implied volatility"
+        },
+        {
+            "type": "heading",
+            "text": "Option Pricing Models"
+        },
+        {
+            "type": "heading",
+            "text": "Main Variable"
+        },
+        {
+            "type": "heading",
+            "text": "Using sensitivity factors other than Price as the Main Variable allows you to keep all other sensitivity factors constant and isolate changes in the greeks and risk for the given change in the Main Variable.\u00a0 You can do this analysis using any sensitivity factor as the Main Variable."
+        },
+        {
+            "type": "heading",
+            "text": "Secondary Variable"
+        },
+        {
+            "type": "heading",
+            "text": "Using Different Combinations of Main & Secondary Variables"
+        },
+        {
+            "type": "heading",
+            "text": "Display Graphics"
+        },
+        {
+            "type": "heading",
+            "text": "Exporting Data"
+        },
+        {
+            "type": "heading",
+            "text": "Maintenance/Initial Margin:"
+        },
+        {
+            "type": "heading",
+            "text": "Position Details"
+        },
+        {
+            "type": "heading",
+            "text": "A)Option Parameters"
+        },
+        {
+            "type": "heading",
+            "text": "B,C)Matrix & Matrix Parameters"
+        },
+        {
+            "type": "heading",
+            "text": "D)Calculations"
+        },
+        {
+            "type": "heading",
+            "text": "CVM:Change the Contract Value Multiplier to change the scale of the option (useful for Emini options)."
+        },
+        {
+            "type": "heading",
+            "text": "Price/Value:Change the Price (Value) to calculate implied volatility and recalculate the greeks based on the new Price/Value. Also, the Matrix can be recalculated based on the new Price/Value by clicking on the 'Calculate Array' button in the Matrix Parameter section."
+        },
+        {
+            "type": "heading",
+            "text": "Volatility:Use this field to analyze the effects of changes in implied volatility."
+        },
+        {
+            "type": "heading",
+            "text": "Pricing Model:Choose among 4 different option pricing models for option valuation:"
+        },
+        {
+            "type": "heading",
+            "text": "Exercise Style:Choose between American or European."
+        },
+        {
+            "type": "heading",
+            "text": "E)Graphics:Display the matrix values graphically."
+        },
+        {
+            "type": "heading",
+            "text": "*Important note on Underlying quantity and E-minis:\u00a0 When E-minis are present in a portfolio, the quantity in the underlying row will not show fractional contracts.\u00a0 For example, if a portfolio contains a long position in 3 full-size S&P500 contracts and a short position in 1 E-mini S&P, the underlying row will show a quantity of long 2.\u00a0 It is recommended that when E-minis are present in a portfolio, you check the 'Use dollar-denominated greeks' checkbox in the preferences section.\u00a0 When this option is turned on, the quantity in the 'Underlying' row will be displayed as (quantity * contract value multiplier)."
+        },
+        {
+            "type": "heading",
+            "text": "*Important note on delta and E-minis:"
+        },
+        {
+            "type": "heading",
+            "text": "(full-size S&P:) .1487*10*250+\u00a0 (E-mini S&P:) .1487*10*50"
+        },
+        {
+            "type": "link",
+            "text": "Using the Controls",
+            "url": "#MainExposure-UsingtheControls",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Notes",
+            "url": "#MainExposure-Notes",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "confluence_tables",
+            "text": []
+        }
+    ],
+    "page_id": "457313820",
+    "child_page_ids": []
+}

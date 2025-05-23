@@ -1,0 +1,900 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "TheStandard Portfolio Analysis of Risk (SPAN)system is a sophisticated methodology that calculates performance bond requirements by analyzing the \"what-ifs\" of virtually any market scenario. Continually enhanced and elaborated, the SPAN methodology can be used to evaluate risk for the broadest possible range of derivative and physical instruments. Although originally designed for use with derivatives, its extraordinary capabilities have led to its extensive use in assessing risk for many different types of financial instruments."
+        },
+        {
+            "type": "link",
+            "text": "PC-SPAN",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411024/Use+PC-SPAN",
+            "data-linked-resource-id": "457411024",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "SPAN Risk Manager",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083187/SPAN+Risk+Manager",
+            "data-linked-resource-id": "457083187",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "SPAN Risk Manager Clearing",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313512/Component+Interface+for+Version+4+of+PC-SPAN+SPAN+Risk+Manager+and+SPAN+Risk+Manager+Clearing",
+            "data-linked-resource-id": "457313512",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "System Requirements",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457082909/System+Requirements",
+            "data-linked-resource-id": "457082909",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Quick Installation",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457082941/Quick+Installation",
+            "data-linked-resource-id": "457082941",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Quick Tour",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313403/Quick+Tour",
+            "data-linked-resource-id": "457313403",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Use PC-SPAN",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411024/Use+PC-SPAN",
+            "data-linked-resource-id": "457411024",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "User Tips",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313493/User+Tips",
+            "data-linked-resource-id": "457313493",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Calculating Performance Bond Requirements",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083100/Calculating+Performance+Bond+Requirements",
+            "data-linked-resource-id": "457083100",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Defining Portfolios",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411067/Defining+Portfolios",
+            "data-linked-resource-id": "457411067",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Defining Positions",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457214561/Defining+Positions",
+            "data-linked-resource-id": "457214561",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Loading SPAN Risk Parameter Files",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083256/Loading+SPAN+Risk+Parameter+Files",
+            "data-linked-resource-id": "457083256",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "PC-SPAN Reports",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457214646/PC-SPAN+Reports",
+            "data-linked-resource-id": "457214646",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "PC-SPAN Interfaces and Utilities",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313476/PC-SPAN+Interfaces+and+Utilities",
+            "data-linked-resource-id": "457313476",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Component Interface for Version 4 of PC-SPAN, SPAN Risk Manager, and SPAN Risk Manager Clearing",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313512/Component+Interface+for+Version+4+of+PC-SPAN+SPAN+Risk+Manager+and+SPAN+Risk+Manager+Clearing",
+            "data-linked-resource-id": "457313512",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Option Pricing Models Interfaces and Methods",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457214519/Option+Pricing+Models+Interfaces+and+Methods",
+            "data-linked-resource-id": "457214519",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Running PC-SPAN Reports and Export Datafiles in Batch",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411097/Running+PC-SPAN+Reports+and+Export+Datafiles+in+Batch",
+            "data-linked-resource-id": "457411097",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Script Language for PC-SPAN v.4.05 and SPAN Risk Manager",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083279/Script+Language+for+PC-SPAN+v.4.05+and+SPAN+Risk+Manager",
+            "data-linked-resource-id": "457083279",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Using PC-SPAN version 4.02 for TRAKRS",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313662/Using+PC-SPAN+version+4.02+for+TRAKRS",
+            "data-linked-resource-id": "457313662",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Layout Guides",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083087/Layout+Guides",
+            "data-linked-resource-id": "457083087",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Additional XML formats recognized by PC-SPAN",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083146/Additional+XML+formats+recognized+by+PC-SPAN",
+            "data-linked-resource-id": "457083146",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Standard Portfolio Data File Layout",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083223/Standard+Portfolio+Data+File+Layout",
+            "data-linked-resource-id": "457083223",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Expanded Portfolio Data File Layout",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313617/Expanded+Portfolio+Data+File+Layout",
+            "data-linked-resource-id": "457313617",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Daily Adjustment History Files",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313675/Daily+Adjustment+History+Files",
+            "data-linked-resource-id": "457313675",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Paris Expanded SPAN File Format for MATIF and Monep Products",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411222/Paris+Expanded+SPAN+File+Format+for+MATIF+and+Monep+Products",
+            "data-linked-resource-id": "457411222",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Risk Parameter File Layouts for the Positional Formats",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083445/Risk+Parameter+File+Layouts+for+the+Positional+Formats",
+            "data-linked-resource-id": "457083445",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Standard",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083480/Standard",
+            "data-linked-resource-id": "457083480",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type 1 Records - Standard",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457214858/Type+1+Records+-+Standard",
+            "data-linked-resource-id": "457214858",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type 0 Records - Standard",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411411/Type+0+Records+-+Standard",
+            "data-linked-resource-id": "457411411",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type 4 Record - Standard",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314082/Type+4+Record+-+Standard",
+            "data-linked-resource-id": "457314082",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type 5 Record - Standard",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411492/Type+5+Record+-+Standard",
+            "data-linked-resource-id": "457411492",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type 2 Record - Standard",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314153/Type+2+Record+-+Standard",
+            "data-linked-resource-id": "457314153",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type 3 Record - Standard",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411562/Type+3+Record+-+Standard",
+            "data-linked-resource-id": "457411562",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type 9 Records - Standard",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457215013/Type+9+Records+-+Standard",
+            "data-linked-resource-id": "457215013",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type B Record - Standard",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314222/Type+B+Record+-+Standard",
+            "data-linked-resource-id": "457314222",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type 6 Record  - Standard",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083904/Type+6+Record+-+Standard",
+            "data-linked-resource-id": "457083904",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type 8 Records - Standard",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314279/Type+8+Records+-+Standard",
+            "data-linked-resource-id": "457314279",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type R Record - Standard",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083949/Type+R+Record+-+Standard",
+            "data-linked-resource-id": "457083949",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type C Record - Standard",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457215146/Type+C+Record+-+Standard",
+            "data-linked-resource-id": "457215146",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type E Record - Standard",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457215179/Type+E+Record+-+Standard",
+            "data-linked-resource-id": "457215179",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type V Record - Standard",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411768/Type+V+Record+-+Standard",
+            "data-linked-resource-id": "457411768",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type X Record - Standard and Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457084084/Type+X+Record+-+Standard+and+Expanded",
+            "data-linked-resource-id": "457084084",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type S Record - Standard",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314413/Type+S+Record+-+Standard",
+            "data-linked-resource-id": "457314413",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type Z Record - Standard and Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457215263/Type+Z+Record+-+Standard+and+Expanded",
+            "data-linked-resource-id": "457215263",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type Y Record - Standard and Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457215294/Type+Y+Record+-+Standard+and+Expanded",
+            "data-linked-resource-id": "457215294",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457214773/Expanded",
+            "data-linked-resource-id": "457214773",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type V - Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314015/Type+V+-+Expanded",
+            "data-linked-resource-id": "457314015",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type T - Paris Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411456/Type+T+-+Paris+Expanded",
+            "data-linked-resource-id": "457411456",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type 8 - Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083725/Type+8+-+Expanded",
+            "data-linked-resource-id": "457083725",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type 2 - Paris Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457214982/Type+2+-+Paris+Expanded",
+            "data-linked-resource-id": "457214982",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type 9 - Paris Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083772/Type+9+-+Paris+Expanded",
+            "data-linked-resource-id": "457083772",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type R - Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083828/Type+R+-+Expanded",
+            "data-linked-resource-id": "457083828",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type 9 - Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411595/Type+9+-+Expanded",
+            "data-linked-resource-id": "457411595",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type 1 Records - Expanded and Paris",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314235/Type+1+Records+-+Expanded+and+Paris",
+            "data-linked-resource-id": "457314235",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type B - Paris Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411644/Type+B+-+Paris+Expanded",
+            "data-linked-resource-id": "457411644",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type 3 - Paris Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411666/Type+3+-+Paris+Expanded",
+            "data-linked-resource-id": "457411666",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type P Record - Standard and Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083966/Type+P+Record+-+Standard+and+Expanded",
+            "data-linked-resource-id": "457083966",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type B - Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457215159/Type+B+-+Expanded",
+            "data-linked-resource-id": "457215159",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type 5 - Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314351/Type+5+-+Expanded",
+            "data-linked-resource-id": "457314351",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type 5 - Paris Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314372/Type+5+-+Paris+Expanded",
+            "data-linked-resource-id": "457314372",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type 6 - Paris Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457215224/Type+6+-+Paris+Expanded",
+            "data-linked-resource-id": "457215224",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type 8 - Paris Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314428/Type+8+-+Paris+Expanded",
+            "data-linked-resource-id": "457314428",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type C - Expanded Format and Paris Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411817/Type+C+-+Expanded+Format+and+Paris+Expanded",
+            "data-linked-resource-id": "457411817",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type P - Paris Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457084126/Type+P+-+Paris+Expanded",
+            "data-linked-resource-id": "457084126",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type S - Expanded Format and Paris Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411852/Type+S+-+Expanded+Format+and+Paris+Expanded",
+            "data-linked-resource-id": "457411852",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type 2 - Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457215340/Type+2+-+Expanded",
+            "data-linked-resource-id": "457215340",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type 4 - Paris Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457215357/Type+4+-+Paris+Expanded",
+            "data-linked-resource-id": "457215357",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type T Record - Standard and Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314479/Type+T+Record+-+Standard+and+Expanded",
+            "data-linked-resource-id": "457314479",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type 6 - Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314509/Type+6+-+Expanded",
+            "data-linked-resource-id": "457314509",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type 3 - Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457084156/Type+3+-+Expanded",
+            "data-linked-resource-id": "457084156",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Type 4 - Expanded",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411883/Type+4+-+Expanded",
+            "data-linked-resource-id": "457411883",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Currency Codes Recognized",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083594/Currency+Codes+Recognized",
+            "data-linked-resource-id": "457083594",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "XML-based Position File",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313850/XML-based+Position+File",
+            "data-linked-resource-id": "457313850",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "XML-based Risk Parameter File",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083551/XML-based+Risk+Parameter+File",
+            "data-linked-resource-id": "457083551",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Portfolio Reports",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083133/Portfolio+Reports",
+            "data-linked-resource-id": "457083133",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Intercommodity Spreading Tier Requirements Report",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457214571/Intercommodity+Spreading+Tier+Requirements+Report",
+            "data-linked-resource-id": "457214571",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Intracommodity Spreading Tier Requirements Report",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411133/Intracommodity+Spreading+Tier+Requirements+Report",
+            "data-linked-resource-id": "457411133",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Spreads Detail Report",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313633/Spreads+Detail+Report",
+            "data-linked-resource-id": "457313633",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Short Option Minimum Tier Requirements Report",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083343/Short+Option+Minimum+Tier+Requirements+Report",
+            "data-linked-resource-id": "457083343",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "PB Requirements Report",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313739/PB+Requirements+Report",
+            "data-linked-resource-id": "457313739",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Period Deltas Report",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411265/Period+Deltas+Report",
+            "data-linked-resource-id": "457411265",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Scanning Tier Requirements Report",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313891/Scanning+Tier+Requirements+Report",
+            "data-linked-resource-id": "457313891",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Positions Report",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313943/Positions+Report",
+            "data-linked-resource-id": "457313943",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "PB Requirements Summary",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083618/PB+Requirements+Summary",
+            "data-linked-resource-id": "457083618",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "PB Requirement Listing",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457214888/PB+Requirement+Listing",
+            "data-linked-resource-id": "457214888",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Scan Risk Contributions Report",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314069/Scan+Risk+Contributions+Report",
+            "data-linked-resource-id": "457314069",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "SPAN Risk Manager",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083187/SPAN+Risk+Manager",
+            "data-linked-resource-id": "457083187",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "SPAN Risk Manager Functions",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411209/SPAN+Risk+Manager+Functions",
+            "data-linked-resource-id": "457411209",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "SPAN Risk Manager - Option Pricing Models",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083416/SPAN+Risk+Manager+-+Option+Pricing+Models",
+            "data-linked-resource-id": "457083416",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Main Exposure",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313820/Main+Exposure",
+            "data-linked-resource-id": "457313820",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Multicommodity Analysis",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411398/Multicommodity+Analysis",
+            "data-linked-resource-id": "457411398",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Risk Parameters Reports",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411114/Risk+Parameters+Reports",
+            "data-linked-resource-id": "457411114",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Combined Commodities",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313720/Combined+Commodities",
+            "data-linked-resource-id": "457313720",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Risk Arrays",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083458/Risk+Arrays",
+            "data-linked-resource-id": "457083458",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Contracts",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083512/Contracts",
+            "data-linked-resource-id": "457083512",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Intra Tiers",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313965/Intra+Tiers",
+            "data-linked-resource-id": "457313965",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Intra Spreads",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083637/Intra+Spreads",
+            "data-linked-resource-id": "457083637",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Spot Periods",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411427/Spot+Periods",
+            "data-linked-resource-id": "457411427",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Scan Tiers",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083698/Scan+Tiers",
+            "data-linked-resource-id": "457083698",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Exchange Rates",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457214950/Exchange+Rates",
+            "data-linked-resource-id": "457214950",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Risk Arrays - Standard",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411520/Risk+Arrays+-+Standard",
+            "data-linked-resource-id": "457411520",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Inter Tiers",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083792/Inter+Tiers",
+            "data-linked-resource-id": "457083792",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "SOM Tiers",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314197/SOM+Tiers",
+            "data-linked-resource-id": "457314197",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Rate IDs",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457215043/Rate+IDs",
+            "data-linked-resource-id": "457215043",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Inter Exchange Spreads",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411624/Inter+Exchange+Spreads",
+            "data-linked-resource-id": "457411624",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Risk Scenarios",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457215098/Risk+Scenarios",
+            "data-linked-resource-id": "457215098",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Scan Rate Tiers",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314312/Scan+Rate+Tiers",
+            "data-linked-resource-id": "457314312",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Inter Spreads",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083999/Inter+Spreads",
+            "data-linked-resource-id": "457083999",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Products",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457084023/Products",
+            "data-linked-resource-id": "457084023",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Products by Combined Commodity",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457084057/Products+by+Combined+Commodity",
+            "data-linked-resource-id": "457084057",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "PC-SPAN 4.5 Historical Build Notes",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083292/PC-SPAN+4.5+Historical+Build+Notes",
+            "data-linked-resource-id": "457083292",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "confluence_tables",
+            "text": []
+        }
+    ],
+    "page_id": "457313347",
+    "child_page_ids": [
+        "457411492",
+        "457083087",
+        "457214519",
+        "457084126",
+        "457313633",
+        "457411398",
+        "457083445",
+        "457084057",
+        "457313820",
+        "457314153",
+        "457411456",
+        "457215224",
+        "457083343",
+        "457083594",
+        "457083480",
+        "457083187",
+        "457083637",
+        "457313403",
+        "457313662",
+        "457084156",
+        "457083146",
+        "457411024",
+        "457313943",
+        "457083551",
+        "457314428",
+        "457215159",
+        "457214561",
+        "457313675",
+        "457313739",
+        "457313720",
+        "457314279",
+        "457411411",
+        "457214646",
+        "457314069",
+        "457411852",
+        "457082909",
+        "457083133",
+        "457215098",
+        "457411209",
+        "457411817",
+        "457314413",
+        "457083416",
+        "457313512",
+        "457411666",
+        "457215179",
+        "457082941",
+        "457314082",
+        "457314235",
+        "457083100",
+        "457411520",
+        "457314312",
+        "457214888",
+        "457411133",
+        "457411097",
+        "457083458",
+        "457215043",
+        "457083292",
+        "457083828",
+        "457411067",
+        "457214858",
+        "457215013",
+        "457314222",
+        "457083618",
+        "457214982",
+        "457214950",
+        "457314509",
+        "457215340",
+        "457083966",
+        "457314197",
+        "457215357",
+        "457084023",
+        "457083256",
+        "457083223",
+        "457083949",
+        "457314372",
+        "457083999",
+        "457411883",
+        "457313965",
+        "457313476",
+        "457083772",
+        "457215294",
+        "457083725",
+        "457314479",
+        "457083698",
+        "457083792",
+        "457313493",
+        "457411644",
+        "457214773",
+        "457313850",
+        "457083279",
+        "457214571",
+        "457411768",
+        "457313891",
+        "457215263",
+        "457411114",
+        "457411222",
+        "457411265",
+        "457411427",
+        "457083512",
+        "457084084",
+        "457215146",
+        "457083904",
+        "457314015",
+        "457314351",
+        "457411624",
+        "457411562",
+        "457411595",
+        "457313617"
+    ]
+}

@@ -1,0 +1,67 @@
+{
+    "data": [
+        {
+            "type": "link",
+            "text": "SPAN Document XML",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/download/attachments/457083146/spanrisk.dtd?version=1&modificationDate=1734799358894&cacheVersion=1&api=v2",
+            "data-linked-resource-id": "457313555",
+            "data-linked-resource-type": "attachment"
+        },
+        {
+            "type": "link",
+            "text": "Positions file XML",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/download/attachments/457083146/posfile.dtd?version=1&modificationDate=1734799357906&cacheVersion=1&api=v2",
+            "data-linked-resource-id": "457214515",
+            "data-linked-resource-type": "attachment"
+        },
+        {
+            "type": "link",
+            "text": "Contract Specifications XML",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/download/attachments/457083146/cntrSpecs.dtd?version=1&modificationDate=1734799357788&cacheVersion=1&api=v2",
+            "data-linked-resource-id": "457083159",
+            "data-linked-resource-type": "attachment"
+        },
+        {
+            "type": "link",
+            "text": "Price update XML",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/download/attachments/457083146/priceFile.dtd?version=1&modificationDate=1734799357783&cacheVersion=1&api=v2",
+            "data-linked-resource-id": "457313540",
+            "data-linked-resource-type": "attachment"
+        },
+        {
+            "type": "link",
+            "text": "Trade XML",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/download/attachments/457083146/tradeFile.dtd?version=1&modificationDate=1734799358941&cacheVersion=1&api=v2",
+            "data-linked-resource-id": "457083179",
+            "data-linked-resource-type": "attachment"
+        },
+        {
+            "type": "link",
+            "text": "Scenario XML",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/download/attachments/457083146/scenario.dtd?version=1&modificationDate=1734799358794&cacheVersion=1&api=v2",
+            "data-linked-resource-id": "457083175",
+            "data-linked-resource-type": "attachment"
+        },
+        {
+            "type": "link",
+            "text": "Trade Register XML",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/download/attachments/457083146/tradeRegister.dtd?version=1&modificationDate=1734799359093&cacheVersion=1&api=v2",
+            "data-linked-resource-id": "457214545",
+            "data-linked-resource-type": "attachment"
+        },
+        {
+            "type": "confluence_tables",
+            "text": []
+        }
+    ],
+    "page_id": "457083146",
+    "child_page_ids": [
+        "457083175",
+        "457214545",
+        "457083159",
+        "457313540",
+        "457214515",
+        "457313555",
+        "457083179"
+    ]
+}

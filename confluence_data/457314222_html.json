@@ -1,0 +1,225 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Notes:"
+        },
+        {
+            "type": "confluence_tables",
+            "text": [
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "1",
+                                "1",
+                                "1",
+                                "AN",
+                                "X",
+                                "Record ID - \"B\""
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "2",
+                                "3",
+                                "AN",
+                                "X(2)",
+                                "Exchange Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "4",
+                                "5",
+                                "AN",
+                                "X(2)",
+                                "Commodity Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "6",
+                                "9",
+                                "N",
+                                "9(4)",
+                                "Futures Contract Month as YYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "10",
+                                "13",
+                                "N",
+                                "9(4)",
+                                "Option Contract Month as YYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "14",
+                                "15",
+                                "AN",
+                                "X(2)",
+                                "Option Contract Day or Week Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "16",
+                                "23",
+                                "N",
+                                "9(2)V9(6)",
+                                "Base Volatility (as a decimal fraction)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "24",
+                                "31",
+                                "N",
+                                "9(2)V9(6)",
+                                "Volatility Scan Range (as a decimal fraction)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "32",
+                                "36",
+                                "N",
+                                "9(5)",
+                                "Futures Price Scan Range"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "37",
+                                "41",
+                                "N",
+                                "9(2)V9(3)",
+                                "Extreme Move Multiplier"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "42",
+                                "46",
+                                "N",
+                                "9V9(4)",
+                                "Extreme Move Covered Fraction"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "47",
+                                "51",
+                                "N",
+                                "9V9(4)",
+                                "Interest Rate (as a decimal fraction)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "52",
+                                "58",
+                                "N",
+                                "9V9(6)",
+                                "Time to Expiration (in years)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "59",
+                                "64",
+                                "N",
+                                "V9(6)",
+                                "Lookahead Time (in years)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "65",
+                                "70",
+                                "N",
+                                "9(2)V9(4)",
+                                "Delta Scaling Factor"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "71",
+                                "76",
+                                "N",
+                                "9(6)",
+                                "Expiration (Settlement) Date as YYMMDD"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "77",
+                                "78",
+                                "AN",
+                                "X(2)",
+                                "Underlying Commodity Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "79",
+                                "80",
+                                "AN",
+                                "X(2)",
+                                "Futures Contract Day or Week Code"
+                            ],
+                            "links": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_id": "457314222",
+    "child_page_ids": []
+}

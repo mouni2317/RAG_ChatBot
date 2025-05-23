@@ -1,0 +1,390 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Notes:"
+        },
+        {
+            "type": "confluence_tables",
+            "text": [
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "1",
+                                "2",
+                                "AN",
+                                "X(2)",
+                                "Record ID - \"B \""
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "3",
+                                "5",
+                                "AN",
+                                "X(3)",
+                                "Exchange Acronym"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "12",
+                                "6",
+                                "17",
+                                "AN",
+                                "X(12)",
+                                "Commodity Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "18",
+                                "22",
+                                "AN",
+                                "X(5)",
+                                "Product Type Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "23",
+                                "28",
+                                "N",
+                                "9(6)",
+                                "Futures Contract Month as CCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "29",
+                                "30",
+                                "AN",
+                                "X(2)",
+                                "Futures Contract Day or Week Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "31",
+                                "36",
+                                "N",
+                                "9(6)",
+                                "Option Contract Month as CCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "37",
+                                "38",
+                                "AN",
+                                "X(2)",
+                                "Option Contract Day or Week Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "39",
+                                "46",
+                                "N",
+                                "9(8)",
+                                "Base Volatility (as a decimal fraction)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "47",
+                                "47",
+                                "N",
+                                "9",
+                                "Base Volatility Decimal Locator"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "48",
+                                "55",
+                                "N",
+                                "9(8)",
+                                "Volatility Scan Range (as a decimal fraction)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "56",
+                                "56",
+                                "N",
+                                "9",
+                                "Volatility Scan Range Decimal Locator"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "57",
+                                "63",
+                                "N",
+                                "9(5)",
+                                "Futures Price Scan Range"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "64",
+                                "64",
+                                "N",
+                                "9",
+                                "Futures Price Scan Range Decimal Locator"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "65",
+                                "69",
+                                "N",
+                                "9(5)",
+                                "Extreme Move Multiplier"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "70",
+                                "70",
+                                "N",
+                                "9",
+                                "Extreme Move Multiplier Decimal Locator"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "71",
+                                "75",
+                                "N",
+                                "9(5)",
+                                "Extreme Move Covered Fraction"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "76",
+                                "76",
+                                "N",
+                                "9",
+                                "Extreme Move Covered Fraction Decimal Locator"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "77",
+                                "81",
+                                "N",
+                                "9(5)",
+                                "Interest Rate (as a decimal fraction)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "82",
+                                "82",
+                                "N",
+                                "9",
+                                "Interest Rate Decimal Locator"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "83",
+                                "89",
+                                "N",
+                                "9(7)",
+                                "Time to Expiration (in years)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "90",
+                                "90",
+                                "N",
+                                "9",
+                                "Time to Expiration Decimal Locator"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "91",
+                                "96",
+                                "N",
+                                "9(6)",
+                                "Lookahead Time (in years)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "97",
+                                "97",
+                                "N",
+                                "9",
+                                "Lookahead Time Decimal Locator"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "98",
+                                "103",
+                                "N",
+                                "9(6)",
+                                "Delta Scaling Factor"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "104",
+                                "104",
+                                "N",
+                                "9",
+                                "Delta Scaling Factor Decimal Locator"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "105",
+                                "112",
+                                "N",
+                                "9(8)",
+                                "Expiration (Settlement) Date as CCYYMMDD"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "12",
+                                "113",
+                                "124",
+                                "AN",
+                                "X(12)",
+                                "Underlying Commodity Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "125",
+                                "126",
+                                "AN",
+                                "X(2)",
+                                "Pricing Model"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "127",
+                                "131",
+                                "N",
+                                "9(5)",
+                                "Dividend Yield (as a decimal fraction)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "132",
+                                "132",
+                                "N",
+                                "9",
+                                "Dividend Yield Decimal Locator"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "133",
+                                "134",
+                                "AN",
+                                "X",
+                                "Interest Rate Sign.\u00a0\u00a0A minus sign means negative, and blank, null, plus sign or any other value means positive."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "133",
+                                "134",
+                                "AN",
+                                "X",
+                                "Dividend Yield Sign.\u00a0 A minus sign means negative, and blank, null, plus sign or any other value means positive."
+                            ],
+                            "links": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_id": "457411644",
+    "child_page_ids": []
+}

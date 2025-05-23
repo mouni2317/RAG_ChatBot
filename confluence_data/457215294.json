@@ -1,0 +1,33 @@
+{
+    "parentId": "457083480",
+    "ownerId": "60653f79352e1e0069fb728f",
+    "createdAt": "2024-12-21T16:44:00.422Z",
+    "authorId": "60653f79352e1e0069fb728f",
+    "parentType": "page",
+    "position": 474970602,
+    "version": {
+        "number": 1,
+        "message": "",
+        "minorEdit": false,
+        "authorId": "60653f79352e1e0069fb728f",
+        "createdAt": "2024-12-21T16:44:01.703Z"
+    },
+    "body": {
+        "export_view": {
+            "representation": "export_view",
+            "value": "<div class=\"table-wrap\"><table class=\"confluenceTable\"><tbody><tr><th class=\"confluenceTh\">Length</th><th class=\"confluenceTh\">From</th><th class=\"confluenceTh\">To</th><th class=\"confluenceTh\">Datatype</th><th class=\"confluenceTh\">Format</th><th class=\"confluenceTh\">Description and Comments</th></tr><tr><td class=\"confluenceTd\">2</td><td class=\"confluenceTd\">1</td><td class=\"confluenceTd\">2</td><td class=\"confluenceTd\">AN</td><td class=\"confluenceTd\">X(2)</td><td class=\"confluenceTd\">Record ID - &quot;Y &quot;</td></tr><tr><td class=\"confluenceTd\">10</td><td class=\"confluenceTd\">3</td><td class=\"confluenceTd\">12</td><td class=\"confluenceTd\">AN</td><td class=\"confluenceTd\">X(10)</td><td class=\"confluenceTd\">Combination Product (Commodity) Code</td></tr><tr><td class=\"confluenceTd\">10</td><td class=\"confluenceTd\">13</td><td class=\"confluenceTd\">22</td><td class=\"confluenceTd\">AN</td><td class=\"confluenceTd\">X(10)</td><td class=\"confluenceTd\">Option on Combination Product (Commodity) Code</td></tr></tbody></table></div><p><strong>Notes:</strong></p><ol><li>A &quot;Y&quot; record specifies an option on combination product family, and identifies the product family which is the underlying combination. Options in this option-on-combination product family are margined using the method specified on the &quot;X&quot; record for the underlying combination product family.</li></ol>"
+        }
+    },
+    "status": "current",
+    "title": "Type Y Record - Standard and Expanded",
+    "spaceId": "457312811",
+    "lastOwnerId": null,
+    "id": "457215294",
+    "_links": {
+        "editui": "/pages/resumedraft.action?draftId=457215294",
+        "webui": "/spaces/pubsub/pages/457215294/Type+Y+Record+-+Standard+and+Expanded",
+        "edituiv2": "/spaces/pubsub/pages/edit-v2/457215294",
+        "tinyui": "/x/Po1AGw",
+        "base": "https://cmegroupclientsite.atlassian.net/wiki"
+    }
+}

@@ -1,0 +1,405 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "These pages contain the comprehensive description of file layouts for fourpositional formatsfor SPAN risk parameter files -- theunpackedformat, thepackedformat, theexpanded unpackedformat, and theParis expandedformat."
+        },
+        {
+            "type": "heading",
+            "text": "Please note that: theLondon Clearing Houseproduces SPAN files for the LIFFE and the other exchanges it clears in theLondon format, not described here."
+        },
+        {
+            "type": "link",
+            "text": "Currency Codes Recognized",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083445/Risk+Parameter+File+Layouts+for+the+Positional+Formats",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Standard Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411411/Type+0+Records+-+Standard",
+            "data-linked-resource-id": "457411411",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Expanded Format and Paris Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411411/Type+0+Records+-+Standard",
+            "data-linked-resource-id": "457411411",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Standard Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457214858/Type+1+Records+-+Standard",
+            "data-linked-resource-id": "457214858",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Expanded Format and Paris Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314235/Type+1+Records+-+Expanded+and+Paris",
+            "data-linked-resource-id": "457314235",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Standard Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314153/Type+2+Record+-+Standard",
+            "data-linked-resource-id": "457314153",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457215340/Type+2+-+Expanded",
+            "data-linked-resource-id": "457215340",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Paris Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457214982/Type+2+-+Paris+Expanded",
+            "data-linked-resource-id": "457214982",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Standard Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411562/Type+3+Record+-+Standard",
+            "data-linked-resource-id": "457411562",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457084156/Type+3+-+Expanded",
+            "data-linked-resource-id": "457084156",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Paris Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411666/Type+3+-+Paris+Expanded",
+            "data-linked-resource-id": "457411666",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Standard Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314082/Type+4+Record+-+Standard",
+            "data-linked-resource-id": "457314082",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411883/Type+4+-+Expanded",
+            "data-linked-resource-id": "457411883",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Paris Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457215357/Type+4+-+Paris+Expanded",
+            "data-linked-resource-id": "457215357",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Standard Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411492/Type+5+Record+-+Standard",
+            "data-linked-resource-id": "457411492",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314351/Type+5+-+Expanded",
+            "data-linked-resource-id": "457314351",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Paris Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314372/Type+5+-+Paris+Expanded",
+            "data-linked-resource-id": "457314372",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Standard Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083904/Type+6+Record+-+Standard",
+            "data-linked-resource-id": "457083904",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314509/Type+6+-+Expanded",
+            "data-linked-resource-id": "457314509",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Paris Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457215224/Type+6+-+Paris+Expanded",
+            "data-linked-resource-id": "457215224",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Standard Formats",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314279/Type+8+Records+-+Standard",
+            "data-linked-resource-id": "457314279",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083725/Type+8+-+Expanded",
+            "data-linked-resource-id": "457083725",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Paris Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314428/Type+8+-+Paris+Expanded",
+            "data-linked-resource-id": "457314428",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Standard Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457215013/Type+9+Records+-+Standard",
+            "data-linked-resource-id": "457215013",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411595/Type+9+-+Expanded",
+            "data-linked-resource-id": "457411595",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Paris Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083772/Type+9+-+Paris+Expanded",
+            "data-linked-resource-id": "457083772",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Standard Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314222/Type+B+Record+-+Standard",
+            "data-linked-resource-id": "457314222",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457215159/Type+B+-+Expanded",
+            "data-linked-resource-id": "457215159",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Paris Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411644/Type+B+-+Paris+Expanded",
+            "data-linked-resource-id": "457411644",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Standard Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457215146/Type+C+Record+-+Standard",
+            "data-linked-resource-id": "457215146",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Expanded Format and Paris Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411817/Type+C+-+Expanded+Format+and+Paris+Expanded",
+            "data-linked-resource-id": "457411817",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Standard and Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457215179/Type+E+Record+-+Standard",
+            "data-linked-resource-id": "457215179",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Standard and Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083966/Type+P+Record+-+Standard+and+Expanded",
+            "data-linked-resource-id": "457083966",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Paris Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457084126/Type+P+-+Paris+Expanded",
+            "data-linked-resource-id": "457084126",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Standard Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083949/Type+R+Record+-+Standard",
+            "data-linked-resource-id": "457083949",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083828/Type+R+-+Expanded",
+            "data-linked-resource-id": "457083828",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Standard Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314413/Type+S+Record+-+Standard",
+            "data-linked-resource-id": "457314413",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Expanded Format and Paris Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411852/Type+S+-+Expanded+Format+and+Paris+Expanded",
+            "data-linked-resource-id": "457411852",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Standard and Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314479/Type+T+Record+-+Standard+and+Expanded",
+            "data-linked-resource-id": "457314479",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Paris Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411456/Type+T+-+Paris+Expanded",
+            "data-linked-resource-id": "457411456",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Standard Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411768/Type+V+Record+-+Standard",
+            "data-linked-resource-id": "457411768",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314015/Type+V+-+Expanded",
+            "data-linked-resource-id": "457314015",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Standard and Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457084084/Type+X+Record+-+Standard+and+Expanded",
+            "data-linked-resource-id": "457084084",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Standard and Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457215294/Type+Y+Record+-+Standard+and+Expanded",
+            "data-linked-resource-id": "457215294",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Standard and Expanded Format",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457215263/Type+Z+Record+-+Standard+and+Expanded",
+            "data-linked-resource-id": "457215263",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Euronext",
+            "url": "http://www.bourse-de-paris.fr/defaultgb.htm",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Clearnet SA",
+            "url": "http://www.clearnetsa.com/",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "SPAN files for the MATIF and Monep markets",
+            "url": "http://www.clearnetsa.com/clearing/",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "London Clearing House",
+            "url": "http://www.lch.co.uk/",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "confluence_tables",
+            "text": []
+        }
+    ],
+    "page_id": "457083445",
+    "child_page_ids": [
+        "457411492",
+        "457314428",
+        "457083772",
+        "457314479",
+        "457083725",
+        "457215294",
+        "457215159",
+        "457084126",
+        "457411644",
+        "457314279",
+        "457215013",
+        "457214858",
+        "457314222",
+        "457083828",
+        "457411411",
+        "457411768",
+        "457411852",
+        "457314153",
+        "457214982",
+        "457215263",
+        "457314509",
+        "457215340",
+        "457215224",
+        "457083966",
+        "457411817",
+        "457411456",
+        "457084084",
+        "457215357",
+        "457314413",
+        "457411666",
+        "457215146",
+        "457083904",
+        "457314015",
+        "457314351",
+        "457083949",
+        "457314372",
+        "457411562",
+        "457411883",
+        "457411595",
+        "457215179",
+        "457084156",
+        "457314082",
+        "457314235"
+    ]
+}

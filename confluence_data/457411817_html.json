@@ -1,0 +1,456 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Notes:"
+        },
+        {
+            "type": "confluence_tables",
+            "text": [
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "1",
+                                "2",
+                                "AN",
+                                "X(2)",
+                                "Record ID - \"C \""
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "3",
+                                "8",
+                                "AN",
+                                "X(6)",
+                                "Combined Commodity Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "9",
+                                "10",
+                                "AN",
+                                "X(2)",
+                                "Intracommodity Spread Method Code - \"10\""
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "11",
+                                "12",
+                                "N",
+                                "9(2)",
+                                "Spread Priority (Spread Number)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "13",
+                                "14",
+                                "N",
+                                "9(2)",
+                                "Number of Legs"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "15",
+                                "21",
+                                "N",
+                                "9(7)",
+                                "Charge Rate"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "22",
+                                "23",
+                                "N",
+                                "9(2)",
+                                "Leg 1 - Leg number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "24",
+                                "25",
+                                "N",
+                                "9(2)",
+                                "Leg 1 - Tier number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "26",
+                                "27",
+                                "N",
+                                "9(2)",
+                                "Leg 1 - Delta Per Spread Ratio"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "28",
+                                "28",
+                                "A",
+                                "A",
+                                "Leg 1 - Market Side (AorB)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "29",
+                                "30",
+                                "N",
+                                "9(2)",
+                                "Leg 2 - Leg number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "31",
+                                "32",
+                                "N",
+                                "9(2)",
+                                "Leg 2 - Tier number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "33",
+                                "34",
+                                "N",
+                                "9(2)",
+                                "Leg 2 - Delta Per Spread Ratio"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "35",
+                                "35",
+                                "A",
+                                "A",
+                                "Leg 2 - Market Side (AorB)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "36",
+                                "37",
+                                "N",
+                                "9(2)",
+                                "Leg 3 - Leg number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "38",
+                                "39",
+                                "N",
+                                "9(2)",
+                                "Leg 3 - Tier number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "40",
+                                "41",
+                                "N",
+                                "9(2)",
+                                "Leg 3 - Delta Per Spread Ratio"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "42",
+                                "42",
+                                "A",
+                                "A",
+                                "Leg 3 - Market Side (AorB)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "43",
+                                "44",
+                                "N",
+                                "9(2)",
+                                "Leg 4 - Leg number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "45",
+                                "46",
+                                "N",
+                                "9(2)",
+                                "Leg 4 - Tier number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "47",
+                                "48",
+                                "N",
+                                "9(2)",
+                                "Leg 4 - Delta Per Spread Ratio"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "49",
+                                "49",
+                                "A",
+                                "A",
+                                "Leg 4 - Market Side (AorB)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "50",
+                                "51",
+                                "N",
+                                "9(2)",
+                                "Leg 5 - Leg number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "52",
+                                "53",
+                                "N",
+                                "9(2)",
+                                "Leg 5 - Tier number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "54",
+                                "55",
+                                "N",
+                                "9(2)",
+                                "Leg 5 - Delta Per Spread Ratio"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "56",
+                                "56",
+                                "A",
+                                "A",
+                                "Leg 5 - Market Side (AorB)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "57",
+                                "58",
+                                "N",
+                                "9(2)",
+                                "Leg 6 - Leg number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "59",
+                                "60",
+                                "N",
+                                "9(2)",
+                                "Leg 6 - Tier number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "61",
+                                "62",
+                                "N",
+                                "9(2)",
+                                "Leg 6 - Delta Per Spread Ratio"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "63",
+                                "63",
+                                "A",
+                                "A",
+                                "Leg 6 - Market Side (AorB)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "64",
+                                "65",
+                                "N",
+                                "9(2)",
+                                "Leg 7 - Leg number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "66",
+                                "67",
+                                "N",
+                                "9(2)",
+                                "Leg 7 - Tier number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "68",
+                                "69",
+                                "N",
+                                "9(2)",
+                                "Leg 7 - Delta Per Spread Ratio"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "70",
+                                "70",
+                                "A",
+                                "A",
+                                "Leg 7 - Market Side (AorB)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "71",
+                                "72",
+                                "N",
+                                "9(2)",
+                                "Leg 8 - Leg number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "73",
+                                "74",
+                                "N",
+                                "9(2)",
+                                "Leg 8 - Tier number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "75",
+                                "76",
+                                "N",
+                                "9(2)",
+                                "Leg 8 - Delta Per Spread Ratio"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "77",
+                                "77",
+                                "A",
+                                "A",
+                                "Leg 8 - Market Side (AorB)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "55",
+                                "78",
+                                "132",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_id": "457411817",
+    "child_page_ids": []
+}

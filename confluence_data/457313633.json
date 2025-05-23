@@ -1,0 +1,33 @@
+{
+    "parentId": "457083133",
+    "spaceId": "457312811",
+    "ownerId": "60653f79352e1e0069fb728f",
+    "lastOwnerId": null,
+    "createdAt": "2024-12-21T16:42:48.405Z",
+    "authorId": "60653f79352e1e0069fb728f",
+    "parentType": "page",
+    "version": {
+        "number": 1,
+        "message": "",
+        "minorEdit": false,
+        "authorId": "60653f79352e1e0069fb728f",
+        "createdAt": "2024-12-21T16:42:49.934Z"
+    },
+    "position": 403443460,
+    "body": {
+        "export_view": {
+            "representation": "export_view",
+            "value": "<p>This report will show the details of each spread that is formed from the positions in a given portfolio, along with its available and remaining delta value and any resulting charges or credits.\u00a0 To use this report, first:</p><ul><li>After creating\u00a0 a new portfolio, select <strong>Tools</strong>from the Span toolbar</li><li>Select <strong>Preferences</strong></li><li>Select the <strong>Calculation Parameters</strong>tab</li><li>Under the <strong>Log What</strong> section, select <strong>Include Calculations - all details (slow)</strong>.\u00a0 Choose OK</li><li>Return to the Span toolbar and select <strong>View</strong></li><li>Under <strong>View</strong>, select <strong>Log </strong>- now the screen is split and the log is viewable at the bottom</li><li>Now calculate the portfolio - the portfolio cannot be calculated before the above steps are completed</li><li>Choose <strong>Save Log</strong>, name the file<strong> </strong>and save it as &quot;filename.log&quot;</li><li>In Reports, select the <strong>Spreads Detail </strong>Report from the Portfolio folder</li><li>In the prompt window, enter the path and file that was named above</li><li>A window containing a warning about an Active X Control will pop up - choose Yes to continue</li><li>Span will produce the Spreads Detail Report</li></ul><p><strong>Spread Type:</strong></p><p>The spread is classified into one of\u00a0 the following types:</p><ul><li>Intra:\u00a0 Additional intracommodity charges for spread positions from the same product group with different expirations</li><li>Inter:\u00a0 Intercommodity credits for spread positions in related instruments</li><li>Intex:\u00a0 Interexchange credits for spread positions at different exchanges</li></ul><p><strong>Spread #</strong></p><p>Span assigns a specific Spread number to every possible spread that is formed. For a complete listing of Spread numbers, (depending on the type of spread) view either the IntraSpreads, InterSpread or InterExch. spread reports under the Risk Parameters Folder.\u00a0</p><p><strong># of Spreads Formed\u00a0 </strong></p><p>This shows the actual number of spreads Span forms from the given portfolios.</p><p><strong>Rate ID:\u00a0 </strong>Identifies the class to which charges or credits are applied.</p><p><strong>Curr:</strong>\u00a0\u00a0 The currency used for each spread.</p><p><strong>Comb Comm:\u00a0\u00a0\u00a0 Combined Commodity</strong></p><p>The set of all eligible products used to generate a total requirement for each Exchange Complex within a portfolio.\u00a0 A Combined Commodity generally consists of all products of the same underlying physical. For example, at the CME, the Eurodollar combined commodity encompasses Mid-Curve options, Eurodollars and Eurodollar options.\u00a0 To view the complete listing of Combined Commodities, refer to the Combined Commodities report under the Risk Parameters folder.</p><p><strong>Tier No.:\u00a0 </strong>A tier is a set of consecutive contract expirations for one Combined Commodity.\u00a0 The tier number refers to a series of contract expirations within a tier.\u00a0 Overall is used to identify all contract expirations in a Combined Commodity.\u00a0 A period is a particular contract month.</p><p><strong>Delta Available: </strong>Total delta available for a contract before the identified spread has been calculated.</p><p><strong>Delta Remaining:</strong>\u00a0 Total delta left for a contract after the identified spread has been calculated</p><p><strong>Charge/Credit:\u00a0 Intracommodity Charge/InterCommodity Credit</strong></p><p>Intracommodity Charge:\u00a0 The additional charge for the identified spread.</p><p>InterCommodity Credit:\u00a0 The offsetting credit for the identified spread.\u00a0</p>"
+        }
+    },
+    "status": "current",
+    "title": "Spreads Detail Report",
+    "id": "457313633",
+    "_links": {
+        "editui": "/pages/resumedraft.action?draftId=457313633",
+        "webui": "/spaces/pubsub/pages/457313633/Spreads+Detail+Report",
+        "edituiv2": "/spaces/pubsub/pages/edit-v2/457313633",
+        "tinyui": "/x/YQ1CGw",
+        "base": "https://cmegroupclientsite.atlassian.net/wiki"
+    }
+}

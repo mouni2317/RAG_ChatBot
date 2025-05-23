@@ -1,0 +1,58 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "By default, PC-SPAN version 4 will look to theDatasubdirectory of the main application directory for risk parameter files to load, but you can select risk parameter files to load from any disk and directory."
+        },
+        {
+            "type": "heading",
+            "text": "XML stands for Extensible Markup Language.\u00a0 An XML-based SPAN file is actually just a SPAN document.\u00a0 So you can load it usingeithertheLoadcommand, or theOpencommand.\u00a0 But there are two differences between theLoadcommand and theOpencommand worth understanding:"
+        },
+        {
+            "type": "heading",
+            "text": "If you are loading a SPAN file for an exchange complex and point in time, and if data for that exchange complex and point in time is already contained in the current SPAN document, the data in the document will beupdatedby the data from the SPAN file.\u00a0 In other words, you canreloada SPAN file without first having to delete its data from the current SPAN document."
+        },
+        {
+            "type": "heading",
+            "text": "PC-SPAN version 4 doesnotsupport the\"packed\"SPAN file format -- which used the.pckfiletype -- and in which text data was stored using the EBCDIC coding scheme and numeric data in \"packed decimal\".\u00a0 Only the CME and CBOT create this format, it is only available to outside parties in limited circumstances, and both CME and CBOT also provide SPAN data in the standard unpacked format."
+        },
+        {
+            "type": "heading",
+            "text": "We do intend to add support for theLondon formats, as well as certain features of SPAN used by the London Clearing House, in the near future."
+        },
+        {
+            "type": "link",
+            "text": "ftp://ftp.cmegroup.com",
+            "url": "ftp://ftp.cmegroup.com",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "f",
+            "url": "http://www.cme.com/ftp.wrap/span/data/",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "tp://ftp.cmegroup.com/span/",
+            "url": "ftp://ftp.cmegroup.com/span/",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": ".",
+            "url": "http://www.cme.com/ftp.wrap/span/data/",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "confluence_tables",
+            "text": []
+        }
+    ],
+    "page_id": "457083256",
+    "child_page_ids": []
+}

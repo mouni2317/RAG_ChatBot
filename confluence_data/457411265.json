@@ -1,0 +1,33 @@
+{
+    "parentId": "457083133",
+    "spaceId": "457312811",
+    "ownerId": "60653f79352e1e0069fb728f",
+    "lastOwnerId": null,
+    "createdAt": "2024-12-21T16:42:58.331Z",
+    "authorId": "60653f79352e1e0069fb728f",
+    "parentType": "page",
+    "version": {
+        "number": 1,
+        "message": "",
+        "minorEdit": false,
+        "authorId": "60653f79352e1e0069fb728f",
+        "createdAt": "2024-12-21T16:42:59.839Z"
+    },
+    "position": 403444139,
+    "body": {
+        "export_view": {
+            "representation": "export_view",
+            "value": "<p>This report gives a portfolio's net and gross original deltas for each contract period for a Combined Commodity.\u00a0 The delta remaining after intra and intercommodity spreading is displayed, as well as any Spot Charges that may be applied to the total performance bond requirement.</p><p><strong>Exch Cmplx:\u00a0\u00a0\u00a0 Exchange Complex</strong></p><p>The exchange complex, clearing organization or cross margining agreement.\u00a0 The Exchange Complex contains the set of Combined Commodities for a single exchange, clearing organization or cross margining agreement (although in some cases the Exchange Complex may have more than one exchange).\u00a0 To view the complete listing of Exchange Complexes refer to the Exchanges report under the reports Master folder.</p><p><strong>Comb Comm:\u00a0\u00a0\u00a0 Combined Commodity</strong></p><p>The set of all eligible products used to generate a total requirement for each Exchange Complex within a portfolio.\u00a0 A Combined Commodity generally consists of all products of the same underlying physical. For example, at the CME, the Eurodollar combined commodity encompasses Mid-Curve options, Eurodollars and Eurodollar options.\u00a0 To view the complete listing of Combined Commodities, refer to the Combined Commodities report under the Risk Parameters folder.</p><p><strong>Level:</strong>\u00a0 The breakdown of the delta for net and gross portfolios.\u00a0 The period delta is shown as net for a net portfolio, but\u00a0 a gross portfolio is categorized into inter, intra and naked deltas.</p><p><strong>Class:\u00a0\u00a0\u00a0 </strong>Specifies the different levels of performance bond requirements.\u00a0 This allows an exchange or clearing organization to divide its performance bond requirement into different, acceptable forms of collateral.</p><p><strong>Maint/Init:\u00a0\u00a0 </strong>Identifies whether a performance bond requirement is a Maintenance Requirement or an Initial Requirement.</p><p><strong>Period:</strong>\u00a0 A defined period of time that identifies the contract.\u00a0 The period is usually expressed a contract month, contract week, etc....</p><p><strong>Original Delta - Net/Gross</strong></p><p>Net Delta:\u00a0 The netted amount of delta per period for each Combined Commodity</p><p>Gross Delta:\u00a0 The total amount of delta per period and Combined Commodity.\u00a0 Both long and short delta are shown for the gross delta.</p><p><strong>Remaining Net Delta:</strong>\u00a0 Total net delta left in a product after all intracommodity and interexchange spreading has been calculated.</p><p><strong>Spot Charge:\u00a0 </strong>Additional charge that covers the risk of products nearing expiration.</p><p>Spreads:<strong> </strong>Identifies any Spot Charge as a result of intracommodity spreads.</p><p>Outrights:\u00a0 Identifies any Spot Charge added as a result of outrights.</p>"
+        }
+    },
+    "status": "current",
+    "title": "Period Deltas Report",
+    "id": "457411265",
+    "_links": {
+        "editui": "/pages/resumedraft.action?draftId=457411265",
+        "webui": "/spaces/pubsub/pages/457411265/Period+Deltas+Report",
+        "edituiv2": "/spaces/pubsub/pages/edit-v2/457411265",
+        "tinyui": "/x/wYpDGw",
+        "base": "https://cmegroupclientsite.atlassian.net/wiki"
+    }
+}

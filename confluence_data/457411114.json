@@ -1,0 +1,33 @@
+{
+    "parentId": "457313347",
+    "ownerId": "60653f79352e1e0069fb728f",
+    "lastOwnerId": null,
+    "createdAt": "2024-12-21T16:42:43.837Z",
+    "authorId": "60653f79352e1e0069fb728f",
+    "parentType": "page",
+    "version": {
+        "number": 1,
+        "message": "",
+        "minorEdit": false,
+        "authorId": "60653f79352e1e0069fb728f",
+        "createdAt": "2024-12-21T16:42:45.251Z"
+    },
+    "position": 56098053,
+    "body": {
+        "export_view": {
+            "representation": "export_view",
+            "value": "<p><ul class='childpages-macro'><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313720/Combined+Commodities\" data-linked-resource-id=\"457313720\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Combined Commodities</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083458/Risk+Arrays\" data-linked-resource-id=\"457083458\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Risk Arrays</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083512/Contracts\" data-linked-resource-id=\"457083512\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Contracts</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313965/Intra+Tiers\" data-linked-resource-id=\"457313965\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Intra Tiers</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083637/Intra+Spreads\" data-linked-resource-id=\"457083637\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Intra Spreads</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411427/Spot+Periods\" data-linked-resource-id=\"457411427\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Spot Periods</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083698/Scan+Tiers\" data-linked-resource-id=\"457083698\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Scan Tiers</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457214950/Exchange+Rates\" data-linked-resource-id=\"457214950\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Exchange Rates</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411520/Risk+Arrays+-+Standard\" data-linked-resource-id=\"457411520\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Risk Arrays - Standard</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083792/Inter+Tiers\" data-linked-resource-id=\"457083792\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Inter Tiers</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314197/SOM+Tiers\" data-linked-resource-id=\"457314197\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">SOM Tiers</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457215043/Rate+IDs\" data-linked-resource-id=\"457215043\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Rate IDs</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411624/Inter+Exchange+Spreads\" data-linked-resource-id=\"457411624\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Inter Exchange Spreads</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457215098/Risk+Scenarios\" data-linked-resource-id=\"457215098\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Risk Scenarios</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314312/Scan+Rate+Tiers\" data-linked-resource-id=\"457314312\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Scan Rate Tiers</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083999/Inter+Spreads\" data-linked-resource-id=\"457083999\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Inter Spreads</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457084023/Products\" data-linked-resource-id=\"457084023\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Products</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457084057/Products+by+Combined+Commodity\" data-linked-resource-id=\"457084057\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Products by Combined Commodity</a></li></ul></p>"
+        }
+    },
+    "status": "current",
+    "title": "Risk Parameters Reports",
+    "spaceId": "457312811",
+    "id": "457411114",
+    "_links": {
+        "editui": "/pages/resumedraft.action?draftId=457411114",
+        "webui": "/spaces/pubsub/pages/457411114/Risk+Parameters+Reports",
+        "edituiv2": "/spaces/pubsub/pages/edit-v2/457411114",
+        "tinyui": "/x/KopDGw",
+        "base": "https://cmegroupclientsite.atlassian.net/wiki"
+    }
+}

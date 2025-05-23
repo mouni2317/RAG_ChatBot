@@ -1,0 +1,537 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Contract-Specific Contract Value Factor(for normal futures and options)"
+        },
+        {
+            "type": "heading",
+            "text": "Notes:"
+        },
+        {
+            "type": "confluence_tables",
+            "text": [
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "1",
+                                "2",
+                                "AN",
+                                "X(2)",
+                                "Record ID - \"B \""
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "3",
+                                "5",
+                                "AN",
+                                "X(3)",
+                                "Exchange Acronym"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "10",
+                                "6",
+                                "15",
+                                "AN",
+                                "X(10)",
+                                "Commodity Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "16",
+                                "18",
+                                "AN",
+                                "X(3)",
+                                "Product Type Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "19",
+                                "24",
+                                "N",
+                                "9(6)",
+                                "Futures Contract Month as CCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "25",
+                                "26",
+                                "AN",
+                                "X(2)",
+                                "Futures Contract Day or Week Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "27",
+                                "27",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "28",
+                                "33",
+                                "N",
+                                "9(6)",
+                                "Option Contract Month as CCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "34",
+                                "35",
+                                "AN",
+                                "X(2)",
+                                "Option Contract Day or Week Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "36",
+                                "36",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "37",
+                                "44",
+                                "N",
+                                "9(2)V9(6)",
+                                "Base Volatility (as a decimal fraction)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "45",
+                                "52",
+                                "N",
+                                "9(2)V9(6)",
+                                "Volatility\u00a0Scan\u00a0Range\u00a0(as a decimal fraction)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "53",
+                                "57",
+                                "N",
+                                "9(5)",
+                                "Futures\u00a0Price\u00a0Scan\u00a0Range"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "58",
+                                "62",
+                                "N",
+                                "9(2)V9(3)",
+                                "Extreme Move Multiplier"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "63",
+                                "67",
+                                "N",
+                                "9V9(4)",
+                                "Extreme Move Covered Fraction"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "68",
+                                "72",
+                                "N",
+                                "9V9(4)",
+                                "Interest Rate (as a decimal fraction)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "73",
+                                "79",
+                                "N",
+                                "9V9(6)",
+                                "Time to Expiration (in years)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "80",
+                                "85",
+                                "N",
+                                "V9(6)",
+                                "Lookahead Time (in years)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "86",
+                                "91",
+                                "N",
+                                "9(2)V9(4)",
+                                "Delta Scaling Factor"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "92",
+                                "99",
+                                "N",
+                                "9(8)",
+                                "Expiration (Settlement) Date as CCYYMMDD"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "10",
+                                "100",
+                                "109",
+                                "AN",
+                                "X(10)",
+                                "Underlying Commodity Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "110",
+                                "111",
+                                "AN",
+                                "X(2)",
+                                "Pricing Model"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "112",
+                                "119",
+                                "N",
+                                "9(2)V9(6)",
+                                "Coupon or Dividend Yield, as a decimal fraction"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "120",
+                                "120",
+                                "AN",
+                                "X(1)",
+                                "Option Expiration Reference Price Flag -- see note below"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "121",
+                                "127",
+                                "N",
+                                "9(7)",
+                                "Option Expiration Reference Price"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "128",
+                                "128",
+                                "AN",
+                                "X(1)",
+                                "Option Expiration Reference Price Sign (+ or -)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "14",
+                                "129",
+                                "142",
+                                "N",
+                                "9(7)V9(7)",
+                                "Swap Value Factor (for interest-rate swaps) orContract-Specific Contract Value Factor(for normal futures and options)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "143",
+                                "144",
+                                "N",
+                                "9(2)",
+                                "Swap Value Factor Exponent"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "145",
+                                "145",
+                                "AN",
+                                "X",
+                                "Sign for Swap Value Factor Exponent (blank, \"+\" or \"-\")"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "146",
+                                "147",
+                                "N",
+                                "9(2)",
+                                "Base Volatility Exponent"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "148",
+                                "148",
+                                "AN",
+                                "X",
+                                "Sign for Base Volatility Exponent (blank, \"+\" or \"-\")"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "149",
+                                "150",
+                                "N",
+                                "9(2)",
+                                "Volatility\u00a0Scan\u00a0Range\u00a0Exponent"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "151",
+                                "151",
+                                "AN",
+                                "X",
+                                "Sign for Volatility Scan Range Exponent (blank, \"+\" or \"-\")"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "12",
+                                "152",
+                                "163",
+                                "N",
+                                "9(2)V9(10)",
+                                "Discount Factor (for discounting back to present value)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "164",
+                                "164",
+                                "AN",
+                                "X",
+                                "Volatility Scan Range Quotation Method -- blank orAmeans that the volatility scan range is provided as an absolute value, andPmeans that it is provided as percentage of the implied volatility."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "165",
+                                "165",
+                                "AN",
+                                "X",
+                                "Price Scan Range Quotation Method -- blank orAmeans that the price scan range is provided as an absolute value, andPmeans that is provided as a percentage of the contract value"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "166",
+                                "167",
+                                "N",
+                                "9(2)",
+                                "Futures Price Scan Range Exponent"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "168",
+                                "168",
+                                "AN",
+                                "X",
+                                "Sign for Futures Price Scan Range Exponent (blank, \"+\" or \"-\")"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "169",
+                                "173",
+                                "AN",
+                                "X",
+                                "Delivery Margin Method"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "174",
+                                "181",
+                                "N",
+                                "9(8)",
+                                "Margin Removal Date (as CCYYMMDD) \u2013 if present, positions in this contract no longer contribute to the margin requirement, beginning at the specified cycle on this date, and subsequently"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "182",
+                                "182",
+                                "AN",
+                                "X",
+                                "Margin Removal Cycle \u2013 eitherSfor end of day, orIfor intraday.\u00a0 If the margin removal date is provided but the cycle value is not, a value ofSfor end of day cycle is defaulted."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "183",
+                                "183",
+                                "AN",
+                                "X",
+                                "Interest Rate Sign.\u00a0 A\u00a0minus sign\u00a0means the interest rate is negative, and blank, null, + or any other value means it is positive."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "184",
+                                "184",
+                                "AN",
+                                "X",
+                                "Coupon or Dividend Yield Sign.\u00a0 A minus sign means the coupon or dividend yield is negative, and blank, null, + or any other value means it is positive."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "14",
+                                "185",
+                                "198",
+                                "N",
+                                "9(14)",
+                                "High Precision Option Expiration Reference Price"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "199",
+                                "199",
+                                "AN",
+                                "X",
+                                "High Precision Option Expiration Reference Price Sign \u2013 blank, + or -.\u00a0 Any value other than a minus sign indicates that the value is positive."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "200",
+                                "200",
+                                "AN",
+                                "X",
+                                "High Precision Option Expiration Reference Price Flag.\u00a0 N means that the high-precision option expiration reference price field is populated, but that the price can be read from either the regular precision field or the high-precision field.\u00a0 Y means that the value can only be read from the high-precision field."
+                            ],
+                            "links": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_id": "457215159",
+    "child_page_ids": []
+}

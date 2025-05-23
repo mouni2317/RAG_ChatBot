@@ -1,0 +1,566 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Notes:"
+        },
+        {
+            "type": "confluence_tables",
+            "text": [
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "1",
+                                "1",
+                                "1",
+                                "AN",
+                                "X",
+                                "Record ID - \"2\""
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "2",
+                                "4",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "5",
+                                "6",
+                                "AN",
+                                "X(2)",
+                                "Commodity (Product) Code 1"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "7",
+                                "7",
+                                "AN",
+                                "X",
+                                "Contract Type (Future/Put/Call) Indicator 1"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "8",
+                                "9",
+                                "AN",
+                                "X(2)",
+                                "Commodity (Product) Code 2"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "10",
+                                "10",
+                                "AN",
+                                "X",
+                                "Contract Type (Future/Put/Call) Indicator 2"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "11",
+                                "12",
+                                "AN",
+                                "X(2)",
+                                "Commodity (Product) Code 3"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "13",
+                                "13",
+                                "AN",
+                                "X",
+                                "Contract Type (Future/Put/Call) Indicator 3"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "14",
+                                "15",
+                                "AN",
+                                "X(2)",
+                                "Commodity (Product) Code 4"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "16",
+                                "16",
+                                "AN",
+                                "X",
+                                "Contract Type (Future/Put/Call) Indicator 4"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "17",
+                                "18",
+                                "AN",
+                                "X(2)",
+                                "Commodity (Product) Code 5"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "19",
+                                "19",
+                                "AN",
+                                "X",
+                                "Contract Type (Future/Put/Call) Indicator 5"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "20",
+                                "21",
+                                "AN",
+                                "X(2)",
+                                "Commodity (Product) Code 6"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "22",
+                                "22",
+                                "AN",
+                                "X",
+                                "Contract Type (Future/Put/Call) Indicator 6"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "23",
+                                "24",
+                                "AN",
+                                "X(2)",
+                                "Commodity (Product) Code 7"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "25",
+                                "25",
+                                "AN",
+                                "X",
+                                "Contract Type (Future/Put/Call) Indicator 7"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "26",
+                                "27",
+                                "AN",
+                                "X(2)",
+                                "Commodity (Product) Code 8"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "28",
+                                "28",
+                                "AN",
+                                "X",
+                                "Contract Type (Future/Put/Call) Indicator 8"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "29",
+                                "30",
+                                "AN",
+                                "X(2)",
+                                "Commodity (Product) Code 9"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "31",
+                                "31",
+                                "AN",
+                                "X",
+                                "Contract Type (Future/Put/Call) Indicator 9"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "32",
+                                "33",
+                                "AN",
+                                "X(2)",
+                                "Commodity (Product) Code 10"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "34",
+                                "34",
+                                "AN",
+                                "X",
+                                "Contract Type (Future/Put/Call) Indicator 10"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "35",
+                                "36",
+                                "AN",
+                                "X(2)",
+                                "Commodity (Product) Code 11"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "37",
+                                "37",
+                                "AN",
+                                "X",
+                                "Contract Type (Future/Put/Call) Indicator 11"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "38",
+                                "39",
+                                "AN",
+                                "X(2)",
+                                "Commodity (Product) Code 12"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "40",
+                                "40",
+                                "AN",
+                                "X",
+                                "Contract Type (Future/Put/Call) Indicator 12"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "41",
+                                "42",
+                                "AN",
+                                "X(2)",
+                                "Commodity (Product) Code 13"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "43",
+                                "43",
+                                "AN",
+                                "X",
+                                "Contract Type (Future/Put/Call) Indicator 13"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "44",
+                                "45",
+                                "AN",
+                                "X(2)",
+                                "Commodity (Product) Code 14"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "46",
+                                "46",
+                                "AN",
+                                "X",
+                                "Contract Type (Future/Put/Call) Indicator 14"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "47",
+                                "48",
+                                "AN",
+                                "X(2)",
+                                "Commodity (Product) Code 15"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "49",
+                                "49",
+                                "AN",
+                                "X",
+                                "Contract Type (Future/Put/Call) Indicator 15"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "50",
+                                "51",
+                                "AN",
+                                "X(2)",
+                                "Commodity (Product) Code 16"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "52",
+                                "52",
+                                "AN",
+                                "X",
+                                "Contract Type (Future/Put/Call) Indicator 16"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "53",
+                                "54",
+                                "AN",
+                                "X(2)",
+                                "Commodity (Product) Code 17"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "55",
+                                "55",
+                                "AN",
+                                "X",
+                                "Contract Type (Future/Put/Call) Indicator 17"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "56",
+                                "57",
+                                "AN",
+                                "X(2)",
+                                "Commodity (Product) Code 18"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "58",
+                                "58",
+                                "AN",
+                                "X",
+                                "Contract Type (Future/Put/Call) Indicator 18"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "59",
+                                "60",
+                                "AN",
+                                "X(2)",
+                                "Commodity (Product) Code 19"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "61",
+                                "61",
+                                "AN",
+                                "X",
+                                "Contract Type (Future/Put/Call) Indicator 19"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "62",
+                                "63",
+                                "AN",
+                                "X(2)",
+                                "Commodity (Product) Code 20"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "64",
+                                "64",
+                                "AN",
+                                "X",
+                                "Contract Type (Future/Put/Call) Indicator 20"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "65",
+                                "65",
+                                "N",
+                                "9",
+                                "Risk Exponent"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "66",
+                                "66",
+                                "AN",
+                                "X",
+                                "Performance Bond Currency Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "10",
+                                "67",
+                                "76",
+                                "N",
+                                "9(4)V9(6)",
+                                "Currency-to-US Dollar Conversion Rate"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "77",
+                                "77",
+                                "AN",
+                                "X",
+                                "Settlement Currency Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "78",
+                                "78",
+                                "AN",
+                                "X",
+                                "Option Margin Style (Valuation Method) --Pfor premium-style,Ffor futures-style, or blank -- if blank, premium-style is assumed."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "79",
+                                "79",
+                                "AN",
+                                "X",
+                                "Limit Option Value (Cap Available Net Option Value) Flag -Y,Nor blank -- if blank, no is assumed."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "80",
+                                "80",
+                                "AN",
+                                "X",
+                                "Combination Margining Method Flag -Sfor split-allocation,Dfor delta-split-allocation, or blank."
+                            ],
+                            "links": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_id": "457314153",
+    "child_page_ids": []
+}

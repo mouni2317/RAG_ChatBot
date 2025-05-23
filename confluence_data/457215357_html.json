@@ -1,0 +1,338 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Length"
+        },
+        {
+            "type": "heading",
+            "text": "From"
+        },
+        {
+            "type": "heading",
+            "text": "To"
+        },
+        {
+            "type": "heading",
+            "text": "Datatype"
+        },
+        {
+            "type": "heading",
+            "text": "Format"
+        },
+        {
+            "type": "heading",
+            "text": "Description and Comments"
+        },
+        {
+            "type": "heading",
+            "text": "Delivery Month 1 - Contract Month asCCYYMM"
+        },
+        {
+            "type": "heading",
+            "text": "Delivery Month 2 - Contract Month asCCYYMM"
+        },
+        {
+            "type": "heading",
+            "text": "Short Option Minimum Calculation Method --blankor2means the original method, based on thesum of the number of short calls and short puts.1means the new method, based onthe greater of the number or short calls or short puts."
+        },
+        {
+            "type": "heading",
+            "text": "Notes:"
+        },
+        {
+            "type": "confluence_tables",
+            "text": [
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "1",
+                                "2",
+                                "AN",
+                                "X(2)",
+                                "Record ID - \"4 \""
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "3",
+                                "8",
+                                "AN",
+                                "X(6)",
+                                "Combined Commodity Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "9",
+                                "10",
+                                "AN",
+                                "X(2)",
+                                "Delivery (Spot) Charge Method Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "11",
+                                "12",
+                                "N",
+                                "9(2)",
+                                "Number of contract months in delivery"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "13",
+                                "14",
+                                "N",
+                                "9(2)",
+                                "Delivery Month 1 - Month Number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "15",
+                                "20",
+                                "N",
+                                "9(6)",
+                                "Delivery Month 1 - Contract Month asCCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "21",
+                                "27",
+                                "N",
+                                "9(7)",
+                                "Delivery Month 1 - Charge Rate Per Delta Consumed By Spreads"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "28",
+                                "34",
+                                "N",
+                                "9(7)",
+                                "Delivery Month 1 - Charge Rate Per Delta Remaining In Outrights"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "35",
+                                "36",
+                                "N",
+                                "9(2)",
+                                "Delivery Month 2 - Month Number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "37",
+                                "42",
+                                "N",
+                                "9(6)",
+                                "Delivery Month 2 - Contract Month asCCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "43",
+                                "49",
+                                "N",
+                                "9(7)",
+                                "Delivery Month 2 - Charge Rate Per Delta Consumed By Spreads"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "50",
+                                "56",
+                                "N",
+                                "9(7)",
+                                "Delivery Month 2 - Charge Rate Per Delta Remaining In Outrights"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "57",
+                                "58",
+                                "AN",
+                                "X(2)",
+                                "Delivery Month 1 Contract Day or Week Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "59",
+                                "60",
+                                "AN",
+                                "X(2)",
+                                "Delivery Month 2 Contract Day or Week Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "61",
+                                "62",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "63",
+                                "68",
+                                "N",
+                                "9(6)",
+                                "Short Option Minimum Charge Rate"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "69",
+                                "69",
+                                "N",
+                                "9",
+                                "Short Option Minimum Charge Rate Decimal Locator"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "70",
+                                "72",
+                                "N",
+                                "9(3)",
+                                "Risk Maintenance Performance Bond Adjustment Factor -- Members"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "73",
+                                "73",
+                                "N",
+                                "9",
+                                "Members Adjustment Factor Decimal Locator"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "74",
+                                "76",
+                                "N",
+                                "9(3)",
+                                "Risk Maintenance Performance Bond Adjustment Factor -- Hedgers"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "77",
+                                "77",
+                                "N",
+                                "9",
+                                "Hedgers Adjustment Factor Decimal Locator"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "78",
+                                "80",
+                                "N",
+                                "9(3)",
+                                "Risk Maintenance Performance Bond Adjustment Factor -- Speculators"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "81",
+                                "81",
+                                "N",
+                                "9",
+                                "Speculators Adjustment Factor Decimal Locator"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "82",
+                                "82",
+                                "AN",
+                                "X",
+                                "Short Option Minimum Calculation Method --blankor2means the original method, based on thesum of the number of short calls and short puts.1means the new method, based onthe greater of the number or short calls or short puts."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "50",
+                                "83",
+                                "132",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_id": "457215357",
+    "child_page_ids": []
+}

@@ -1,0 +1,176 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Risk Arrays"
+        },
+        {
+            "type": "heading",
+            "text": "Comb Comm:Combined Commodity"
+        },
+        {
+            "type": "heading",
+            "text": "Product:"
+        },
+        {
+            "type": "heading",
+            "text": "ID:Span assigns an internal product ID number to each product within a family"
+        },
+        {
+            "type": "heading",
+            "text": "Alias:Name that defines the product"
+        },
+        {
+            "type": "heading",
+            "text": "Contract"
+        },
+        {
+            "type": "heading",
+            "text": "ID:Span assigns an internal contract ID number to each contract"
+        },
+        {
+            "type": "heading",
+            "text": "Alias:The alias gives the Contract month and year in yyyymm format.\u00a0 For options contracts, the alias also includes \"C\" or \"P\" for call or put, and the strike price.\u00a0 For example,200107 on 200109C 1380is the alias for an July 2001 1380 Call with an underlying September 2000 future."
+        },
+        {
+            "type": "heading",
+            "text": "Price:The price (premium for an option) of a contract"
+        },
+        {
+            "type": "heading",
+            "text": "Imp Vol:TheImplied volatility calculated for each specific option, or the averaged implied volatility calculated for the option along with its corresponding call or put pair."
+        },
+        {
+            "type": "heading",
+            "text": "Arr ID:Span assigns an ID number for each type of array"
+        },
+        {
+            "type": "heading",
+            "text": "Delta:The composite delta value of an option.\u00a0 The composite Delta is derived as the weighted average of the deltas, where the weights are associated with each underlying price scan point."
+        },
+        {
+            "type": "heading",
+            "text": "Scenario 1-16:"
+        },
+        {
+            "type": "confluence_tables",
+            "text": [
+                {
+                    "headers": [
+                        "1",
+                        "Futures Price Unchanged; Volatility up the Volatility Scan Range"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "Futures Price Unchanged; Volatility down the Volatility Scan Range"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "Futures Price up 1/3 the Price Scan range; Volatility up the Volatility Scan Range"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "Futures up 1/3 the Price Scan range; Volatility down the Volatility Scan Range"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "Futures down 1/3 the Price Scan range; Volatility up the Volatility Scan Range"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "Futures down 1/3 the Price Scan range; Volatility down the Volatility Scan Range"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "Futures up 2/3 the Price Scan range; Volatility up the Volatility Scan Range"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "Futures up 2/3 the Price Scan range; Volatility down the Volatility Scan Range"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "9",
+                                "Futures down 2/3 the Price Scan range; Volatility up the Volatility Scan Range"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "10",
+                                "Futures down 2/3 range the Price Scan; Volatility down the Volatility Scan Range"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "11",
+                                "Futures up 3/3 range the Price Scan; Volatility up the Volatility Scan Range"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "12",
+                                "Futures up 3/3 range the Price Scan; Volatility down the Volatility Scan Range"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "13",
+                                "Futures down 3/3 range the Price Scan; Volatility up the Volatility Scan Range"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "14",
+                                "Futures down 3/3 range the Price Scan; volatility down the Volatility Scan Range"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "15",
+                                "Futures up extreme (3 times the Price Scan Range) - Cover 30% of loss"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "16",
+                                "Futures down extreme (3 times the Price Scan Range) - Cover 30% of loss"
+                            ],
+                            "links": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_id": "457083458",
+    "child_page_ids": []
+}

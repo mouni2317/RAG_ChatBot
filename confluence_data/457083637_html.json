@@ -1,0 +1,34 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Intracommodity Spreads"
+        },
+        {
+            "type": "heading",
+            "text": "Comb Comm:Combined Commodity"
+        },
+        {
+            "type": "heading",
+            "text": "Priority:Span assigns a spread Priority number to every Spread.\u00a0 This Priority will determine which spreads in a portfolio will be used first."
+        },
+        {
+            "type": "heading",
+            "text": "Type:The spread rate type is the method of charge and can be defined as:"
+        },
+        {
+            "type": "heading",
+            "text": "Rates:"
+        },
+        {
+            "type": "heading",
+            "text": "Legs:"
+        },
+        {
+            "type": "confluence_tables",
+            "text": []
+        }
+    ],
+    "page_id": "457083637",
+    "child_page_ids": []
+}

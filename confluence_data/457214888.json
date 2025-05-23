@@ -1,0 +1,33 @@
+{
+    "parentId": "457083133",
+    "ownerId": "60653f79352e1e0069fb728f",
+    "lastOwnerId": null,
+    "createdAt": "2024-12-21T16:43:13.014Z",
+    "authorId": "60653f79352e1e0069fb728f",
+    "parentType": "page",
+    "position": 403446195,
+    "version": {
+        "number": 1,
+        "message": "",
+        "minorEdit": false,
+        "authorId": "60653f79352e1e0069fb728f",
+        "createdAt": "2024-12-21T16:43:14.312Z"
+    },
+    "body": {
+        "export_view": {
+            "representation": "export_view",
+            "value": "<p>This report is a succinct look at only the Span generated Requirement, per Firm, Account and Currency.\u00a0 It breaks the Span Requirement down into Maintenance and Initial, and then adds the Available Net Option value to produce the Total Span Requirement.</p><p><strong>Firm: </strong>\u00a0\u00a0 The firm or entity as entered into Span</p><p><strong>Account: </strong>\u00a0\u00a0 The specified Portfolio for the above firm.\u00a0 There can be many portfolios for a single firm.</p><p><strong>Seg:\u00a0 Segregated Account:\u00a0 </strong>Specifies whether an account is of Customer or House origin.</p><p><strong>PB Class:\u00a0\u00a0\u00a0 </strong>Specifies the different levels of performance bond requirements.\u00a0 This allows an exchange or clearing organization to divide it's performance bond requirement into different, acceptable forms of collateral.</p><p><strong>Curr:</strong>\u00a0\u00a0\u00a0 The currency used for each product and for the overall portfolio.\u00a0 Span gives the option of using different currencies for overall portfolio requirements and\u00a0 for each product's performance bond requirements.</p><p><strong>SpanReq:</strong>\u00a0\u00a0\u00a0 The requirement derived by Span which reflects the hypothetical single-day exposure given the Exchange or Clearing Organization's.\u00a0 It is calculated by taking the Scan Risk and adding to it any intracommodity, spot or Short Option Minimum charges, and deducting any intercommodity or interexchange credits.</p><p><strong>Maint:\u00a0 Maintenance Requirement</strong></p><p>The amount of money needed in the account to hold the portfolio of positions.</p><p><strong>Init:\u00a0 Initial Requirement</strong></p><p>This amount is needed when opening a new position or when the account funds drop below the maintenance level.\u00a0\u00a0</p><p><strong>NOV :\u00a0\u00a0\u00a0 Available Net Option Value</strong></p><p>The Long Option value less the Short Option Value.\u00a0 Therefore, long option value subtracts from the requirement while short option value adds to the requirement.\u00a0</p><p><strong>Total Span Requirement:\u00a0\u00a0\u00a0 </strong>Equal to the Span Requirement less the Available Net Option Value.</p>"
+        }
+    },
+    "status": "current",
+    "spaceId": "457312811",
+    "title": "PB Requirement Listing",
+    "id": "457214888",
+    "_links": {
+        "editui": "/pages/resumedraft.action?draftId=457214888",
+        "webui": "/spaces/pubsub/pages/457214888/PB+Requirement+Listing",
+        "edituiv2": "/spaces/pubsub/pages/edit-v2/457214888",
+        "tinyui": "/x/qItAGw",
+        "base": "https://cmegroupclientsite.atlassian.net/wiki"
+    }
+}

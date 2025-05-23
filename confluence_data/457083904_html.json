@@ -1,0 +1,538 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Layout for bytes 44-74 for method 4 (scanning-based) spreads:"
+        },
+        {
+            "type": "heading",
+            "text": "Layout for bytes 44-74 for method 20 (tiered delta-based) spreads:"
+        },
+        {
+            "type": "heading",
+            "text": "Layout for bytes 75-80:"
+        },
+        {
+            "type": "heading",
+            "text": "Notes:"
+        },
+        {
+            "type": "link",
+            "text": "2",
+            "url": "http://www.cme-ch.com/span/spanl306.htm#note1",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "8",
+            "url": "http://www.cme-ch.com/span/spanl306.htm#note2",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "7",
+            "url": "http://www.cme-ch.com/span/spanl306.htm#note3",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "9",
+            "url": "http://www.cme-ch.com/span/spanl306.htm#note4",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "5",
+            "url": "http://www.cme-ch.com/span/spanl306.htm#note5",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "confluence_tables",
+            "text": [
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "1",
+                                "1",
+                                "1",
+                                "AN",
+                                "X",
+                                "Record ID - \"6\""
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "2",
+                                "4",
+                                "AN",
+                                "X(3)",
+                                "Commodity Group Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "5",
+                                "6",
+                                "N",
+                                "9(2)",
+                                "Spread Priority2"
+                            ],
+                            "links": [
+                                "http://www.cme-ch.com/span/spanl306.htm#note1"
+                            ]
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "7",
+                                "11",
+                                "N",
+                                "9(5)",
+                                "Spread Credit Rate, in percent8"
+                            ],
+                            "links": [
+                                "http://www.cme-ch.com/span/spanl306.htm#note2"
+                            ]
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "12",
+                                "14",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code Leg 1"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "15",
+                                "16",
+                                "N",
+                                "9(2)",
+                                "Delta/Spread Ratio Leg 1"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "17",
+                                "17",
+                                "AN",
+                                "X",
+                                "Spread Side Leg 1 (\"A\",\"B\")7"
+                            ],
+                            "links": [
+                                "http://www.cme-ch.com/span/spanl306.htm#note3"
+                            ]
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "18",
+                                "19",
+                                "AN",
+                                "X(2)",
+                                "Exchange Code Leg 1"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "20",
+                                "22",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code Leg 2"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "23",
+                                "24",
+                                "N",
+                                "9(2)",
+                                "Delta/Spread Ratio Leg 2"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "25",
+                                "25",
+                                "AN",
+                                "X",
+                                "Spread Side Leg 2 (\"A\",\"B\")"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "26",
+                                "27",
+                                "AN",
+                                "X(2)",
+                                "Exchange Code Leg 2"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "28",
+                                "30",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code Leg 3"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "31",
+                                "32",
+                                "N",
+                                "9(2)",
+                                "Delta/Spread Ratio Leg 3"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "33",
+                                "33",
+                                "AN",
+                                "X",
+                                "Spread Side Leg 3 (\"A\",\"B\")"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "34",
+                                "35",
+                                "AN",
+                                "X(2)",
+                                "Exchange Code Leg 3"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "36",
+                                "38",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code Leg 4"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "39",
+                                "40",
+                                "N",
+                                "9(2)",
+                                "Delta/Spread Ratio Leg 4"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "41",
+                                "41",
+                                "AN",
+                                "X",
+                                "Spread Side Leg 4 (\"A\",\"B\")"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "42",
+                                "43",
+                                "AN",
+                                "X(2)",
+                                "Exchange Code Leg 4"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "44",
+                                "45",
+                                "AN",
+                                "X(2)",
+                                "Method 4: Target Exchange Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "46",
+                                "48",
+                                "AN",
+                                "X(3)",
+                                "Method 4: Target Combined Commodity Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "49",
+                                "54",
+                                "N",
+                                "9(3)V9(3)",
+                                "Method 4: Gain Allowance Percentage"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "55",
+                                "55",
+                                "AN",
+                                "X(1)",
+                                "Method 4: Leg 1 Required Flag (\"N\" means not required, any other value means required)9"
+                            ],
+                            "links": [
+                                "http://www.cme-ch.com/span/spanl306.htm#note4"
+                            ]
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "56",
+                                "56",
+                                "AN",
+                                "X(1)",
+                                "Method 4: Leg 2 Required Flag"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "57",
+                                "57",
+                                "AN",
+                                "X(1)",
+                                "Method 4: Leg 3 Required Flag"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "58",
+                                "58",
+                                "AN",
+                                "X(1)",
+                                "Method 4: Leg 4 Required Flag"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "59",
+                                "59",
+                                "AN",
+                                "X(1)",
+                                "Method 4:\u00a0 Target Leg Required Flag"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "60",
+                                "61",
+                                "N",
+                                "9(2)",
+                                "Method 4:\u00a0 Target Leg Delta Per Spread Ratio"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "13",
+                                "62",
+                                "74",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "44",
+                                "45",
+                                "N",
+                                "9(2)",
+                                "Tier Number Leg 1"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "46",
+                                "47",
+                                "N",
+                                "9(2)",
+                                "Tier Number Leg 2"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "48",
+                                "49",
+                                "N",
+                                "9(2)",
+                                "Tier Number Leg 3"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "50",
+                                "51",
+                                "N",
+                                "9(2)",
+                                "Tier Number Leg 4"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "23",
+                                "52",
+                                "74",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "3",
+                                "75",
+                                "77",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "1",
+                                "78",
+                                "AN",
+                                "X(1)",
+                                "Spread Group Flag:\u00a0 blank orNmeans normal intercommodity or interexchange spread.Smeans super-intercommodity or super-interexchange spread --ie, a spread evaluated before rather than after normal intracommodity spreading."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "79",
+                                "80",
+                                "N",
+                                "9(2)",
+                                "Intercommodity Spread Method Code5"
+                            ],
+                            "links": [
+                                "http://www.cme-ch.com/span/spanl306.htm#note5"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_id": "457083904",
+    "child_page_ids": []
+}

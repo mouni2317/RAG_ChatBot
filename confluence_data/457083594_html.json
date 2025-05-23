@@ -1,0 +1,180 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Currency Codes Recognized"
+        },
+        {
+            "type": "heading",
+            "text": "The SPAN risk parameter file allows the specification of theperformance bond currencyfor each combined commodity and thesettlement currencyfor each product contained in each combined commodity.\u00a0The performance bond currency is the currency in which the SPAN performance bond requirement for a combined commodity will be denominated. The settlement currency is the currency in which prices are quoted for a particular product, which will typically be the currency in which futures-style settlement variation (mark-to-market) or premium-style option premium amounts are paid or collected.\u00a0When SPAN was first introduced in 1988, usage of 3-byte ISO (International Standards Organization) codes for specifying currencies was not widespread. The standard SPAN file layout therefore used a one-byte code for identifying currencies. In the new, expanded SPAN file layout, the three-byte ISO codes are used.\u00a0The following table gives currencies with both their one-byte and three-byte ISO codes."
+        },
+        {
+            "type": "confluence_tables",
+            "text": [
+                {
+                    "headers": [
+                        "3-byte ISO code",
+                        "1-byte code",
+                        "Currency"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "AUD",
+                                "A",
+                                "Australian Dollar"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "GBP",
+                                "L",
+                                "British Pound"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "CAD",
+                                "C",
+                                "Canadian Dollar"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "EUR",
+                                "E",
+                                "Euro"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "FRF",
+                                "F",
+                                "French Franc"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "DEM",
+                                "D",
+                                "German Deutschemark"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "HKD",
+                                "H",
+                                "Hong Kong Dollar"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "HUF",
+                                "U",
+                                "Hungarian Forint"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "ITL",
+                                "I",
+                                "Italian Lira"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "JPY",
+                                "Y",
+                                "Japanese Yen"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "MXN",
+                                "P",
+                                "Mexican Peso"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "NZD",
+                                "Z",
+                                "New Zealand Dollar"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "NOK",
+                                "N",
+                                "Norwegian Kroner"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "SGD",
+                                "G",
+                                "Singaporean Dollar"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "ESP",
+                                "T",
+                                "Spanish Peseta"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "ZAR",
+                                "R",
+                                "South African Rand"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "SEK",
+                                "K",
+                                "Swedish Kroner"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "CHF",
+                                "S",
+                                "Swiss Franc"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "USD",
+                                "$",
+                                "US Dollar"
+                            ],
+                            "links": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_id": "457083594",
+    "child_page_ids": []
+}

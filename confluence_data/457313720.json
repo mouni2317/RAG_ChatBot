@@ -1,0 +1,33 @@
+{
+    "parentId": "457411114",
+    "ownerId": "60653f79352e1e0069fb728f",
+    "lastOwnerId": null,
+    "createdAt": "2024-12-21T16:42:53.569Z",
+    "authorId": "60653f79352e1e0069fb728f",
+    "parentType": "page",
+    "version": {
+        "number": 1,
+        "message": "",
+        "minorEdit": false,
+        "authorId": "60653f79352e1e0069fb728f",
+        "createdAt": "2024-12-21T16:42:56.173Z"
+    },
+    "position": 91132119,
+    "body": {
+        "export_view": {
+            "representation": "export_view",
+            "value": "<p><span class=\"confluence-embedded-file-wrapper\"><img class=\"confluence-embedded-image\" src=\"https://cmegroupclientsite.atlassian.net/wiki/download/attachments/457313720/combcomm.jpg?api=v2\"></span></p><p><u><strong>Combined Commodities</strong></u></p><p>This report contains a complete listing of Combined Commodities for the given Exchange Complex, along with their various limitations and calculation methods.</p><p><strong>Comb Comm:</strong>\u00a0 Combined Commodity</p><p>The product symbol for the Combined Commodity.\u00a0 The Combined Commodity is the set of all eligible products used to generate a total requirement for each Exchange Complex within a portfolio.\u00a0 A Combined Commodity generally consists of all products of the same underlying physical. For example, at the CME, the Eurodollar combined commodity encompasses Mid-Curve options, Eurodollars and Eurodollar options.\u00a0</p><p><strong>Name:</strong>\u00a0 The name of the Combined Commodity</p><p><strong>Group:</strong>\u00a0 Shows the Exchange Complex under which the Combined Commodity falls.</p><p><strong>Cur: </strong>\u00a0Gives the margining currency for each Combined Commodity</p><p><strong>Risk Exp.: </strong>\u00a0Risk Exponent</p><p>Certain foreign currency denominated products require that the Risk Arrays be raised to a power of ten (the Risk Exponent) to comply with SPAN standard format parameter file.\u00a0 Files in the XML format are not subject to this limitation.</p><p><strong>Limits on Avail NOV:</strong>\u00a0 Limits on Available Net Option Value</p><p>If a Combined Commodity's Available Net Option Value has limits, it cannot be used to offset risk in another Combined Commodity.\u00a0 The standard setting (without limits) allows Available Net Option Value to be used to offset risk from any other Combined Commodity.</p><p><strong>Process Meth:</strong>\u00a0 The Process Method defines the manner in which Span performs scanning risk for a Combined Commodity.</p><p>The two process methods are Normal Risk and Liquidation Risk.\u00a0 Liquidation Risk is an alternative method of scanning risk that incorporates duration for debt securities.</p><p><strong>WPR: </strong>\u00a0The Weighted Price Risk Method calculation determines the amount of Intercommodity Spread offsets available, either by per delta or per scan range amount.\u00a0 The WPR Method can be calculated by one of three ways:\u00a0 Normal, Scan Range or Scan Range Cap Method.\u00a0</p><ul><li>The Normal Method (NORMAL) is calculating the WPR by normal delta-based spreading, where\u00a0the WPR is equal to the Price Risk/Rounded Net Delta</li><li>In the Scan Range Method (SCANRANGE), the WPR is equal to the Scan Range amount.\u00a0\u00a0</li><li>In the Scan Range Cap Method (SCANRANGE_CAP), the WPR is calculated normally, except the Scan Range is capped at the Scan Range amount.</li></ul><p><strong>Spot Method:\u00a0</strong> The Spot Method is a method that allows Span to assess a charge that covers the additional risk associated with contracts in the spot month (nearing expiration).\u00a0 The Spot Method is calculated by one of three methods:\u00a0 Normal, Gross or Basis.\u00a0</p><ul><li>The Normal method is applying a charge to cover the risk of products nearing expiration.\u00a0</li><li>The Gross method is calculated by aggregating all the delta in a period.\u00a0</li><li>The Basis method applies an additional charge for two similar products within the same Combined Commodity.</li></ul><p><strong>SOM Method</strong>:\u00a0 SPAN utilizes a Short Option Minimum charge to cover the risk associated with deep out-of-the-money short options.\u00a0 The Short Option Minimum sets a floor level risk requirement for a short option in every Combined Commodity.\u00a0 For example, if the Short Option Minimum for EC is $40, then a portfolio that is short 20 EC put options will have a minimum performance bond requirement of $800.</p><p>Span has two methods of calculating the Short Option Minimum.\u00a0</p><ul><li>Maximum of Calls/Puts - Span takes the sums of all short calls, and then does the same separately for the short puts .\u00a0 The greater of these two numbers is then multiplied by the Short Option Minimum rate to derive a Short Option Minimum.</li><li>Sum of Calls/Puts - Span takes the sum of all the short calls and short puts together and then multiplies the resulting number by the Short Option Minimum Rate to derive a Short Option Minimum.\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0</li></ul><p><strong>Combo Method:\u00a0 </strong></p><p>Certain contracts are actually a combination of different contracts bundled into one contract.\u00a0 The Combo Method only applies to a Combined Commodity that contains this type of combination contract (or options on them).\u00a0 If\u00a0 a Combined Commodity is not this type of combination contract, then the Combo Method does not apply and is listed as None.\u00a0 The Split Method breaks up combinations by contracts and delta.\u00a0\u00a0 The Delta Split Method breaks options contracts up by delta.</p>"
+        }
+    },
+    "status": "current",
+    "title": "Combined Commodities",
+    "spaceId": "457312811",
+    "id": "457313720",
+    "_links": {
+        "editui": "/pages/resumedraft.action?draftId=457313720",
+        "webui": "/spaces/pubsub/pages/457313720/Combined+Commodities",
+        "edituiv2": "/spaces/pubsub/pages/edit-v2/457313720",
+        "tinyui": "/x/uA1CGw",
+        "base": "https://cmegroupclientsite.atlassian.net/wiki"
+    }
+}

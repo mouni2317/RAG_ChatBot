@@ -1,0 +1,258 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Notes:"
+        },
+        {
+            "type": "confluence_tables",
+            "text": [
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "1",
+                                "1",
+                                "1",
+                                "AN",
+                                "X",
+                                "Record ID - \"S\""
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "2",
+                                "4",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "5",
+                                "6",
+                                "AN",
+                                "X(2)",
+                                "Scanning / Intercommodity Spreading Method Code:-\"01\"fornon-tiered processing(ie, all the contract months together constitute a single tier for both scanning and intercommodity spreading)-\"02\"for each futures contract month as its own scanning and intercommodity spreading tier-\"10\"fortable-driven tiered scanningwith non-tiered intercommodity spreading-\"20\"fortable-driven tiered intercommodity spreadingwith non-tiered scanning-\"21\"fortable-driven tiered scanning and tiered intercommodity spreading, withidentical tier definitionsfor scanning and intercommodity spreading-\"22\"fortable-driven tiered scanningand tiered intercommodity spreading, with scanning tiers and intercommodity spreading tiers defined independently, and with this record containingscanning tier definitions-\"23\"fortable-driven tiered scanning and tiered intercommodity spreading, with scanning tiers and intercommodity spreading tiers defined independently, and with this record containingintercommodity spreading tier definitions"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "7",
+                                "8",
+                                "N",
+                                "9(2)",
+                                "Number of Tiers"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "9",
+                                "10",
+                                "N",
+                                "9(2)",
+                                "Tier 1 - Tier number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "11",
+                                "16",
+                                "N",
+                                "9(6)",
+                                "Tier 1 - Starting Contract Month asCCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "17",
+                                "22",
+                                "N",
+                                "9(6)",
+                                "Tier 1 - Ending Contract Month asCCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "23",
+                                "24",
+                                "N",
+                                "9(2)",
+                                "Tier 2 - Tier number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "25",
+                                "30",
+                                "N",
+                                "9(6)",
+                                "Tier 2 - Starting Contract Month asCCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "31",
+                                "36",
+                                "N",
+                                "9(6)",
+                                "Tier 2 - Ending Contract Month asCCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "37",
+                                "38",
+                                "N",
+                                "9(2)",
+                                "Tier 3 - Tier number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "39",
+                                "44",
+                                "N",
+                                "9(6)",
+                                "Tier 3 - Starting Contract Month asCCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "45",
+                                "50",
+                                "N",
+                                "9(6)",
+                                "Tier 3 - Ending Contract Month asCCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "51",
+                                "52",
+                                "N",
+                                "9(2)",
+                                "Tier 4 - Tier number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "53",
+                                "58",
+                                "N",
+                                "9(6)",
+                                "Tier 4 - Starting Contract Month asCCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "59",
+                                "64",
+                                "N",
+                                "9(6)",
+                                "Tier 4 - Ending Contract Month asCCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "65",
+                                "66",
+                                "N",
+                                "9(2)",
+                                "Tier 5 - Tier number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "67",
+                                "72",
+                                "N",
+                                "9(6)",
+                                "Tier 5 - Starting Contract Month asCCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "73",
+                                "78",
+                                "N",
+                                "9(6)",
+                                "Tier 5 - Ending Contract Month asCCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "79",
+                                "79",
+                                "AN",
+                                "X",
+                                "Weighted Futures Price Risk Calculation Method -1for the normal calculation in which price risk is evaluated and then divided by net delta,2for the normal method but where the value is capped at the futures price scan range, and3for the special method in which the value is set to the futures price scan range"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "80",
+                                "80",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_id": "457314413",
+    "child_page_ids": []
+}

@@ -1,0 +1,33 @@
+{
+    "parentId": "457411114",
+    "spaceId": "457312811",
+    "ownerId": "60653f79352e1e0069fb728f",
+    "lastOwnerId": null,
+    "createdAt": "2024-12-21T16:43:10.120Z",
+    "authorId": "60653f79352e1e0069fb728f",
+    "parentType": "page",
+    "version": {
+        "number": 1,
+        "message": "",
+        "minorEdit": false,
+        "authorId": "60653f79352e1e0069fb728f",
+        "createdAt": "2024-12-21T16:43:11.345Z"
+    },
+    "position": 91134877,
+    "id": "457083637",
+    "status": "current",
+    "body": {
+        "export_view": {
+            "representation": "export_view",
+            "value": "<p><span class=\"confluence-embedded-file-wrapper\"><img class=\"confluence-embedded-image\" src=\"https://cmegroupclientsite.atlassian.net/wiki/download/attachments/457083637/Intraspread.jpg?api=v2\"></span></p><p><u><strong>Intracommodity Spreads</strong></u></p><p>This report shows the rates and legs associated with each Combined Commodity for Intracommodity Spreading, meaning the offsets for spreads between products within the same Combined Commodity but of different expirations.</p><p><strong>Comb Comm: </strong>\u00a0Combined Commodity</p><p>The set of all eligible products used to generate a total requirement for each Exchange Complex within a portfolio.\u00a0 A Combined Commodity generally consists of all products of the same underlying physical. For example, at the CME, the Eurodollar combined commodity encompasses Mid-Curve options, Eurodollars and Eurodollar options.\u00a0</p><p><strong>Priority:\u00a0 </strong>Span assigns a spread Priority number to every Spread.\u00a0 This Priority will determine which spreads in a portfolio will be used first.</p><p><strong>Type:\u00a0 </strong>The spread rate type is the method of charge and can be defined as:</p><ul><li>WPR - Weighted Price Risk, which gives a credit (or charge if rate is negative) to each leg of the spread</li><li>FLAT - flat rate processing, which is an overall charge (or credit if rate is negative) equally allocated to each Combined Commodity in the spread</li><li>PMPS - per month per spread variation of the FLAT rate</li></ul><p><strong>Rates:</strong></p><ul><li>ID - Span assigns an ID to each spread rate</li><li>Flat Rate - flat rate processing, which is an overall charge (or credit if rate is negative) equally allocated to each Combined Commodity in the spread</li><li>Per Mo Rate - a rate charged on a per month basis</li><li>Per Sprd Rate- a rate charged on a per spread basis</li></ul><p><strong>Legs:</strong></p><ul><li>Leg # - Shows the Leg #</li><li>Tier/Period - Shows the Tier or Period for the particular leg.\u00a0 A Tier or Period is comprised of one or more contracts that may be grouped for spreading purposes</li><li>Side - A or B refers to the side of the market on which a contract must be to form a particular spread.\u00a0 For example, &quot;A versus B&quot; actually means &quot;Long versus Short&quot;.</li><li>Ratio - gives the number of contracts for each side required to form the spread</li><li>Beg Tier - gives the beginning tier of a spread</li><li>End Tier - gives the ending tier of a spread</li></ul>"
+        }
+    },
+    "title": "Intra Spreads",
+    "_links": {
+        "editui": "/pages/resumedraft.action?draftId=457083637",
+        "webui": "/spaces/pubsub/pages/457083637/Intra+Spreads",
+        "edituiv2": "/spaces/pubsub/pages/edit-v2/457083637",
+        "tinyui": "/x/9Yo_Gw",
+        "base": "https://cmegroupclientsite.atlassian.net/wiki"
+    }
+}

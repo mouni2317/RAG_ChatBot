@@ -1,0 +1,33 @@
+{
+    "parentId": "457083133",
+    "ownerId": "60653f79352e1e0069fb728f",
+    "lastOwnerId": null,
+    "createdAt": "2024-12-21T16:42:51.804Z",
+    "authorId": "60653f79352e1e0069fb728f",
+    "parentType": "page",
+    "position": 403443965,
+    "version": {
+        "number": 1,
+        "message": "",
+        "minorEdit": false,
+        "authorId": "60653f79352e1e0069fb728f",
+        "createdAt": "2024-12-21T16:42:53.027Z"
+    },
+    "body": {
+        "export_view": {
+            "representation": "export_view",
+            "value": "<p>This report shows the minimum performance bond requirement by Short Option Minimum per combined commodity.\u00a0 If a position contains short options, it shows the Short Option Minimum charge, and then further breaks down the short option position by calls and puts.</p><p><strong>Exch Cmplx:\u00a0\u00a0\u00a0 Exchange Complex</strong></p><p>The exchange complex, clearing organization or cross margining agreement.\u00a0 The Exchange Complex contains the set of Combined Commodities for a single exchange, clearing organization or cross margining agreement (although in some cases the Exchange Complex may have more than one exchange).\u00a0 To view the complete listing of Exchange Complexes refer to the Exchanges report under the reports Master folder.</p><p><strong>Comb Comm:\u00a0\u00a0\u00a0 Combined Commodity</strong></p><p>The set of all eligible products used to generate a total requirement for each Exchange Complex within a portfolio.\u00a0 A Combined Commodity generally consists of all products of the same underlying physical. For example, at the CME, the Eurodollar combined commodity encompasses Mid-Curve options, Eurodollars and Eurodollar options.\u00a0 To view the complete listing of Combined Commodities, refer to the Combined Commodities report under the Risk Parameters folder.</p><p><strong>Level:</strong>\u00a0 The breakdown of the scanning risk calculations for net and gross portfolios.\u00a0 The scan scenario is shown as net for a net portfolio, but\u00a0 for a gross portfolio scan risk calculations are categorized by inter, intra and naked.</p><p><strong>Class:\u00a0\u00a0\u00a0 </strong>Specifies the different levels of performance bond requirements.\u00a0 This allows an exchange or clearing organization to divide its performance bond requirement into different, acceptable forms of collateral.</p><p><strong>Maint/Init:</strong>\u00a0\u00a0 Identifies whether a performance bond requirement is a Maintenance Requirement or an Initial Requirement.</p><p><strong>Tier No.:\u00a0 </strong>A tier is a set of consecutive contract expirations for one Combined Commodity.\u00a0 The tier number refers to a series of contract expirations within a tier.\u00a0 Overall is used to identify all contract expirations in a Combined Commodity.</p><p><strong>SOM:\u00a0\u00a0\u00a0 Short Option Minimum</strong></p><p>To cover the risks associated with deep-out-of-the-money short options positions, where SPAN may calculate a zero or negligible performance bond requirement,\u00a0 a minimum portfolio requirement based on the\u00a0 portfolio's short options may be assessed.\u00a0 If a Short Option Minimum exists for a product, the performance bond requirement cannot fall below this floor level.</p><p><strong>Short Options:\u00a0 </strong>Option products being sold.</p><p>Calls:\u00a0 Shows the number of short option calls per combined commodity</p><p>Puts:\u00a0 Shows the number of short option puts per combined commodity</p>"
+        }
+    },
+    "status": "current",
+    "title": "Short Option Minimum Tier Requirements Report",
+    "spaceId": "457312811",
+    "id": "457083343",
+    "_links": {
+        "editui": "/pages/resumedraft.action?draftId=457083343",
+        "webui": "/spaces/pubsub/pages/457083343/Short+Option+Minimum+Tier+Requirements+Report",
+        "edituiv2": "/spaces/pubsub/pages/edit-v2/457083343",
+        "tinyui": "/x/z4k_Gw",
+        "base": "https://cmegroupclientsite.atlassian.net/wiki"
+    }
+}

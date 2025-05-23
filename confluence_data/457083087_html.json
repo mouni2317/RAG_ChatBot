@@ -1,0 +1,105 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Risk Parameter Files"
+        },
+        {
+            "type": "heading",
+            "text": "Position Files"
+        },
+        {
+            "type": "link",
+            "text": "Risk Parameter File Layouts for the Positional Formats",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083445/Risk+Parameter+File+Layouts+for+the+Positional+Formats",
+            "data-linked-resource-id": "457083445",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "XML-based Risk Parameter File",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083551/XML-based+Risk+Parameter+File",
+            "data-linked-resource-id": "457083551",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Paris Expanded SPAN File Format for MATIF and Monep Products",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411222/Paris+Expanded+SPAN+File+Format+for+MATIF+and+Monep+Products",
+            "data-linked-resource-id": "457411222",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Standard Portfolio Data File Layout",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083223/Standard+Portfolio+Data+File+Layout",
+            "data-linked-resource-id": "457083223",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Expanded Portfolio Data File Layout",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313617/Expanded+Portfolio+Data+File+Layout",
+            "data-linked-resource-id": "457313617",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "XML-based Position File",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313850/XML-based+Position+File",
+            "data-linked-resource-id": "457313850",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Additional XML formats recognized by PC-SPAN",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083146/Additional+XML+formats+recognized+by+PC-SPAN",
+            "data-linked-resource-id": "457083146",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "",
+            "url": "http://www.cmegroup.com/confluence/display/pubspan/Additional+XML+formats+recognized+by+PC-SPAN",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "",
+            "url": "http://www.cmegroup.com/confluence/display/pubspan/Additional+XML+formats+recognized+by+PC-SPAN",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Daily Adjustment History Files",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313675/Daily+Adjustment+History+Files",
+            "data-linked-resource-id": "457313675",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Currency Codes Recognized",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083594/Currency+Codes+Recognized",
+            "data-linked-resource-id": "457083594",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "confluence_tables",
+            "text": []
+        }
+    ],
+    "page_id": "457083087",
+    "child_page_ids": [
+        "457083551",
+        "457313850",
+        "457083445",
+        "457083223",
+        "457313617",
+        "457083594",
+        "457083146",
+        "457313675",
+        "457411222"
+    ]
+}

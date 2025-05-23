@@ -1,0 +1,33 @@
+{
+    "parentId": "457214773",
+    "spaceId": "457312811",
+    "ownerId": "60653f79352e1e0069fb728f",
+    "lastOwnerId": null,
+    "createdAt": "2024-12-21T16:44:12.913Z",
+    "authorId": "60653f79352e1e0069fb728f",
+    "parentType": "page",
+    "version": {
+        "number": 1,
+        "message": "",
+        "minorEdit": false,
+        "authorId": "60653f79352e1e0069fb728f",
+        "createdAt": "2024-12-21T16:44:14.067Z"
+    },
+    "position": 452768628,
+    "body": {
+        "export_view": {
+            "representation": "export_view",
+            "value": "<div class=\"table-wrap\"><table class=\"confluenceTable\"><tbody><tr><th class=\"confluenceTh\">Length</th><th class=\"confluenceTh\">From</th><th class=\"confluenceTh\">To</th><th class=\"confluenceTh\">Datatype</th><th class=\"confluenceTh\">Format</th><th class=\"confluenceTh\">Description and Comments</th></tr><tr><td class=\"confluenceTd\">2</td><td class=\"confluenceTd\">1</td><td class=\"confluenceTd\">2</td><td class=\"confluenceTd\">AN</td><td class=\"confluenceTd\">X(2)</td><td class=\"confluenceTd\">Record ID - &quot;T &quot;</td></tr><tr><td class=\"confluenceTd\">3</td><td class=\"confluenceTd\">3</td><td class=\"confluenceTd\">5</td><td class=\"confluenceTd\">AN</td><td class=\"confluenceTd\">X(3)</td><td class=\"confluenceTd\">Convert-From Currency ISO Code</td></tr><tr><td class=\"confluenceTd\">1</td><td class=\"confluenceTd\">6</td><td class=\"confluenceTd\">6</td><td class=\"confluenceTd\">AN</td><td class=\"confluenceTd\">X</td><td class=\"confluenceTd\">Convert-From Currency One-Byte Code</td></tr><tr><td class=\"confluenceTd\">3</td><td class=\"confluenceTd\">7</td><td class=\"confluenceTd\">9</td><td class=\"confluenceTd\">AN</td><td class=\"confluenceTd\">X(3)</td><td class=\"confluenceTd\">Convert-To Currency ISO Code</td></tr><tr><td class=\"confluenceTd\">1</td><td class=\"confluenceTd\">10</td><td class=\"confluenceTd\">10</td><td class=\"confluenceTd\">AN</td><td class=\"confluenceTd\">X</td><td class=\"confluenceTd\">Convert-To Currency One-Byte Code</td></tr><tr><td class=\"confluenceTd\">10</td><td class=\"confluenceTd\">11</td><td class=\"confluenceTd\">20</td><td class=\"confluenceTd\">N</td><td class=\"confluenceTd\">9(4)V9(6)</td><td class=\"confluenceTd\">Conversion Multiplier</td></tr></tbody></table></div><p><strong>Notes:</strong></p><ol><li>T records, if any, should be located in the file immediately after the first record in the file -- the exchange complex header record.</li></ol>"
+        }
+    },
+    "status": "current",
+    "title": "Type T Record - Standard and Expanded",
+    "id": "457314479",
+    "_links": {
+        "editui": "/pages/resumedraft.action?draftId=457314479",
+        "webui": "/spaces/pubsub/pages/457314479/Type+T+Record+-+Standard+and+Expanded",
+        "edituiv2": "/spaces/pubsub/pages/edit-v2/457314479",
+        "tinyui": "/x/rxBCGw",
+        "base": "https://cmegroupclientsite.atlassian.net/wiki"
+    }
+}

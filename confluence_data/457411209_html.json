@@ -1,0 +1,293 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Processing Functions"
+        },
+        {
+            "type": "heading",
+            "text": "In doing this, it applies both ahorizontal shiftand avertical shift:\u00a0 The best way to understand this is to think of a graph of strike price (on the X-axis) and volatility (on the Y-axis):"
+        },
+        {
+            "type": "heading",
+            "text": "Thehorizontal shiftmoves the volatility curve left or right according to how the underlying price has changed from the previous point in time to the current point in time -- ie, the price at which the at-the-money strike is defined.\u00a0 If the underlying price increases, for example, the curve is shifted to the right."
+        },
+        {
+            "type": "heading",
+            "text": "Thevertical shiftmoves the volatility curve up or down according to how implied volatilities for the \"reference option(s)\" -- the option(s) that are closest to the money -- at the new point in time have changed from the analogous volatilities at the previous point in time."
+        },
+        {
+            "type": "heading",
+            "text": "Use separate call and put reference volatilities:select the closest-to-the-money call at the new point in time which has a volatility defined for it.\u00a0 If an exact at-the-money option exists and has a volatility defined, this is the selected one.\u00a0 If not, then select the call which is closest-to-the-money.\u00a0 (If an out-of-the-money call and an in-the-money call are equidistant-from-the-money, then select the out-of-the-money one.)\u00a0 Use this volatility as the reference for assigning volatilities to all other calls for which volatilities are not already defined.Separately, repeat this logic to select the closest-to-the-money put at the new point which has a volatility defined for it, and use this volatility as the reference for assigning volatilities to all other puts for which volatilities are not already defined."
+        },
+        {
+            "type": "heading",
+            "text": "Use best reference volatility:Use the logic described above to select the closest-to-the-money call for which a volatility is defined, and the closest-to-the-money put for which a volatility is defined.\u00a0 If these two strikes are equidistant-from-the-money, take the average of their volatilities as the reference volatility.\u00a0 Otherwise, select the strike which is closest to the money, and use its volatility as the reference volatility.This single value for best reference volatility is then used to assign volatilities to all options, calls and puts, at the new point in time for which volatilities are not already assigned."
+        },
+        {
+            "type": "heading",
+            "text": "No reference:the volatility curve is shifted horizontally but not vertically."
+        },
+        {
+            "type": "heading",
+            "text": "The SPAN Risk Manager provides a rich set of capabilities for evaluating the impact of what-if scenarios, a function also known asstress testing.\u00a0 This works as follows:"
+        },
+        {
+            "type": "heading",
+            "text": "A point in time is selected -- thebasepoint in time."
+        },
+        {
+            "type": "heading",
+            "text": "A new point in time is created -- thewhat-ifpoint in time -- by cloning the base point in time, and then applying a definedwhat-if scenarioto it.\u00a0 The what-if scenario allows any or all of the following to be varied:\u00a0 price, volatility, price scan range, volatility scan range, time to expiration, risk-free interest rate, and dividend yield."
+        },
+        {
+            "type": "heading",
+            "text": "For each portfolio, theimpactof applying the what-if scenario is then calculated as:"
+        },
+        {
+            "type": "heading",
+            "text": "Thus, apositive impactmeans that the portfolio gained in value and/or had its risk decrease.\u00a0 Conversely, anegative impactmeans that the portfolio lost value and/or had its risk increase."
+        },
+        {
+            "type": "heading",
+            "text": "The specification for how these parameters should be changed, and to which contracts the changes should be applied, constitute awhat-if scenario."
+        },
+        {
+            "type": "heading",
+            "text": "You start by pointing to the original, base point in time, right-mouse click, and selectWhat-If Scenario."
+        },
+        {
+            "type": "heading",
+            "text": "TheCreate What-If Scenariodialog box displays, prompting you to enter a descriptor for the what-if scenario.\u00a0 You enter the descriptor and click onCreate New."
+        },
+        {
+            "type": "heading",
+            "text": "The fullDefine What-If Scenariodialog box now displays.\u00a0 This allows the specification of the changes to be applied to the above parameters:"
+        },
+        {
+            "type": "heading",
+            "text": "Set-- sets the parameter to the specified value;"
+        },
+        {
+            "type": "heading",
+            "text": "Change-- changes the parameter by the specified amount.\u00a0 (A negative amount decreases the parameter.)"
+        },
+        {
+            "type": "heading",
+            "text": "Change Percent-- changes the parameter by the specified percentage.\u00a0 (A negative value decreases the parameter by the specified percentage.)"
+        },
+        {
+            "type": "heading",
+            "text": "After the desired what-if parameters have been defined, you can click on eitherOKorCalculate:"
+        },
+        {
+            "type": "heading",
+            "text": "OKcauses the new point in time to be created and the what-if scenarios applied to it."
+        },
+        {
+            "type": "heading",
+            "text": "Calculatedoes the following:"
+        },
+        {
+            "type": "heading",
+            "text": "Displays theCompare Scenariosdialog box, displaying the impact of the what-if scenario on the portfolios."
+        },
+        {
+            "type": "heading",
+            "text": "Point to the desired point-in-time.\u00a0 Right-mouse click on it, selectWhat-If Scenario, then click onModify."
+        },
+        {
+            "type": "heading",
+            "text": "Right-mouse click, then selectCompare Scenarios."
+        },
+        {
+            "type": "heading",
+            "text": "TheSelect Point in Timedialog box pops up.\u00a0 Select the \"base\" point in time, then click onOK."
+        },
+        {
+            "type": "heading",
+            "text": "TheCompare Scenariosdialog box displays."
+        },
+        {
+            "type": "heading",
+            "text": "Viaspanitrmand a script file:"
+        },
+        {
+            "type": "heading",
+            "text": "If desired, use thex2pconversion utility to create the SPAN risk parameter file in the expanded-unpacked or standard-unpacked format."
+        },
+        {
+            "type": "heading",
+            "text": "Viaspanitrmand a script file:"
+        },
+        {
+            "type": "heading",
+            "text": "Via eitherspanitrmor the real-time component interface for the SPAN Risk Manager:"
+        },
+        {
+            "type": "heading",
+            "text": "Update positions only"
+        },
+        {
+            "type": "heading",
+            "text": "Trade-register mode"
+        },
+        {
+            "type": "heading",
+            "text": "Bookkeeping mode"
+        },
+        {
+            "type": "link",
+            "text": "Processing Functions",
+            "url": "#SPANRiskManagerFunctions-ProcessingFunctions",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Calculate Option Implied Volatilities",
+            "url": "#SPANRiskManagerFunctions-CalculateOptionImpliedVolatilities",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Average Call / Put Volatilities",
+            "url": "#SPANRiskManagerFunctions-AverageCall/PutVolatilities",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Calculate Series Volatilities",
+            "url": "#SPANRiskManagerFunctions-CalculateSeriesVolatilities",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Calculate Option Prices (and Greeks)",
+            "url": "#SPANRiskManagerFunctions-CalculateOptionPrices(andGreeks)",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Calculate Risk Arrays",
+            "url": "#SPANRiskManagerFunctions-CalculateRiskArrays",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Replicate Price Basis",
+            "url": "#SPANRiskManagerFunctions-ReplicatePriceBasis",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Apply Volatility Skew",
+            "url": "#SPANRiskManagerFunctions-ApplyVolatilitySkew",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Observe Market",
+            "url": "#SPANRiskManagerFunctions-ObserveMarket",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Reset Prices",
+            "url": "#SPANRiskManagerFunctions-ResetPrices",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "What-If Scenario Processing",
+            "url": "#SPANRiskManagerFunctions-What-IfScenarioProcessing",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Define What-If Scenario",
+            "url": "#SPANRiskManagerFunctions-DefineWhat-IfScenario",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Compare Scenarios",
+            "url": "#SPANRiskManagerFunctions-CompareScenarios",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Typical Uses of SPAN Risk Manager",
+            "url": "#SPANRiskManagerFunctions-TypicalUsesofSPANRiskManager",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Calculation of SPAN Risk Arrays, Creation of SPAN Risk Parameter Files",
+            "url": "#SPANRiskManagerFunctions-CalculationofSPANRiskArrays,CreationofSPANRiskParameterFiles",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Stress Testing",
+            "url": "#SPANRiskManagerFunctions-StressTesting",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Real-Time Pre- or Post-Execution Risk-Based Credit Controls",
+            "url": "#SPANRiskManagerFunctions-Real-TimePre-orPost-ExecutionRisk-BasedCreditControls",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Trade Posting",
+            "url": "#SPANRiskManagerFunctions-TradePosting",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Update Positions Only",
+            "url": "#SPANRiskManagerFunctions-UpdatePositionsOnly",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Trade-register mode",
+            "url": "#SPANRiskManagerFunctions-Trade-registermode",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Bookkeeping mode",
+            "url": "#SPANRiskManagerFunctions-Bookkeepingmode",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "confluence_tables",
+            "text": []
+        }
+    ],
+    "page_id": "457411209",
+    "child_page_ids": []
+}

@@ -1,0 +1,66 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Overall for Portfolio:The portfolio's total equity broken down by ledger balance, open trade equity and securities on deposit"
+        },
+        {
+            "type": "heading",
+            "text": "Core Maintenance Requirement/Total Requirement:Equal to the Span Maintenance Requirement less the Available Net Option Value"
+        },
+        {
+            "type": "heading",
+            "text": "Excess Over (Deficit Under):(Net Liquidating Value + Securities) - (Maintenance Span Requirement)"
+        },
+        {
+            "type": "heading",
+            "text": "Core Initial Requirement/Total Requirement:Equal to the Span Initial Requirement less the Available Net Option Value"
+        },
+        {
+            "type": "heading",
+            "text": "Excess Over (Deficit Under):(Net Liquidating Value + Securities) - (Initial Span Requirement)"
+        },
+        {
+            "type": "heading",
+            "text": "Net Liquidating Value + Securities:Total Equity plus Available Net Option Value"
+        },
+        {
+            "type": "heading",
+            "text": "Level:The value perspectives shown as Overall Values, Overall Requirements, Requirements per Exchange Complex and Requirements per Combined Commodity."
+        },
+        {
+            "type": "heading",
+            "text": "Curr:The currency used for each product and for the overall portfolio. Span gives the option of using different currencies for overall portfolio requirements and for each product's performance bond requirements."
+        },
+        {
+            "type": "heading",
+            "text": "LOV:Long Option Value"
+        },
+        {
+            "type": "heading",
+            "text": "SOV:Short Option Value"
+        },
+        {
+            "type": "heading",
+            "text": "Class:Specifies the different levels of performance bond requirements.\u00a0 This allows an exchange or clearing organization to divide it's performance bond requirement into different, acceptable forms of collateral."
+        },
+        {
+            "type": "heading",
+            "text": "Maint/Init:Identifies whether a performance bond requirement is a Maintenance Requirement or an Initial Requirement."
+        },
+        {
+            "type": "heading",
+            "text": "SpanReq:The requirement derived by Span which reflects the actual single-day exposure.\u00a0 It is calculated by taking the Scan Risk and adding to it any intracommodity, spot or Short Option Minimum charges, and deducting any intercommodity or interexchange credits."
+        },
+        {
+            "type": "heading",
+            "text": "Av NOV :\u00a0\u00a0\u00a0 Available Net Option Value"
+        },
+        {
+            "type": "confluence_tables",
+            "text": []
+        }
+    ],
+    "page_id": "457083618",
+    "child_page_ids": []
+}

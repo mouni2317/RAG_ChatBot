@@ -1,0 +1,33 @@
+{
+    "parentId": "457083133",
+    "spaceId": "457312811",
+    "ownerId": "60653f79352e1e0069fb728f",
+    "lastOwnerId": null,
+    "createdAt": "2024-12-21T16:43:06.126Z",
+    "authorId": "60653f79352e1e0069fb728f",
+    "parentType": "page",
+    "position": 403445073,
+    "version": {
+        "number": 1,
+        "message": "",
+        "minorEdit": false,
+        "authorId": "60653f79352e1e0069fb728f",
+        "createdAt": "2024-12-21T16:43:07.679Z"
+    },
+    "body": {
+        "export_view": {
+            "representation": "export_view",
+            "value": "<p>This report shows the positions in a portfolio.\u00a0 It s possible to view a single portfolio, several portfolios, or all portfolios at any given point in time.</p><p><strong>Exch Cmplx:\u00a0\u00a0\u00a0 Exchange Complex</strong></p><p>The exchange complex, clearing organization or cross margining agreement.\u00a0 The Exchange Complex contains the set of Combined Commodities for a single exchange, clearing organization or cross margining agreement (although in some cases the Exchange Complex may have more than one exchange).\u00a0 To view the complete listing of Exchange Complexes refer to the Exchanges report under the reports Master folder.</p><p><strong>Exch:\u00a0 Exchange</strong></p><p>The individual exchange.\u00a0 Each Exchange Complex may have more than one Exchange's product groupings under its umbrella.\u00a0 Each individual Exchange will have its own product grouping.</p><p><strong>Product:</strong></p><p>Each Exchange has Products grouped into families.\u00a0 Span defines the Products by:</p><ul><li>ID - Span assigns an internal product ID number to each product within a family\u00a0</li><li>Code - The Combined Commodity.\u00a0 For example, SP is the code for the family of products with the underlying physical S&amp;P 500 index.</li><li>Type - Identifies the product.\u00a0 Futures are Fut, options on futures are FutOpt, etc.\u00a0 To view a complete listing of product IDs, Codes and Types, refer to the Products By Combined Commodity Report under the Risk Parameters folder.</li></ul><p>Span defines the Contract by:</p><ul><li>ID - An internal contract ID number is assigned to each contract within a product family</li><li>Alias - The alias gives the Contract month and year in yyyymm format.\u00a0 For options contracts, the alias also includes &quot;C&quot; or &quot;P&quot; for call or put, and the strike price.\u00a0 For example, <u>200107 on 200109C 1380</u> is the alias for an July 2001 1380 Call with an underlying September 2000 future.</li></ul><p><strong>Price:</strong></p><p>The price of the contract (the premium for an option) for the specified point in time.</p><p><strong>Net:</strong></p><p>The net position in the portfolio for the specified contract.</p><p><strong>Value:</strong></p><p>Contract Price x Contract Value Factor x Net Position</p><p>For example, for an SP mini option position that is net short -100 with a premium of 3.2, the Value is calculated as follows:</p><p>3.2 x 50 x (-100)=-16,000</p>"
+        }
+    },
+    "status": "current",
+    "title": "Positions Report",
+    "id": "457313943",
+    "_links": {
+        "editui": "/pages/resumedraft.action?draftId=457313943",
+        "webui": "/spaces/pubsub/pages/457313943/Positions+Report",
+        "edituiv2": "/spaces/pubsub/pages/edit-v2/457313943",
+        "tinyui": "/x/lw5CGw",
+        "base": "https://cmegroupclientsite.atlassian.net/wiki"
+    }
+}

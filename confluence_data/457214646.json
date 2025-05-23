@@ -1,0 +1,33 @@
+{
+    "parentId": "457411024",
+    "ownerId": "60653f79352e1e0069fb728f",
+    "lastOwnerId": null,
+    "createdAt": "2024-12-21T16:42:49.221Z",
+    "authorId": "60653f79352e1e0069fb728f",
+    "parentType": "page",
+    "position": 91554985,
+    "version": {
+        "number": 1,
+        "message": "",
+        "minorEdit": false,
+        "authorId": "60653f79352e1e0069fb728f",
+        "createdAt": "2024-12-21T16:42:50.547Z"
+    },
+    "spaceId": "457312811",
+    "body": {
+        "export_view": {
+            "representation": "export_view",
+            "value": "<p>PC-SPAN Version 4 creates reports using some advanced new features of\u00a0<strong>XML -- Extensible Markup Language --\u00a0</strong>and Internet Explorer version 5.</p><p>When you select the Reports tab (either click on it, or select it from the menu using\u00a0<strong>View Reports</strong>), a temporary SPAN document is created, which is then opened in the\u00a0<strong>Reports module</strong>.\u00a0 The window will now display two panes:</p><ul><li>On the left, the\u00a0<strong>Contents</strong>\u00a0pane, which allows you to select from the set of available reports, and</li><li>On the right, the\u00a0<strong>Report</strong>\u00a0pane, in which the selected report will display.</li></ul><p>On the\u00a0<strong>Contents</strong>\u00a0pane, there are several\u00a0<strong>report folders</strong>.\u00a0 You click on these to open the folder, displaying the list of reports within the folder, and again to close the folder.\u00a0 By default, the\u00a0<strong>Portfolio reports</strong>\u00a0folder is open when you first enter the Reports tab.</p><p>Click on a specific report to prepare it.</p><h2 id=\"PC-SPANReports-EnteringReportParameters\">Entering Report Parameters</h2><p>Depending on the report you select and the data available, dialog boxes may display so that you can select particular report parameters.</p><p>For example, suppose you have selected the\u00a0<strong>Positions</strong>\u00a0report, and you have several portfolios defined at each of several different points in time.\u00a0 In this case, first a dialog box will display allowing you to select the particular point in time.\u00a0 Then a second dialog box will display allowing you to select one or more portfolio(s) to be included in the report.\u00a0 You can also use the standard Windows\u00a0<strong>Shift-Click</strong>\u00a0and/or\u00a0<strong>Ctrl-Click</strong>\u00a0combinations to select more than one portfolio.</p><h2 id=\"PC-SPANReports-WorkingwithReports\">Working with Reports</h2><p>Once you have requested a particular report and specified any necessary parameters, a small dialog box will display advising you to wait while the report is being generated.\u00a0 When it is ready, that dialog box will disappear.</p><p>The report will now display in the Report pane, with the\u00a0<strong>Report button bar</strong>\u00a0at the top of the pane.\u00a0 Here's what each button does:</p><ul><li>At the right-hand side of the button bar, you'll see the\u00a0<strong>Page</strong>,\u00a0<strong>Go To Page</strong>, and\u00a0<strong>Page Size</strong>\u00a0fields:<br/><br/><ul><li>The\u00a0<strong>Page</strong>\u00a0button shows you how many pages the report consists of, and which of them is displayed now.\u00a0 For example:\u00a0 &quot;Page 1 of 6.&quot;</li><li>The\u00a0<strong>Go To Page</strong>\u00a0button allows you to go directly to a particular page.\u00a0 Enter the desired page number, and click on the button to display that page.</li><li>The\u00a0<strong>Page Size</strong>\u00a0shows the number of data lines which are included per page.\u00a0 Change this value as desired, and click on the button to change the page size.\u00a0 The report will then be re-paginated automatically.</li></ul></li><li>In the middle of the button bar, you'll see the\u00a0<strong>First, Previous</strong>,\u00a0<strong>Next</strong>\u00a0and\u00a0<strong>Last</strong>\u00a0buttons.\u00a0 Use\u00a0<strong>Previous</strong>\u00a0or\u00a0<strong>Next</strong>\u00a0to go backwards or forwards one page at a time, and\u00a0<strong>First</strong>\u00a0or\u00a0<strong>Last\u00a0</strong>to jump directly to the first or last page of the report.</li><li>On the left-hand side of the button bar, you'll see the following buttons:<br/><br/><ul><li>Click the\u00a0<strong>Hide</strong>\u00a0button to hide the contents pane, providing more room on the screen for viewing the report.\u00a0 Click it again to display the contents pane again.</li><li>Click the\u00a0<strong>Print Current Page</strong>\u00a0button to print just the currently displayed report page.</li><li>Click the\u00a0<strong>Print All Report Pages</strong>\u00a0button to print the entire report.</li><li>Click the\u00a0<strong>Save</strong>\u00a0button to save the report to a file, so that you can view it or print it again without having to rerun it.</li></ul></li></ul><p>Almost all of the reports print nicely in the default\u00a0<strong>portrait\u00a0</strong>mode.\u00a0 Occasionally, you may need to change a report to\u00a0<strong>landscape</strong>\u00a0mode.\u00a0 You do this using the\u00a0<strong>Properties</strong>\u00a0button for the printer, after you have clicked on either the\u00a0<strong>Print Current Page</strong>\u00a0or the\u00a0<strong>Print All Report Pages</strong>\u00a0buttons.</p>"
+        }
+    },
+    "status": "current",
+    "title": "PC-SPAN Reports",
+    "id": "457214646",
+    "_links": {
+        "editui": "/pages/resumedraft.action?draftId=457214646",
+        "webui": "/spaces/pubsub/pages/457214646/PC-SPAN+Reports",
+        "edituiv2": "/spaces/pubsub/pages/edit-v2/457214646",
+        "tinyui": "/x/topAGw",
+        "base": "https://cmegroupclientsite.atlassian.net/wiki"
+    }
+}

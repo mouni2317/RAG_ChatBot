@@ -1,0 +1,98 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Contracts"
+        },
+        {
+            "type": "heading",
+            "text": "Comb Comm:Combined Commodity"
+        },
+        {
+            "type": "heading",
+            "text": "Product:"
+        },
+        {
+            "type": "heading",
+            "text": "ID:Span assigns an internal product ID number to each product within a family"
+        },
+        {
+            "type": "heading",
+            "text": "Alias:Name that defines the product"
+        },
+        {
+            "type": "heading",
+            "text": "Contract"
+        },
+        {
+            "type": "heading",
+            "text": "ID:Span assigns a contract ID number to each contract"
+        },
+        {
+            "type": "heading",
+            "text": "Period:Gives the Contract month and year in yyyymm format.\u00a0 For options contracts, the Period is displayed slightly differently.\u00a0 For example,200110 on 1.00 ES 200112 is one October 2001 option on December 2001 ES futures contract."
+        },
+        {
+            "type": "heading",
+            "text": "C/P:Call or put"
+        },
+        {
+            "type": "heading",
+            "text": "Strike:The strike price of an option"
+        },
+        {
+            "type": "heading",
+            "text": "Price:The price (premium for an option) of a contract"
+        },
+        {
+            "type": "heading",
+            "text": "Value:The underlying value of a contract"
+        },
+        {
+            "type": "heading",
+            "text": "Delta:The delta value of an option"
+        },
+        {
+            "type": "heading",
+            "text": "Volatility:Implied volatility for options"
+        },
+        {
+            "type": "heading",
+            "text": "Scale:This number refers to the scaling of contracts on products that have the same underlying, but differently sized contracts.\u00a0 For example, the emini ND contract (NQ)\u00a0 is scaled to 1 and a regular ND is scaled to 5."
+        },
+        {
+            "type": "heading",
+            "text": "Setl. Date:Settlement date"
+        },
+        {
+            "type": "heading",
+            "text": "Time to Exp.:Time to expiration"
+        },
+        {
+            "type": "heading",
+            "text": "FDT:First trade date"
+        },
+        {
+            "type": "heading",
+            "text": "LDT:Last trade date"
+        },
+        {
+            "type": "heading",
+            "text": "Intr. Rate:Interest rate if supplied"
+        },
+        {
+            "type": "heading",
+            "text": "Div. Rate:Dividend rate if supplied"
+        },
+        {
+            "type": "heading",
+            "text": "Look Ahead:If supplied, the passage of time that Span will use to calculate the risk array's hypothetical gains and losses\u00a0 (The usual Look Ahead time is a period of one day.\u00a0 It would be three days on a Friday and four days before a long weekend.)"
+        },
+        {
+            "type": "confluence_tables",
+            "text": []
+        }
+    ],
+    "page_id": "457083512",
+    "child_page_ids": []
+}

@@ -1,0 +1,33 @@
+{
+    "parentId": "457214773",
+    "ownerId": "60653f79352e1e0069fb728f",
+    "lastOwnerId": null,
+    "createdAt": "2024-12-21T16:43:27.809Z",
+    "authorId": "60653f79352e1e0069fb728f",
+    "parentType": "page",
+    "position": 452760539,
+    "version": {
+        "number": 1,
+        "message": "",
+        "minorEdit": false,
+        "authorId": "60653f79352e1e0069fb728f",
+        "createdAt": "2024-12-21T16:43:29.041Z"
+    },
+    "spaceId": "457312811",
+    "body": {
+        "export_view": {
+            "representation": "export_view",
+            "value": "<div class=\"table-wrap\"><table class=\"confluenceTable\"><tbody><tr><th class=\"confluenceTh\">Length</th><th class=\"confluenceTh\">From</th><th class=\"confluenceTh\">To</th><th class=\"confluenceTh\">Datatype</th><th class=\"confluenceTh\">Format</th><th class=\"confluenceTh\">Description and Comments</th></tr><tr><td class=\"confluenceTd\">2</td><td class=\"confluenceTd\">1</td><td class=\"confluenceTd\">2</td><td class=\"confluenceTd\">AN</td><td class=\"confluenceTd\">X(2)</td><td class=\"confluenceTd\">Record ID - &quot;R &quot;</td></tr><tr><td class=\"confluenceTd\">3</td><td class=\"confluenceTd\">3</td><td class=\"confluenceTd\">5</td><td class=\"confluenceTd\">AN</td><td class=\"confluenceTd\">X(3)</td><td class=\"confluenceTd\">Exchange Acronym</td></tr><tr><td class=\"confluenceTd\">10</td><td class=\"confluenceTd\">6</td><td class=\"confluenceTd\">15</td><td class=\"confluenceTd\">AN</td><td class=\"confluenceTd\">X(10)</td><td class=\"confluenceTd\">Product (Commodity) Code</td></tr><tr><td class=\"confluenceTd\">6</td><td class=\"confluenceTd\">16</td><td class=\"confluenceTd\">21</td><td class=\"confluenceTd\">AN</td><td class=\"confluenceTd\">X(6)</td><td class=\"confluenceTd\">Combined Commodity Code</td></tr><tr><td class=\"confluenceTd\">3</td><td class=\"confluenceTd\">22</td><td class=\"confluenceTd\">24</td><td class=\"confluenceTd\">AN</td><td class=\"confluenceTd\">X(3)</td><td class=\"confluenceTd\">Alternate Exchange Acronym</td></tr><tr><td class=\"confluenceTd\">10</td><td class=\"confluenceTd\">25</td><td class=\"confluenceTd\">34</td><td class=\"confluenceTd\">AN</td><td class=\"confluenceTd\">X(10)</td><td class=\"confluenceTd\">Alternate Product (Commodity) Code</td></tr><tr><td class=\"confluenceTd\">6</td><td class=\"confluenceTd\">35</td><td class=\"confluenceTd\">40</td><td class=\"confluenceTd\">AN</td><td class=\"confluenceTd\">X(3)</td><td class=\"confluenceTd\">Alternate Combined Commodity Code</td></tr><tr><td class=\"confluenceTd\">90</td><td class=\"confluenceTd\">41</td><td class=\"confluenceTd\">132</td><td class=\"confluenceTd\">-</td><td class=\"confluenceTd\">-</td><td class=\"confluenceTd\">Filler</td></tr></tbody></table></div><p><strong>Notes:</strong></p><ol><li>Commodity redefinition records may be used where products on two different exchanges in the same SPAN file need to be assigned to the same combined commodity code. In the SPAN file, the combined commodity code pertains to the exchange -- not to the group of exchanges which are cleared by a single clearing organization or which otherwise comprise an &quot;exchange complex.&quot; Therefore, to put products on two different exchanges into the same combined commodity, it is necessary to redefine one of them as if it were on the other exchange.<br/><br/></li><li>For example, in the Chicago Board of Trade / Mid-America Commodity Exchange SPAN file, CBOT commodity 17 (Treasury Bonds) is redefined as Mid-Am commodity US, in the Mid-Am combined commodity &quot;17 &quot;. Thus, Mid-Am combined commodity &quot;17 &quot; contains both CBOT treasury bonds and Mid-Am treasury bonds. Delta-scaling factors on the type &quot;B&quot; records are used to take relative contract size differences into account when doing delta calculations with these two different contracts.<br/><br/></li><li>If present in the file, commodity redefinition records must be located\u00a0<strong>immediately after the first exchange header (type &quot;1&quot;) record in the file, regardless of which exchange they are for.</strong></li></ol>"
+        }
+    },
+    "status": "current",
+    "title": "Type R - Expanded",
+    "id": "457083828",
+    "_links": {
+        "editui": "/pages/resumedraft.action?draftId=457083828",
+        "webui": "/spaces/pubsub/pages/457083828/Type+R+-+Expanded",
+        "edituiv2": "/spaces/pubsub/pages/edit-v2/457083828",
+        "tinyui": "/x/tIs_Gw",
+        "base": "https://cmegroupclientsite.atlassian.net/wiki"
+    }
+}

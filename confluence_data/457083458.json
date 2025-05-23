@@ -1,0 +1,33 @@
+{
+    "parentId": "457411114",
+    "spaceId": "457312811",
+    "ownerId": "60653f79352e1e0069fb728f",
+    "lastOwnerId": null,
+    "createdAt": "2024-12-21T16:42:58.208Z",
+    "authorId": "60653f79352e1e0069fb728f",
+    "parentType": "page",
+    "version": {
+        "number": 1,
+        "message": "",
+        "minorEdit": false,
+        "authorId": "60653f79352e1e0069fb728f",
+        "createdAt": "2024-12-21T16:42:59.804Z"
+    },
+    "position": 91133118,
+    "body": {
+        "export_view": {
+            "representation": "export_view",
+            "value": "<p><span class=\"confluence-embedded-file-wrapper\"><img class=\"confluence-embedded-image\" src=\"https://cmegroupclientsite.atlassian.net/wiki/download/attachments/457083458/Riskarrays.jpg?api=v2\"></span></p><p><u><strong>Risk Arrays</strong></u></p><p>This report shows the Span Risk Arrays for each specific Combined Commodity contract in a portfolio.\u00a0 The Risk Array represents a contract's hypothetical gain/loss under a specific set of market conditions from a set point in time to a specific point in time in the future.</p><p><strong>Comb Comm: </strong>\u00a0Combined Commodity</p><p>The set of all eligible products used to generate a total requirement for each Exchange Complex within a portfolio.\u00a0 A Combined Commodity generally consists of all products of the same underlying physical. For example, at the CME, the Eurodollar combined commodity encompasses Mid-Curve options, Eurodollars and Eurodollar options.\u00a0</p><p><strong><u>Product:</u></strong></p><p><strong>ID: </strong>\u00a0Span assigns an internal product ID number to each product within a family\u00a0</p><p><strong>Alias:</strong>\u00a0 Name that defines the product</p><p><strong><u>Contract</u></strong></p><p><strong>ID:</strong>\u00a0 Span assigns an internal contract ID number to each contract</p><p><strong>Alias:</strong> The alias gives the Contract month and year in yyyymm format.\u00a0 For options contracts, the alias also includes &quot;C&quot; or &quot;P&quot; for call or put, and the strike price.\u00a0 For example, <u>200107 on 200109C 1380</u> is the alias for an July 2001 1380 Call with an underlying September 2000 future.</p><p><strong>Price:\u00a0 </strong>The price (premium for an option) of a contract</p><p><strong>Imp Vol:\u00a0</strong>The<strong> </strong>Implied volatility calculated for each specific option, or the averaged implied volatility calculated for the option along with its corresponding call or put pair.</p><p><strong>Arr ID:\u00a0 </strong>Span assigns an ID number for each type of array</p><p><strong>Delta:\u00a0 </strong>The composite delta value of an option.\u00a0 The composite Delta is derived as the weighted average of the deltas, where the weights are associated with each underlying price scan point.</p><p><strong>Scenario 1-16:</strong></p><p>These Scan Risk Scenarios provide sixteen different potential market scenarios and show the associated gain/loss per Contract.\u00a0 The chart below displays the sixteen risk scenarios.\u00a0</p><div class=\"table-wrap\"><table class=\"confluenceTable\"><tbody><tr><td class=\"confluenceTd\">1</td><td class=\"confluenceTd\">Futures Price Unchanged; Volatility up the Volatility Scan Range</td></tr><tr><td class=\"confluenceTd\">2</td><td class=\"confluenceTd\">Futures Price Unchanged; Volatility down the Volatility Scan Range</td></tr><tr><td class=\"confluenceTd\">3</td><td class=\"confluenceTd\">Futures Price up 1/3 the Price Scan range; Volatility up the Volatility Scan Range</td></tr><tr><td class=\"confluenceTd\">4</td><td class=\"confluenceTd\">Futures up 1/3 the Price Scan range; Volatility down the Volatility Scan Range</td></tr><tr><td class=\"confluenceTd\">5</td><td class=\"confluenceTd\">Futures down 1/3 the Price Scan range; Volatility up the Volatility Scan Range</td></tr><tr><td class=\"confluenceTd\">6</td><td class=\"confluenceTd\">Futures down 1/3 the Price Scan range; Volatility down the Volatility Scan Range</td></tr><tr><td class=\"confluenceTd\">7</td><td class=\"confluenceTd\">Futures up 2/3 the Price Scan range; Volatility up the Volatility Scan Range</td></tr><tr><td class=\"confluenceTd\">8</td><td class=\"confluenceTd\">Futures up 2/3 the Price Scan range; Volatility down the Volatility Scan Range</td></tr><tr><td class=\"confluenceTd\">9</td><td class=\"confluenceTd\">Futures down 2/3 the Price Scan range; Volatility up the Volatility Scan Range</td></tr><tr><td class=\"confluenceTd\">10</td><td class=\"confluenceTd\">Futures down 2/3 range the Price Scan; Volatility down the Volatility Scan Range</td></tr><tr><td class=\"confluenceTd\">11</td><td class=\"confluenceTd\">Futures up 3/3 range the Price Scan; Volatility up the Volatility Scan Range</td></tr><tr><td class=\"confluenceTd\">12</td><td class=\"confluenceTd\">Futures up 3/3 range the Price Scan; Volatility down the Volatility Scan Range</td></tr><tr><td class=\"confluenceTd\">13</td><td class=\"confluenceTd\">Futures down 3/3 range the Price Scan; Volatility up the Volatility Scan Range</td></tr><tr><td class=\"confluenceTd\">14</td><td class=\"confluenceTd\">Futures down 3/3 range the Price Scan; volatility down the Volatility Scan Range</td></tr><tr><td class=\"confluenceTd\">15</td><td class=\"confluenceTd\">Futures up extreme (3 times the Price Scan Range) - Cover 30% of loss</td></tr><tr><td class=\"confluenceTd\">16</td><td class=\"confluenceTd\">Futures down extreme (3 times the Price Scan Range) - Cover 30% of loss</td></tr></tbody></table></div>"
+        }
+    },
+    "status": "current",
+    "title": "Risk Arrays",
+    "id": "457083458",
+    "_links": {
+        "editui": "/pages/resumedraft.action?draftId=457083458",
+        "webui": "/spaces/pubsub/pages/457083458/Risk+Arrays",
+        "edituiv2": "/spaces/pubsub/pages/edit-v2/457083458",
+        "tinyui": "/x/Qoo_Gw",
+        "base": "https://cmegroupclientsite.atlassian.net/wiki"
+    }
+}

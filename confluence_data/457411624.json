@@ -1,0 +1,33 @@
+{
+    "parentId": "457411114",
+    "ownerId": "60653f79352e1e0069fb728f",
+    "lastOwnerId": null,
+    "createdAt": "2024-12-21T16:43:35.123Z",
+    "authorId": "60653f79352e1e0069fb728f",
+    "parentType": "page",
+    "position": 91139602,
+    "version": {
+        "number": 1,
+        "message": "",
+        "minorEdit": false,
+        "authorId": "60653f79352e1e0069fb728f",
+        "createdAt": "2024-12-21T16:43:36.515Z"
+    },
+    "spaceId": "457312811",
+    "status": "current",
+    "body": {
+        "export_view": {
+            "representation": "export_view",
+            "value": "<p><span class=\"confluence-embedded-file-wrapper\"><img class=\"confluence-embedded-image\" src=\"https://cmegroupclientsite.atlassian.net/wiki/download/attachments/457411624/intexspreads.jpg?api=v2\"></span></p><p><u><strong>Interexchange Spreads</strong></u></p><p>This report shows the InterExchange spread rates, meaning the offsets for products within the same Combined Commodity but traded at different Exchange Complexes, categorized by Priority.</p><p><strong>Priority:\u00a0 </strong>Span assigns a Priority number to every spread.\u00a0 This Priority will determine which spreads in a portfolio will be used first.</p><p><strong>Legs:</strong></p><ul><li>Leg # - shows the legs by either Home Leg or Away Leg per the Exchange Complex.\u00a0 The Home Leg includes products listed at the Exchange Complex being viewed in Span.\u00a0 The Away Leg includes all products listed at any other Exchange Complexes.</li><li>Exch Cmplx - shows the Exchange Complexes represented in the spread</li><li>Comb Comm - shows the Combined Commodity (ies) that make up each leg of the spread</li><li>Tier/Period - Shows the Tier or Period for the particular leg.\u00a0 A Tier or Period is comprised of one or more contracts that may be grouped for spreading purposes</li><li>Side - A or B refers to the side of the market on which a contract must be to form a particular spread.\u00a0 For example, &quot;A versus B&quot; actually means &quot;Long versus Short&quot;.</li><li>Ratio - gives the number of contracts for each side required to form the spread</li></ul><p><strong>Rates:</strong></p><ul><li>ID- Span assigns an ID to each spread rate</li><li>Rate - Shows the actual rate for each spread in percentage terms\u00a0</li></ul>"
+        }
+    },
+    "title": "Inter Exchange Spreads",
+    "id": "457411624",
+    "_links": {
+        "editui": "/pages/resumedraft.action?draftId=457411624",
+        "webui": "/spaces/pubsub/pages/457411624/Inter+Exchange+Spreads",
+        "edituiv2": "/spaces/pubsub/pages/edit-v2/457411624",
+        "tinyui": "/x/KIxDGw",
+        "base": "https://cmegroupclientsite.atlassian.net/wiki"
+    }
+}

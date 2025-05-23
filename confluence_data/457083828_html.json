@@ -1,0 +1,115 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Notes:"
+        },
+        {
+            "type": "confluence_tables",
+            "text": [
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "1",
+                                "2",
+                                "AN",
+                                "X(2)",
+                                "Record ID - \"R \""
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "3",
+                                "5",
+                                "AN",
+                                "X(3)",
+                                "Exchange Acronym"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "10",
+                                "6",
+                                "15",
+                                "AN",
+                                "X(10)",
+                                "Product (Commodity) Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "16",
+                                "21",
+                                "AN",
+                                "X(6)",
+                                "Combined Commodity Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "22",
+                                "24",
+                                "AN",
+                                "X(3)",
+                                "Alternate Exchange Acronym"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "10",
+                                "25",
+                                "34",
+                                "AN",
+                                "X(10)",
+                                "Alternate Product (Commodity) Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "35",
+                                "40",
+                                "AN",
+                                "X(3)",
+                                "Alternate Combined Commodity Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "90",
+                                "41",
+                                "132",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_id": "457083828",
+    "child_page_ids": []
+}

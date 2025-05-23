@@ -1,0 +1,50 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Exch Cmplx:\u00a0\u00a0\u00a0 Exchange Complex"
+        },
+        {
+            "type": "heading",
+            "text": "Comb Comm:\u00a0\u00a0\u00a0 Combined Commodity"
+        },
+        {
+            "type": "heading",
+            "text": "Level:The breakdown of the delta for net and gross portfolios.\u00a0 The period delta is shown as net for a net portfolio, but\u00a0 a gross portfolio is categorized into inter, intra and naked deltas."
+        },
+        {
+            "type": "heading",
+            "text": "Class:Specifies the different levels of performance bond requirements.\u00a0 This allows an exchange or clearing organization to divide its performance bond requirement into different, acceptable forms of collateral."
+        },
+        {
+            "type": "heading",
+            "text": "Maint/Init:Identifies whether a performance bond requirement is a Maintenance Requirement or an Initial Requirement."
+        },
+        {
+            "type": "heading",
+            "text": "Period:A defined period of time that identifies the contract.\u00a0 The period is usually expressed a contract month, contract week, etc...."
+        },
+        {
+            "type": "heading",
+            "text": "Original Delta - Net/Gross"
+        },
+        {
+            "type": "heading",
+            "text": "Remaining Net Delta:Total net delta left in a product after all intracommodity and interexchange spreading has been calculated."
+        },
+        {
+            "type": "heading",
+            "text": "Spot Charge:Additional charge that covers the risk of products nearing expiration."
+        },
+        {
+            "type": "heading",
+            "text": "Spreads:Identifies any Spot Charge as a result of intracommodity spreads."
+        },
+        {
+            "type": "confluence_tables",
+            "text": []
+        }
+    ],
+    "page_id": "457411265",
+    "child_page_ids": []
+}

@@ -1,0 +1,122 @@
+{
+    "data": [
+        {
+            "type": "confluence_tables",
+            "text": [
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "1",
+                                "2",
+                                "AN",
+                                "X(2)",
+                                "Record ID - \"9\""
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "3",
+                                "5",
+                                "AN",
+                                "X(3)",
+                                "Exchange Acronym"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "12",
+                                "6",
+                                "17",
+                                "AN",
+                                "X(12)",
+                                "Commodity (Product) Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "18",
+                                "22",
+                                "AN",
+                                "X(5)",
+                                "Product Type Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "14",
+                                "23",
+                                "36",
+                                "N",
+                                "9(14)",
+                                "Settlement Price"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "37",
+                                "37",
+                                "N",
+                                "9",
+                                "Settlement Price Decimal Locator"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "14",
+                                "38",
+                                "51",
+                                "N",
+                                "9(14)",
+                                "Duration"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "52",
+                                "52",
+                                "N",
+                                "9",
+                                "Duration Decimal Locator"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "80",
+                                "53",
+                                "132",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_id": "457083772",
+    "child_page_ids": []
+}

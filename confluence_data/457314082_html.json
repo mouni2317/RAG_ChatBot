@@ -1,0 +1,788 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Layout for bytes 7-62 if the Delivery Charge Method Code is \"02\", \"03\", \"04\", or \"05\":"
+        },
+        {
+            "type": "heading",
+            "text": "Layout for bytes 7-62 if the Delivery Charge Method Code is \"06\" -- SIMEX method:"
+        },
+        {
+            "type": "heading",
+            "text": "Layout for bytes 7-62 if the Delivery Charge Method Code is \"07\" -- NYMEX method:"
+        },
+        {
+            "type": "heading",
+            "text": "Layout for bytes 7-62 if the Delivery Charge Method Code is \"08\" -- Coffee Sugar Cocoa Exchange method:"
+        },
+        {
+            "type": "heading",
+            "text": "Layout for bytes 7-62 if the Delivery Charge Method Code is '10', the \"table-driven\" method:"
+        },
+        {
+            "type": "heading",
+            "text": "Layout for bytes 7-62 if the Delivery Charge Method Code is '11', the \"basis-risk\" method:"
+        },
+        {
+            "type": "heading",
+            "text": "Layout for bytes 63-80:"
+        },
+        {
+            "type": "heading",
+            "text": "Notes:"
+        },
+        {
+            "type": "confluence_tables",
+            "text": [
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "1",
+                                "1",
+                                "1",
+                                "AN",
+                                "X",
+                                "Record ID - \"4\""
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "2",
+                                "4",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "5",
+                                "6",
+                                "AN",
+                                "X(2)",
+                                "Delivery (Spot) Charge Method Code"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "7",
+                                "7",
+                                "13",
+                                "N",
+                                "9(7)",
+                                "Delivery Charge Rate 1: Spreads"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "14",
+                                "20",
+                                "N",
+                                "9(7)",
+                                "Delivery Charge Rate 2: Outrights"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "21",
+                                "27",
+                                "N",
+                                "9(7)",
+                                "Delivery Charge Rate 3"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "28",
+                                "34",
+                                "N",
+                                "9(7)",
+                                "Delivery Charge Rate 4"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "35",
+                                "41",
+                                "N",
+                                "9(7)",
+                                "Delivery Charge Rate 5"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "42",
+                                "48",
+                                "N",
+                                "9(7)",
+                                "Delivery Charge Rate 6"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "49",
+                                "55",
+                                "N",
+                                "9(7)",
+                                "Delivery Charge Rate 7"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "56",
+                                "58",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "59",
+                                "62",
+                                "N",
+                                "9(4)",
+                                "Delivery Month in the formatYYMM"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "7",
+                                "7",
+                                "13",
+                                "N",
+                                "9(7)",
+                                "Spreads for Delivery Month 2 Charge Rate: for spreads between spot month 2 and the back months"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "14",
+                                "20",
+                                "N",
+                                "9(7)",
+                                "Outrights for Delivery Month 2 Charge Rate"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "21",
+                                "27",
+                                "N",
+                                "9(7)",
+                                "Spreads for Delivery Month 1 Charge Rate: for spreads between the two spot months, and between spot month 1 and the back months"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "28",
+                                "34",
+                                "N",
+                                "9(7)",
+                                "Outrights for Delivery Month 1 Charge Rate"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "35",
+                                "38",
+                                "N",
+                                "9(4)",
+                                "Delivery Month 2 asYYMM. If blanks or zeros, then there is no second spot month defined."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "39",
+                                "42",
+                                "N",
+                                "9(4)",
+                                "Delivery Month 1-1 asYYMM. The first of up-to-two futures months which together make up Delivery Month 1."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "43",
+                                "46",
+                                "N",
+                                "9(4)",
+                                "Delivery Month 1-2 asYYMM. The second of up-to-two futures months which together make up Delivery Month 1. If blank or zero, then there is only one futures month comprising Delivery Month 1."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "16",
+                                "47",
+                                "62",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "7",
+                                "7",
+                                "13",
+                                "N",
+                                "9(7)",
+                                "Spot Month 1 Charge Rate"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "14",
+                                "17",
+                                "N",
+                                "9(4)",
+                                "Spot Month 1 asYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "18",
+                                "20",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "21",
+                                "27",
+                                "N",
+                                "9(7)",
+                                "Spot Month 2 Charge Rate"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "28",
+                                "31",
+                                "N",
+                                "9(4)",
+                                "Spot Month 2 asYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "32",
+                                "34",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "35",
+                                "41",
+                                "N",
+                                "9(7)",
+                                "Spot Month 3 Charge Rate"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "42",
+                                "45",
+                                "N",
+                                "9(4)",
+                                "Spot Month 3 asYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "46",
+                                "48",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "49",
+                                "55",
+                                "N",
+                                "9(7)",
+                                "Spot Month 4 Charge Rate"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "56",
+                                "59",
+                                "N",
+                                "9(4)",
+                                "Spot Month 4 asYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "60",
+                                "62",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "7",
+                                "7",
+                                "13",
+                                "N",
+                                "9(7)",
+                                "Spot Month Spread Rate -- for spreads between spot month 1 and spot month 2"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "14",
+                                "20",
+                                "N",
+                                "9(7)",
+                                "Non-Spot Month Spread Rate - for spreads in the back (non-spot) months"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "21",
+                                "27",
+                                "N",
+                                "9(7)",
+                                "Spot to Non-Spot Spread Rate - for spreads between the spot months and the back months"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "28",
+                                "34",
+                                "N",
+                                "9(7)",
+                                "Spot Month 1 Outright Rate"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "35",
+                                "41",
+                                "N",
+                                "9(7)",
+                                "Spot Month 2 Outright Rate"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "42",
+                                "45",
+                                "N",
+                                "9(4)",
+                                "Spot Month 1 asYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "46",
+                                "49",
+                                "N",
+                                "9(4)",
+                                "Spot Month 2 asYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "13",
+                                "50",
+                                "62",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "7",
+                                "8",
+                                "N",
+                                "9(2)",
+                                "Number of contract months in delivery"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "9",
+                                "10",
+                                "N",
+                                "9(2)",
+                                "Delivery Month 1 - Month Number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "11",
+                                "16",
+                                "N",
+                                "9(6)",
+                                "Delivery Month 1 - Contract Month asCCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "17",
+                                "23",
+                                "N",
+                                "9(7)",
+                                "Delivery Month 1 - Charge Rate Per Delta Consumed By Spreads"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "24",
+                                "30",
+                                "N",
+                                "9(7)",
+                                "Delivery Month 1 - Charge Rate Per Delta Remaining In Outrights"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "31",
+                                "32",
+                                "N",
+                                "9(2)",
+                                "Delivery Month 2 - Month Number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "33",
+                                "38",
+                                "N",
+                                "9(6)",
+                                "Delivery Month 2 - Contract Month asCCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "39",
+                                "45",
+                                "N",
+                                "9(7)",
+                                "Delivery Month 2 - Charge Rate Per Delta Consumed By Spreads"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "46",
+                                "52",
+                                "N",
+                                "9(7)",
+                                "Delivery Month 2 - Charge Rate Per Delta Remaining In Outrights"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "10",
+                                "53",
+                                "62",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "7",
+                                "8",
+                                "N",
+                                "X(2)",
+                                "Spot commodity (product) code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "9",
+                                "15",
+                                "N",
+                                "9(7)",
+                                "Basis Risk Charge Rate"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "47",
+                                "16",
+                                "62",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "7",
+                                "63",
+                                "69",
+                                "N",
+                                "9(7)",
+                                "Short Option Minimum Charge Rate"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "70",
+                                "72",
+                                "N",
+                                "9V9(2)",
+                                "Risk Maintenance Performance Bond Adjustment Factor -- Members"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "73",
+                                "75",
+                                "N",
+                                "9V9(2)",
+                                "Risk Maintenance Performance Bond Adjustment Factor -- Hedgers"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "76",
+                                "78",
+                                "N",
+                                "9V9(2)",
+                                "Risk Maintenance Performance Bond Adjustment Factor -- Speculators"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "79",
+                                "79",
+                                "AN",
+                                "X",
+                                "Short Option Minimum Calculation Method --blankor2means the original method, based on thesum of the number of short calls and short puts.1means the new method, based onthe greater of the number or short calls or short puts."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "80",
+                                "80",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_id": "457314082",
+    "child_page_ids": []
+}

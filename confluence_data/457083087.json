@@ -1,0 +1,33 @@
+{
+    "parentId": "457313347",
+    "ownerId": "60653f79352e1e0069fb728f",
+    "createdAt": "2024-12-21T16:42:33.500Z",
+    "authorId": "60653f79352e1e0069fb728f",
+    "parentType": "page",
+    "position": 56097527,
+    "version": {
+        "number": 1,
+        "message": "",
+        "minorEdit": false,
+        "authorId": "60653f79352e1e0069fb728f",
+        "createdAt": "2024-12-21T16:42:34.710Z"
+    },
+    "body": {
+        "export_view": {
+            "representation": "export_view",
+            "value": "<h1 class=\"p1\" id=\"LayoutGuides-RiskParameterFiles\"><strong>Risk Parameter Files</strong></h1><ul><li class=\"p2\"><span class=\"s2\"><span class=\"s3\"><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083445/Risk+Parameter+File+Layouts+for+the+Positional+Formats\" data-linked-resource-id=\"457083445\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Risk Parameter File Layouts for the Positional Formats</a></span></span></li><li class=\"p2\"><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083551/XML-based+Risk+Parameter+File\" data-linked-resource-id=\"457083551\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">XML-based Risk Parameter File</a></li><li class=\"p2\"><span style=\"line-height: 13.0pt;font-size: 10.0pt;\" class=\"s3\"><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411222/Paris+Expanded+SPAN+File+Format+for+MATIF+and+Monep+Products\" data-linked-resource-id=\"457411222\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Paris Expanded SPAN File Format for MATIF and Monep Products</a></span></li></ul><p class=\"p4\"><strong style=\"line-height: normal;font-size: 1.8em;\" class=\"legacy-color-text-default\">Position Files</strong></p><ul><li class=\"p4\"><span style=\"line-height: 13.0pt;font-size: 10.0pt;\" class=\"s3\"><span style=\"font-size: small;\"><span style=\"line-height: 13.0pt;\"><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083223/Standard+Portfolio+Data+File+Layout\" data-linked-resource-id=\"457083223\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Standard Portfolio Data File Layout</a></span></span></span></li><li class=\"p4\"><span style=\"line-height: 13.0pt;font-size: 10.0pt;\" class=\"s3\"><span style=\"font-size: small;\"><span style=\"line-height: 13.0pt;\"><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313617/Expanded+Portfolio+Data+File+Layout\" data-linked-resource-id=\"457313617\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Expanded Portfolio Data File Layout</a></span></span></span></li><li class=\"p4\"><span style=\"line-height: 13.0pt;font-size: 10.0pt;\" class=\"s3\"><span style=\"font-size: small;\"><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313850/XML-based+Position+File\" data-linked-resource-id=\"457313850\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">XML-based Position File</a><br/></span></span></li><li class=\"p4\"><span style=\"line-height: 13.0pt;font-size: 10.0pt;\" class=\"s3\"><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083146/Additional+XML+formats+recognized+by+PC-SPAN\" data-linked-resource-id=\"457083146\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\"><span style=\"font-size: small;\"><span style=\"line-height: 13.0pt;\">Additional XML formats recognized by PC-SPAN</span></span></a><a href=\"http://www.cmegroup.com/confluence/display/pubspan/Additional+XML+formats+recognized+by+PC-SPAN\" class=\"external-link\" rel=\"nofollow\"><span style=\"font-size: small;\">\u00a0</span></a><a href=\"http://www.cmegroup.com/confluence/display/pubspan/Additional+XML+formats+recognized+by+PC-SPAN\" class=\"external-link\" rel=\"nofollow\"><span style=\"font-size: small;\">\u00a0</span></a></span></li></ul><p class=\"p4\"><span style=\"line-height: normal;font-size: 1.8em;font-weight: bold;\" class=\"legacy-color-text-default\">Miscellaneous</span></p><ul><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313675/Daily+Adjustment+History+Files\" data-linked-resource-id=\"457313675\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Daily Adjustment History Files</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083594/Currency+Codes+Recognized\" data-linked-resource-id=\"457083594\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Currency Codes Recognized</a><span>\u00a0</span></li></ul><p>\u00a0</p><p>\u00a0</p>"
+        }
+    },
+    "status": "current",
+    "title": "Layout Guides",
+    "spaceId": "457312811",
+    "lastOwnerId": null,
+    "id": "457083087",
+    "_links": {
+        "editui": "/pages/resumedraft.action?draftId=457083087",
+        "webui": "/spaces/pubsub/pages/457083087/Layout+Guides",
+        "edituiv2": "/spaces/pubsub/pages/edit-v2/457083087",
+        "tinyui": "/x/z4g_Gw",
+        "base": "https://cmegroupclientsite.atlassian.net/wiki"
+    }
+}

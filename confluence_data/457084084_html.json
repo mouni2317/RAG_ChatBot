@@ -1,0 +1,71 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Notes:"
+        },
+        {
+            "type": "confluence_tables",
+            "text": [
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "1",
+                                "2",
+                                "AN",
+                                "X(2)",
+                                "Record ID - \"X \""
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "3",
+                                "3",
+                                "AN",
+                                "X",
+                                "Combination Margining Method Code -SforSplit Allocation,DforDelta-Split Allocation,MforModified Split Allocation, or blank"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "10",
+                                "4",
+                                "13",
+                                "AN",
+                                "X(10)",
+                                "Product (Commodity) Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "14",
+                                "20",
+                                "N",
+                                "9(7)",
+                                "Price Offset"
+                            ],
+                            "links": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_id": "457084084",
+    "child_page_ids": []
+}

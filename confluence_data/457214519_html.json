@@ -1,0 +1,362 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "ISpanOptionPricingModel: IDispatchinterface\u00a0methods:"
+        },
+        {
+            "type": "heading",
+            "text": "PutExerciseStyle(short)"
+        },
+        {
+            "type": "heading",
+            "text": "PutOptionTypeIsCall(BOOL);"
+        },
+        {
+            "type": "heading",
+            "text": "PutUndPrice(double);"
+        },
+        {
+            "type": "heading",
+            "text": "PutStrikePrice(double);"
+        },
+        {
+            "type": "heading",
+            "text": "PutVolatility(double);"
+        },
+        {
+            "type": "heading",
+            "text": "PutRiskFreeRate(double);"
+        },
+        {
+            "type": "heading",
+            "text": "PutDivYield(double);"
+        },
+        {
+            "type": "heading",
+            "text": "PutExpirTime(double);"
+        },
+        {
+            "type": "heading",
+            "text": "PutUnderlyingAssetType(short);"
+        },
+        {
+            "type": "heading",
+            "text": "PutAllGreeksFlag (bool);"
+        },
+        {
+            "type": "heading",
+            "text": "PutDeltaFlag (bool);"
+        },
+        {
+            "type": "heading",
+            "text": "PutVegaFlag (bool);"
+        },
+        {
+            "type": "heading",
+            "text": "PutGammaFlag(bool);"
+        },
+        {
+            "type": "heading",
+            "text": "PutThetaFlag (bool);"
+        },
+        {
+            "type": "heading",
+            "text": "PutRhoFlag (bool);"
+        },
+        {
+            "type": "heading",
+            "text": "Defaults for all \u201cGreek\u201dFlagsset totruefor Merton model, butfalsefor Whaley and Cox-Ross-Rubinstein models because they are computationally expensive."
+        },
+        {
+            "type": "heading",
+            "text": "PutUndPriceChange(double);"
+        },
+        {
+            "type": "heading",
+            "text": "PutVolatilityChange (double);"
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "PutExpirTimeChange (double);"
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "PutRiskFreeRateChange (double);"
+        },
+        {
+            "type": "heading",
+            "text": "PutDivYieldChange (double);"
+        },
+        {
+            "type": "heading",
+            "text": "Defaults for Changes set to 0.01% for allChangemethods."
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "Calculate();"
+        },
+        {
+            "type": "heading",
+            "text": "Calculatestheoretical prices for an opiton."
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "GetPrice(double*);"
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "GetDelta(double*);"
+        },
+        {
+            "type": "heading",
+            "text": "GetVega(double*);"
+        },
+        {
+            "type": "heading",
+            "text": "GetTheta(double*);"
+        },
+        {
+            "type": "heading",
+            "text": "GetGamma(double*);"
+        },
+        {
+            "type": "heading",
+            "text": "GetRho(double*);"
+        },
+        {
+            "type": "heading",
+            "text": "GetIntinsicValue(double*);"
+        },
+        {
+            "type": "heading",
+            "text": "GetCostOfCarry(double*);"
+        },
+        {
+            "type": "heading",
+            "text": "GetExpirTime(double*);"
+        },
+        {
+            "type": "heading",
+            "text": "ISpanMertonPricingModel: ISpanOptionPricingModelinterface has following methods used for analytical calculations of European Options prices on\u00a0\u00a0Equities or Futures:"
+        },
+        {
+            "type": "heading",
+            "text": "GetSpanNormalProbability(IspanNormalProbability*);"
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "ISpanWhaleyPricingModel: ISpanOptionPricingModelinterface has following methods for numerical calculation of American Options on Futures:"
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "PutMaxIterations(long);"
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "PutConvergeTreshhold (double);"
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "GetCriticalPrice();"
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "GetModelIterations(long);"
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "ISpanCoxRossRubPricingModel: ISpanOptionPricingModelinterface has following methods for numerical calculation of American Options on Futures and Equities"
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "PutTreeDimension(long);"
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "ISpanOptionVolatilityModel: IDispatchinterface has following methods used for numerical calculations of Implied volatilities running backward\u00a0SpanOptionPricingModel:"
+        },
+        {
+            "type": "heading",
+            "text": "PutSpanOptionPricingModel(ISpanOptionModel*);"
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "PutPrice(double*);"
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "PutMaxIterations(long);"
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "PutConvergeTreshhold(double);"
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "PutLoVolatility(double);"
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "PutHiVolatility(double);"
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "PutHiVolLimit(double);"
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "Calculte();"
+        },
+        {
+            "type": "heading",
+            "text": "Calculates option volatility."
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "GetVolatility(double);"
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "GetModelIterations(long);"
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "ISpanNormalProbability: IDispatchinterface has following methods"
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "PutProbabilityEventValue(double);"
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "Calculate();"
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "GetProbabilityDensity(double*);"
+        },
+        {
+            "type": "heading",
+            "text": "GetCumulativeProbability(double*);"
+        },
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "Calculation Statusis represented by an HRESULT generic return code"
+        },
+        {
+            "type": "confluence_tables",
+            "text": []
+        }
+    ],
+    "page_id": "457214519",
+    "child_page_ids": []
+}

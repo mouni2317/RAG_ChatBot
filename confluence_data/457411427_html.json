@@ -1,0 +1,26 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Comb Comm:Combined Commodity"
+        },
+        {
+            "type": "heading",
+            "text": "Rate ID:Span assigns an ID to each spread rate"
+        },
+        {
+            "type": "heading",
+            "text": "Period:Gives the period (which is the spot month period)"
+        },
+        {
+            "type": "heading",
+            "text": "Charge Rate Per Delta:"
+        },
+        {
+            "type": "confluence_tables",
+            "text": []
+        }
+    ],
+    "page_id": "457411427",
+    "child_page_ids": []
+}

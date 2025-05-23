@@ -1,0 +1,165 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "The new Paris expanded-format SPAN files are also available on the Web site of ClearNet SA\u00a0(the clearing organization for Euronext) atwww.clearnetsa.com/clearing.\u00a0\u00a0 At this page, clickData Downloadlink at the top middle of the page to bring up the page from which the SPAN files can be downloaded.\u00a0 The file denoted asFPXXBCis the MATIF \"all products\" file,OPXXBCis the Monep file, andOPXXBDis the Monep-SBF market-maker crossmargining file.\u00a0 After clicking on the desired link, a menu of available files will be displayed, with the date and time at which the file was posted.\u00a0 The most recently posted file is the one for the just-concluded business date.\u00a0 Each file is available as either azipfile or as a non-compressed standard text file.\u00a0 Note that the files are named here using a different naming convention than that used on the CME's FTP site."
+        },
+        {
+            "type": "heading",
+            "text": "If you are using PC-SPAN to process portfolios for Paris markets, youmustobtain this latest build.It has one change so that when SPAN files in the new Paris-expanded format are read, the method for aggregating position delta for options on physicals is set so that the delta goes to the period of the underlying physical.Without this change, intracommodity spread charges for Monep positions may be calculated incorrectly."
+        },
+        {
+            "type": "heading",
+            "text": "Registered users of PC-SPAN version 4 are invited to download, without charge, build #302 of version 4.01a from the CME's PC-SPAN software distribution websiteathttp://www.swreg.org.\u00a0 For more\u00a0ordering information, please seeDownload SPAN."
+        },
+        {
+            "type": "heading",
+            "text": "matif.ccyymmdd.s.zip- the \"all products\" file for MATIF"
+        },
+        {
+            "type": "heading",
+            "text": "monep.ccyymmdd.s.zip- the file for Monep"
+        },
+        {
+            "type": "heading",
+            "text": "monepx.ccyymmdd.s.zip- the file for Monep-SBF market-maker crossmargining"
+        },
+        {
+            "type": "heading",
+            "text": "Inside each suchzipfile is a correspondingly namedpa3file, this being the filetype which identifies the file as being a SPAN file in the \"Paris-expanded\" format."
+        },
+        {
+            "type": "heading",
+            "text": "On the first record in the file (the \"type zero\" header record), the market-maker crossmargining SPAN file can be distinguished from the regular Monep SPAN file by the presence of the bytesXMRGNbeginning in position 40."
+        },
+        {
+            "type": "heading",
+            "text": "There is also an alternative way of solving this problem using PC-SPAN version 4, which does not require loading any additional SPAN files other than the Paris expanded-format file(s).\u00a0 From the menu, selectTools, thenPreferences, thenCalculation Parameters.\u00a0 Change theConversion Currencyfrom USD to EUR.\u00a0 Leave the Native Currency at its default value of USD.\u00a0 Then specify \"To Convert to Native Currency, Use This Rate\", and enter the conversion rate you desire to use to convert from EUR to USD.\u00a0 Then click onOKto save the modified preferences."
+        },
+        {
+            "type": "heading",
+            "text": "As described above, the SPAN file for Monep-SBF market-maker cross-margining can be distinguished from the regular SPAN file for Monep by the presence of the codeXMRGNbeginning in position 40 of the header (\"type zero\") record in the file.\u00a0 In bytes 3-8, the normal location used to make this distinction, both of these files containMONEPfollowed by a space."
+        },
+        {
+            "type": "heading",
+            "text": "In order to distinguish these two files, PC-SPAN version 4 now inspects the six bytes beginning in position 40.\u00a0 If these containXMRGN, then the exchange complex acronym to use is constructed by taking the value in bytes 3-8, removing any trailing spaces, and appending anX.\u00a0 The result, in the SPAN file for Monep-SBF market-maker crossmargining, is an exchange complex acronym ofMONEPX."
+        },
+        {
+            "type": "heading",
+            "text": "The Paris Bourse can be contacted about the new Paris expanded format SPAN file and its use for MATIF and Monep, via email toC21request@bourseparis.com.By telephone, contact:"
+        },
+        {
+            "type": "link",
+            "text": "New File Naming Conventions",
+            "url": "#ParisExpandedSPANFileFormatforMATIFandMonepProducts-NewFileNamingConventions",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Position Loading",
+            "url": "#ParisExpandedSPANFileFormatforMATIFandMonepProducts-PositionLoading",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Currency Conversions",
+            "url": "#ParisExpandedSPANFileFormatforMATIFandMonepProducts-CurrencyConversions",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Loading the Monep-SBF Market-Maker Crossmargining SPAN File",
+            "url": "#ParisExpandedSPANFileFormatforMATIFandMonepProducts-LoadingtheMonep-SBFMarket-MakerCrossmarginingSPANFile",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Format for the Paris-expanded SPAN File",
+            "url": "#ParisExpandedSPANFileFormatforMATIFandMonepProducts-FormatfortheParis-expandedSPANFile",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Contacting Euronext Paris (the Paris Bourse)",
+            "url": "#ParisExpandedSPANFileFormatforMATIFandMonepProducts-ContactingEuronextParis(theParisBourse)",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "ftp.cme.com/pub/span/data/mat",
+            "url": "ftp://ftp.cme.com/pub/span/data/mat",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "new and improved file naming convention",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411222/Paris+Expanded+SPAN+File+Format+for+MATIF+and+Monep+Products#ParisExpandedSPANFileFormatforMATIFandMonepProducts-NewFileNamingConventions",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "www.clearnetsa.com/clearing",
+            "url": "http://www.clearnetsa.com/clearing",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "http://www.swreg.org",
+            "url": "http://www.swreg.org",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Download SPAN",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457214350/Download+SPAN",
+            "data-linked-resource-id": "457214350",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "ftp.cme.com/pub/span/data/mat",
+            "url": "ftp://ftp.cme.com/pub/span/data/mat",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "ftp.cme.com/pub/span/data/cme/xml",
+            "url": "ftp://ftp.cme.com/pub/span/data/cme/xml",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "ftp.cme.com/pub/span/docs/paris-expanded-format.zip",
+            "url": "ftp://ftp.cme.com/pub/span/docs/paris-expanded-format.zip",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "C21request@bourseparis.com",
+            "url": "mailto:C21request@bourseparis.com",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "confluence_tables",
+            "text": []
+        }
+    ],
+    "page_id": "457411222",
+    "child_page_ids": [
+        "457214350"
+    ]
+}

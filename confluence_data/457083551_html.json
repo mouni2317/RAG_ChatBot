@@ -1,0 +1,32 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Word File"
+        },
+        {
+            "type": "heading",
+            "text": "XLS File"
+        },
+        {
+            "type": "link",
+            "text": "Word File",
+            "url": "https://www.cmegroup.com/clearing/files/spanrisk.doc",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "XLS File",
+            "url": "https://www.cmegroup.com/clearing/files/spanrisk.xsd",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "confluence_tables",
+            "text": []
+        }
+    ],
+    "page_id": "457083551",
+    "child_page_ids": []
+}

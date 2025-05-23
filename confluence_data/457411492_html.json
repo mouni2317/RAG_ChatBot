@@ -1,0 +1,313 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Notes:"
+        },
+        {
+            "type": "confluence_tables",
+            "text": [
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "1",
+                                "1",
+                                "1",
+                                "AN",
+                                "X",
+                                "Record ID - \"5\""
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "2",
+                                "4",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Group Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "5",
+                                "8",
+                                "N",
+                                "9(2)V9(2)",
+                                "Group Initial to Maintenance Ratio - Speculators"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "9",
+                                "12",
+                                "N",
+                                "9(2)V9(2)",
+                                "Group Initial to Maintenance Ratio - Members"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "13",
+                                "15",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code 1"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "16",
+                                "18",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code 2"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "19",
+                                "21",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code 3"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "22",
+                                "24",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code 4"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "25",
+                                "27",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code 5"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "28",
+                                "30",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code 6"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "31",
+                                "33",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code 7"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "34",
+                                "36",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code 8"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "37",
+                                "39",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code 9"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "40",
+                                "42",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code 10"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "43",
+                                "45",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code 11"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "46",
+                                "48",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code 12"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "49",
+                                "51",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code 13"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "52",
+                                "54",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code 14"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "55",
+                                "57",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code 15"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "58",
+                                "60",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code 16"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "61",
+                                "63",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code 17"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "64",
+                                "66",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code 18"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "67",
+                                "69",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code 19"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "70",
+                                "72",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code 20"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "73",
+                                "76",
+                                "N",
+                                "9(2)V9(2)",
+                                "Group Initial to Maintenance Ratio - Hedgers"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "76",
+                                "80",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_id": "457411492",
+    "child_page_ids": []
+}

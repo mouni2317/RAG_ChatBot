@@ -1,0 +1,46 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "From theToolsmenu, you can select either theOrganization Mastermaintenance dialog, or thePreferencesdialog.\u00a0 TheOrganization Masteris the PC-SPAN 4 equivalent of previous versions' screens for maintaining master data.\u00a0\u00a0 ThePreferencesdialog is the equivalent of previous versions' screen for maintaining overall system parameters."
+        },
+        {
+            "type": "heading",
+            "text": "The Organization Master dialog uses a standard tree view to allow you to browse among the various elements of master data, and to select particular ones to display.To modify any particular entity, double click on it to bring up the dialog box associated with that entity."
+        },
+        {
+            "type": "heading",
+            "text": "Organization master data is contained in a file namedOrgMast.mst.\u00a0 This is the equivalent of previous versions' master files.\u00a0 As changes are made to the Organization Master data -- for example, exchanges launch new products or new exchanges adopt SPAN - you can either maintain the Organization Master data yourself, or you can download the updated file from the CME's SPAN Pages on the Internet."
+        },
+        {
+            "type": "heading",
+            "text": "ThePreferencesdialog box has two tabbed sections --General ParametersandCalculation Parameters."
+        },
+        {
+            "type": "heading",
+            "text": "TheGeneral Parameterssection allows you to specify:"
+        },
+        {
+            "type": "heading",
+            "text": "Generally, you would leave all of these parameters at their default values, with one exception:\u00a0 if you have installed PC-SPAN version 4 on a PC where you also have a copy of version 3, you may wish to change to the SPAN File Directory toc:\\span\\data, the default value for the version 3 \"data file directory.\"\u00a0 Doing this will make it easy to load SPAN risk parameter files into either version 3 or version 4."
+        },
+        {
+            "type": "heading",
+            "text": "TheCalculation Parameterssection allows you to specify currency conversion parameters and logging parameters."
+        },
+        {
+            "type": "heading",
+            "text": "Currency conversion parametersallow you to specify how PC-SPAN does currency conversions:"
+        },
+        {
+            "type": "heading",
+            "text": "Thelogging parametersallow you to specify what events get logged:"
+        },
+        {
+            "type": "confluence_tables",
+            "text": []
+        }
+    ],
+    "page_id": "457313493",
+    "child_page_ids": []
+}

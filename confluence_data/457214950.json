@@ -1,0 +1,33 @@
+{
+    "parentId": "457411114",
+    "ownerId": "60653f79352e1e0069fb728f",
+    "lastOwnerId": null,
+    "createdAt": "2024-12-21T16:43:20.709Z",
+    "authorId": "60653f79352e1e0069fb728f",
+    "parentType": "page",
+    "position": 91136860,
+    "version": {
+        "number": 1,
+        "message": "",
+        "minorEdit": false,
+        "authorId": "60653f79352e1e0069fb728f",
+        "createdAt": "2024-12-21T16:43:21.986Z"
+    },
+    "body": {
+        "export_view": {
+            "representation": "export_view",
+            "value": "<p><u><strong><span class=\"confluence-embedded-file-wrapper\"><img class=\"confluence-embedded-image\" src=\"https://cmegroupclientsite.atlassian.net/wiki/download/attachments/457214950/exchangerates.jpg?api=v2\"></span></strong></u></p><p><u><strong>Exchange Rates Report</strong></u></p><p>This report gives the per Exchange Complex foreign currency conversion rate to the home currency for the specified settlement date.</p><p><strong>Exch Cmplx:\u00a0\u00a0\u00a0 Exchange Complex</strong></p><p>The exchange complex, clearing organization or cross margining agreement.\u00a0 The Exchange Complex contains the set of Combined Commodities for a single exchange, clearing organization or cross margining agreement (although in some cases the Exchange Complex may have more than one exchange).\u00a0 To view the complete listing of Exchange Complexes refer to the Exchanges report under the reports Master folder.</p><p><strong>From Currency: </strong>\u00a0Each currency identified in the Span file or in the PC-Span program.</p><p><strong>To Currency:</strong>\u00a0 The home currency to which all other currencies are being converted.</p><p><strong>Conversion Rate:</strong>\u00a0 The rate at which each currency is being converted to the home currency.</p>"
+        }
+    },
+    "status": "current",
+    "title": "Exchange Rates",
+    "spaceId": "457312811",
+    "id": "457214950",
+    "_links": {
+        "editui": "/pages/resumedraft.action?draftId=457214950",
+        "webui": "/spaces/pubsub/pages/457214950/Exchange+Rates",
+        "edituiv2": "/spaces/pubsub/pages/edit-v2/457214950",
+        "tinyui": "/x/5otAGw",
+        "base": "https://cmegroupclientsite.atlassian.net/wiki"
+    }
+}

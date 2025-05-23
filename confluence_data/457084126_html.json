@@ -1,0 +1,282 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Price Quotation Method -STDfor standard physical commodities,IDXfor standard indices, such as equity indices,INTfor interest-rate indices such as Eurodollars"
+        },
+        {
+            "type": "heading",
+            "text": "Exercise Style -AMERfor american style options,EUROfor european style options (AMERis default)"
+        },
+        {
+            "type": "heading",
+            "text": "Volatility\u00a0Scan\u00a0Range\u00a0Quotation Method -A\u2013 volatility scan range provided as absolute value,P\u2013 volatility scan range provided as percentage of implied volatility (Ais default)"
+        },
+        {
+            "type": "heading",
+            "text": "Price\u00a0Scan\u00a0Range\u00a0Quotation Method -A\u2013 price scan range provided as absolute value,P\u2013 price scan range provided as percentage of contract value (Ais default)"
+        },
+        {
+            "type": "heading",
+            "text": "Price\u00a0Scan\u00a0Range\u00a0Valuation Type \u2013U\u2013 price scan range is set in terms of underlying contract value.Blank\u2013 price scan range is set in terms of the option contract value"
+        },
+        {
+            "type": "heading",
+            "text": "Valuation Method \u2013FUT\u2013 futures style,EQTY\u2013 equity style,CLLT- collateral"
+        },
+        {
+            "type": "heading",
+            "text": "Notes:"
+        },
+        {
+            "type": "confluence_tables",
+            "text": [
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "1",
+                                "2",
+                                "AN",
+                                "X(2)",
+                                "Record ID - \"P \""
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "3",
+                                "5",
+                                "AN",
+                                "X(3)",
+                                "Exchange Acronym"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "12",
+                                "6",
+                                "17",
+                                "AN",
+                                "X(10)",
+                                "Product (Commodity) Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "18",
+                                "22",
+                                "AN",
+                                "X(3)",
+                                "Product Type Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "15",
+                                "23",
+                                "37",
+                                "AN",
+                                "X(15)",
+                                "Product Name"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "38",
+                                "40",
+                                "N",
+                                "9(3)",
+                                "Settlement Price Decimal Locator"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "41",
+                                "43",
+                                "N",
+                                "9(3)",
+                                "Strike Price Decimal Locator (for options only)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "44",
+                                "44",
+                                "AN",
+                                "X",
+                                "Settlement Price Alignment Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "45",
+                                "45",
+                                "AN",
+                                "X",
+                                "Strike Price Alignment Code (for options only)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "14",
+                                "46",
+                                "59",
+                                "N",
+                                "9(7)V9(7)",
+                                "Contract Value Factor (Multiplier)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "60",
+                                "67",
+                                "N",
+                                "9(6)V9(2)",
+                                "Standard Cabinet Option Value"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "68",
+                                "69",
+                                "N",
+                                "9(2)",
+                                "Quoted Position Quantity per Contract (CBOT \"Futures Per Contract\")"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "70",
+                                "72",
+                                "AN",
+                                "X(3)",
+                                "Settlement (Price Quotation) Currency ISO Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "73",
+                                "73",
+                                "AN",
+                                "X",
+                                "Settlement (Price Quotation) Currency One-Byte Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "74",
+                                "76",
+                                "AN",
+                                "X(3)",
+                                "Price Quotation Method -STDfor standard physical commodities,IDXfor standard indices, such as equity indices,INTfor interest-rate indices such as Eurodollars"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "77",
+                                "80",
+                                "AN",
+                                "X(4)",
+                                "Exercise Style -AMERfor american style options,EUROfor european style options (AMERis default)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "81",
+                                "81",
+                                "AN",
+                                "X",
+                                "Volatility\u00a0Scan\u00a0Range\u00a0Quotation Method -A\u2013 volatility scan range provided as absolute value,P\u2013 volatility scan range provided as percentage of implied volatility (Ais default)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "82",
+                                "82",
+                                "AN",
+                                "X",
+                                "Price\u00a0Scan\u00a0Range\u00a0Quotation Method -A\u2013 price scan range provided as absolute value,P\u2013 price scan range provided as percentage of contract value (Ais default)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "83",
+                                "83",
+                                "AN",
+                                "X",
+                                "Price\u00a0Scan\u00a0Range\u00a0Valuation Type \u2013U\u2013 price scan range is set in terms of underlying contract value.Blank\u2013 price scan range is set in terms of the option contract value"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "84",
+                                "88",
+                                "AN",
+                                "X(5)",
+                                "Valuation Method \u2013FUT\u2013 futures style,EQTY\u2013 equity style,CLLT- collateral"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "44",
+                                "89",
+                                "132",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_id": "457084126",
+    "child_page_ids": []
+}

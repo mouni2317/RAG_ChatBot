@@ -1,0 +1,33 @@
+{
+    "parentId": "457313347",
+    "spaceId": "457312811",
+    "ownerId": "60653f79352e1e0069fb728f",
+    "lastOwnerId": null,
+    "createdAt": "2024-12-21T16:42:01.365Z",
+    "authorId": "60653f79352e1e0069fb728f",
+    "parentType": "page",
+    "position": 56094603,
+    "version": {
+        "number": 1,
+        "message": "",
+        "minorEdit": false,
+        "authorId": "60653f79352e1e0069fb728f",
+        "createdAt": "2024-12-21T16:42:02.514Z"
+    },
+    "body": {
+        "export_view": {
+            "representation": "export_view",
+            "value": "<p align=\"left\">PC-SPAN version 4 is an easy-to-use Windows program that allows you to load SPAN risk parameter files for exchanges and clearing organizations of interest, define portfolios, calculate margins, and view or print results.\u00a0Version 4 was first made available in 1999.\u00a0The latest build of version 4 is numbered as <strong>610</strong>.</p><p>PC-SPAN version 4:</p><ul><li>Supports the XML-based SPAN file format and the Paris-expanded-unpacked format in addition to the original unpacked and expanded-unpacked formats.</li><li>Supports the XML-based position file format as well as the original unpacked and expanded-unpacked position file formats.</li><li>Supports the SPAN files produced by over 35 world exchanges currently leveraging SPAN margin methodology.\u00a0</li></ul><p><strong>Minimum System Requirements</strong></p><p>The latest PC-SPAN version 4 (build 610) requires:</p><ul><li><span style=\"letter-spacing: 0.0px;\">A\u00a0PC running a version starting with\u00a0Windows 7 or higher (Windows server build 2012 R2 or higher).</span></li><li>Support x64 platform of Windows OS.\u00a0<strong>Will not support x86 platform of Windows OS onwards.</strong></li><li>Microsoft .NET Framework 4.5.2 or higher.</li><li>Visual\u00a0C++\u00a02015 Runtime\u00a0Libraries\u00a0(x64)</li><li>Approx. 100 megabytes of disk space to install.</li><li>Approx. 500 megabytes of free space to be able to install and use the program.</li><li>Minimum of 4 gigabytes of RAM.\u00a0</li></ul>"
+        }
+    },
+    "status": "current",
+    "title": "System Requirements",
+    "id": "457082909",
+    "_links": {
+        "editui": "/pages/resumedraft.action?draftId=457082909",
+        "webui": "/spaces/pubsub/pages/457082909/System+Requirements",
+        "edituiv2": "/spaces/pubsub/pages/edit-v2/457082909",
+        "tinyui": "/x/HYg_Gw",
+        "base": "https://cmegroupclientsite.atlassian.net/wiki"
+    }
+}

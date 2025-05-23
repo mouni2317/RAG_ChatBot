@@ -1,0 +1,42 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Products by Combined Commodities"
+        },
+        {
+            "type": "heading",
+            "text": "Comb Comm:\u00a0\u00a0\u00a0 Combined Commodity"
+        },
+        {
+            "type": "heading",
+            "text": "Exch:\u00a0 Exchange"
+        },
+        {
+            "type": "heading",
+            "text": "Type:"
+        },
+        {
+            "type": "heading",
+            "text": "Prod ID:"
+        },
+        {
+            "type": "heading",
+            "text": "Code:"
+        },
+        {
+            "type": "heading",
+            "text": "Scale:"
+        },
+        {
+            "type": "heading",
+            "text": "Appl Basis Risk:"
+        },
+        {
+            "type": "confluence_tables",
+            "text": []
+        }
+    ],
+    "page_id": "457084057",
+    "child_page_ids": []
+}

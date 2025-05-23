@@ -1,0 +1,346 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Notes:"
+        },
+        {
+            "type": "confluence_tables",
+            "text": [
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "1",
+                                "2",
+                                "AN",
+                                "2",
+                                "Record ID - \"0 \""
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "3",
+                                "8",
+                                "AN",
+                                "X(2)",
+                                "Exchange Complex(Clearing OrganizationorCross-Margin Agreement) Acronym"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "9",
+                                "16",
+                                "N",
+                                "9(8)",
+                                "Business Date asCCYYMMDD"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "17",
+                                "17",
+                                "AN",
+                                "X",
+                                "Settlement (S) or Intraday (I) Flag"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "18",
+                                "19",
+                                "AN",
+                                "X(2)",
+                                "File Identifier - (Efor \"Early\" Settlement,Ffor \"Final\" Settlement,Cfor \"Complete\" Settlement, or other value)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "20",
+                                "23",
+                                "N",
+                                "9(4)",
+                                "Business Time asHHMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "24",
+                                "31",
+                                "N",
+                                "9(8)",
+                                "File Creation Date asCCYYMMDD"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "32",
+                                "35",
+                                "N",
+                                "9(4)",
+                                "File Creation Time asHHMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "36",
+                                "37",
+                                "AN",
+                                "X(2)",
+                                "File Format -U2for Expanded Unpacked,UPfor Paris Expanded Format"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "38",
+                                "38",
+                                "AN",
+                                "X",
+                                "Gross/Net-Margining Indicator (applies to clearing-level processing)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "39",
+                                "39",
+                                "AN",
+                                "X",
+                                "OverallLimit Option Value (Cap Available Net Option Value)Flag"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "40",
+                                "44",
+                                "AN",
+                                "X(5)",
+                                "Business Function (CLRorblankfor Normal Clearing andXMRGNfor Cross Margining)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "45",
+                                "50",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "51",
+                                "51",
+                                "AN",
+                                "X",
+                                "Clearing or Customer Code -Afor Clearing, orblankorCfor Customer"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "52",
+                                "52",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "53",
+                                "57",
+                                "AN",
+                                "X(5)",
+                                "Clearing or Customer Acronym -blankorCUSTfor Customer, orCLRfor Clearing"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "58",
+                                "58",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "59",
+                                "59",
+                                "AN",
+                                "X",
+                                "Account Type Code. For Clearing accounts,blankorNfor Normal, orMfor Member. For Customer accounts,blankorHfor Hedger,Mfor Member,Sfor Speculator."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "60",
+                                "60",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "61",
+                                "65",
+                                "AN",
+                                "X(5)",
+                                "Account Type Acronym. For Clearing accounts,blankorNRMLfor Normal, orMBRfor Member. For Customer accounts,blankorHEDGEfor Hedger,MBRfor Member,SPECfor Speculator."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "66",
+                                "66",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "67",
+                                "67",
+                                "AN",
+                                "X",
+                                "Performance Bond Class Code -blankor1for Core, or2for Reserve"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "68",
+                                "68",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "69",
+                                "73",
+                                "AN",
+                                "X(5)",
+                                "Performance Bond Class Acronym -blankorCOREfor Core, orRESRVfor Reserve"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "74",
+                                "74",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "75",
+                                "75",
+                                "AN",
+                                "X",
+                                "Maintenance or Initial Code -blankorMfor Maintenance, orIfor Initial"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "76",
+                                "76",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "77",
+                                "81",
+                                "AN",
+                                "X(5)",
+                                "Maintenance or Initial Acronym -blankorMAINTfor Maintenance, orINITfor Initial"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "51",
+                                "82",
+                                "132",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_id": "457411411",
+    "child_page_ids": []
+}

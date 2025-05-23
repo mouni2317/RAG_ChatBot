@@ -1,0 +1,33 @@
+{
+    "parentId": "457313347",
+    "spaceId": "457312811",
+    "ownerId": "60653f79352e1e0069fb728f",
+    "lastOwnerId": null,
+    "createdAt": "2024-12-21T16:42:36.528Z",
+    "authorId": "60653f79352e1e0069fb728f",
+    "parentType": "page",
+    "version": {
+        "number": 1,
+        "message": "",
+        "minorEdit": false,
+        "authorId": "60653f79352e1e0069fb728f",
+        "createdAt": "2024-12-21T16:42:37.807Z"
+    },
+    "position": 56097864,
+    "id": "457083133",
+    "status": "current",
+    "body": {
+        "export_view": {
+            "representation": "export_view",
+            "value": "<p><ul class='childpages-macro'><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457214571/Intercommodity+Spreading+Tier+Requirements+Report\" data-linked-resource-id=\"457214571\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Intercommodity Spreading Tier Requirements Report</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411133/Intracommodity+Spreading+Tier+Requirements+Report\" data-linked-resource-id=\"457411133\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Intracommodity Spreading Tier Requirements Report</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313633/Spreads+Detail+Report\" data-linked-resource-id=\"457313633\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Spreads Detail Report</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083343/Short+Option+Minimum+Tier+Requirements+Report\" data-linked-resource-id=\"457083343\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Short Option Minimum Tier Requirements Report</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313739/PB+Requirements+Report\" data-linked-resource-id=\"457313739\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">PB Requirements Report</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411265/Period+Deltas+Report\" data-linked-resource-id=\"457411265\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Period Deltas Report</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313891/Scanning+Tier+Requirements+Report\" data-linked-resource-id=\"457313891\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Scanning Tier Requirements Report</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457313943/Positions+Report\" data-linked-resource-id=\"457313943\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Positions Report</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457083618/PB+Requirements+Summary\" data-linked-resource-id=\"457083618\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">PB Requirements Summary</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457214888/PB+Requirement+Listing\" data-linked-resource-id=\"457214888\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">PB Requirement Listing</a></li><li><a href=\"https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457314069/Scan+Risk+Contributions+Report\" data-linked-resource-id=\"457314069\" data-linked-resource-version=\"1\" data-linked-resource-type=\"page\">Scan Risk Contributions Report</a></li></ul></p>"
+        }
+    },
+    "title": "Portfolio Reports",
+    "_links": {
+        "editui": "/pages/resumedraft.action?draftId=457083133",
+        "webui": "/spaces/pubsub/pages/457083133/Portfolio+Reports",
+        "edituiv2": "/spaces/pubsub/pages/edit-v2/457083133",
+        "tinyui": "/x/-Yg_Gw",
+        "base": "https://cmegroupclientsite.atlassian.net/wiki"
+    }
+}

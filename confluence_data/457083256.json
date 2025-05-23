@@ -1,0 +1,33 @@
+{
+    "parentId": "457411024",
+    "spaceId": "457312811",
+    "ownerId": "60653f79352e1e0069fb728f",
+    "lastOwnerId": null,
+    "createdAt": "2024-12-21T16:42:44.765Z",
+    "authorId": "60653f79352e1e0069fb728f",
+    "parentType": "page",
+    "version": {
+        "number": 1,
+        "message": "",
+        "minorEdit": false,
+        "authorId": "60653f79352e1e0069fb728f",
+        "createdAt": "2024-12-21T16:42:46.183Z"
+    },
+    "position": 91554601,
+    "body": {
+        "export_view": {
+            "representation": "export_view",
+            "value": "<p>By default, PC-SPAN version 4 will look to the\u00a0<strong>Data</strong>\u00a0subdirectory of the main application directory for risk parameter files to load, but you can select risk parameter files to load from any disk and directory.</p><p>PC-SPAN version 4 supports the following SPAN risk parameter file formats:</p><ul><li>the\u00a0<strong>unpacked</strong>\u00a0format, also called the\u00a0<strong>standard unpacked</strong>\u00a0format:\u00a0 Files are named with the\u00a0<strong>.par</strong>\u00a0filetype -- for example,\u00a0<strong>cme0831s.par</strong>.</li><li>the\u00a0<strong>expanded unpacked</strong>\u00a0format.\u00a0 Files are named with the\u00a0<strong>.pa2</strong>\u00a0filetype -- for example,\u00a0<strong>cdc0831s.pa2</strong>.</li><li>the new\u00a0<strong>XML-based SPAN file format</strong>.\u00a0 Files are named with the\u00a0<strong>.spn</strong>\u00a0filetype -- for example,\u00a0<strong>cme.20170831.s.cust.spn</strong>.</li></ul><p>XML stands for Extensible Markup Language.\u00a0 An XML-based SPAN file is actually just a SPAN document.\u00a0 So you can load it using\u00a0<strong>either</strong>\u00a0the\u00a0<strong>Load</strong>\u00a0command, or the\u00a0<strong>Open</strong>\u00a0command.\u00a0 But there are two differences between the\u00a0<strong>Load</strong>\u00a0command and the\u00a0<strong>Open</strong>\u00a0command worth understanding:</p><ul><li><strong>Which file formats the command supports:</strong><br/><br/><ul><li>The\u00a0<strong>Open\u00a0</strong>command is used only for SPAN documents -- either XML-based SPAN risk parameter files, or SPAN documents saved from within PC-SPAN version 4.\u00a0</li><li>The\u00a0<strong>Load</strong>\u00a0command may be used for any SPAN file format.</li></ul></li><li><strong>What happens with the current SPAN document:</strong><br/><br/><ul><li>The\u00a0<strong>Open</strong>\u00a0command first clears the current SPAN document before loading the new one.</li><li>The\u00a0<strong>Load</strong>\u00a0command\u00a0<strong>adds</strong>\u00a0the data from selected SPAN file to the data already in the current document.\u00a0</li></ul></li></ul><p>If you are loading a SPAN file for an exchange complex and point in time, and if data for that exchange complex and point in time is already contained in the current SPAN document, the data in the document will be\u00a0<strong>updated</strong>\u00a0by the data from the SPAN file.\u00a0 In other words, you can\u00a0<strong>reload</strong>\u00a0a SPAN file without first having to delete its data from the current SPAN document.</p><p>PC-SPAN version 4 gives you total flexibility in how you name your SPAN risk parameter files.\u00a0 You don't have to use the old naming conventions, and you can use long filenames.\u00a0 For each SPAN risk parameter file, PC-SPAN 4 will determine the point in time and exchange complex to which it pertains, from the data in the file.</p><p>PC-SPAN version 4 does\u00a0<strong>not</strong>\u00a0support the\u00a0<strong>&quot;packed&quot;</strong>\u00a0SPAN file format -- which used the\u00a0<strong>.pck</strong>\u00a0filetype -- and in which text data was stored using the EBCDIC coding scheme and numeric data in &quot;packed decimal&quot;.\u00a0 Only the CME and CBOT create this format, it is only available to outside parties in limited circumstances, and both CME and CBOT also provide SPAN data in the standard unpacked format.</p><p>We do intend to add support for the\u00a0<strong>London formats</strong>, as well as certain features of SPAN used by the London Clearing House, in the near future.</p><h3 id=\"LoadingSPANRiskParameterFiles-ObtainingandUnzippingSPANRiskParameterFiles\">Obtaining and Unzipping SPAN Risk Parameter Files</h3><p>SPAN risk parameter files for the various exchanges and clearing organizations can be obtained from a variety of sources.\u00a0 One of the simplest and best ways is from the CME's FTP site on the Internet, at <a href=\"ftp://ftp.cmegroup.com\" class=\"external-link\" rel=\"nofollow\">ftp://ftp.cmegroup.com</a>.</p><p>Download SPAN files from this site using your Web browser or a separate &quot;FTP client&quot; program.\u00a0 For more information, or to download SPAN files, see the SPAN pages of the CME's Web site at\u00a0<a href=\"http://www.cme.com/ftp.wrap/span/data/\" class=\"external-link\" rel=\"nofollow\">f</a><a href=\"ftp://ftp.cmegroup.com/span/\" class=\"external-link\" rel=\"nofollow\">tp://ftp.cmegroup.com/span/</a><a href=\"http://www.cme.com/ftp.wrap/span/data/\" class=\"external-link\" rel=\"nofollow\">.</a></p><p>SPAN files obtained from the CME's FTP site are &quot;zipped&quot;.\u00a0 This means that the actual SPAN file is compressed inside a &quot;ZIP&quot; file.\u00a0 Before you can use the SPAN file, you will need to extract (&quot;unzip&quot;) the SPAN file from within the ZIP file.\u00a0 There are many programs available for doing this.\u00a0 Shareware versions of two of the most popular such programs -- PK-Zip and WinZip -- are included on the PC-SPAN version 4 CD.</p>"
+        }
+    },
+    "status": "current",
+    "title": "Loading SPAN Risk Parameter Files",
+    "id": "457083256",
+    "_links": {
+        "editui": "/pages/resumedraft.action?draftId=457083256",
+        "webui": "/spaces/pubsub/pages/457083256/Loading+SPAN+Risk+Parameter+Files",
+        "edituiv2": "/spaces/pubsub/pages/edit-v2/457083256",
+        "tinyui": "/x/eIk_Gw",
+        "base": "https://cmegroupclientsite.atlassian.net/wiki"
+    }
+}

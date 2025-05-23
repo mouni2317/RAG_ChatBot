@@ -1,0 +1,33 @@
+{
+    "parentId": "457411114",
+    "ownerId": "60653f79352e1e0069fb728f",
+    "lastOwnerId": null,
+    "createdAt": "2024-12-21T16:43:40.898Z",
+    "authorId": "60653f79352e1e0069fb728f",
+    "parentType": "page",
+    "position": 91140835,
+    "version": {
+        "number": 1,
+        "message": "",
+        "minorEdit": false,
+        "authorId": "60653f79352e1e0069fb728f",
+        "createdAt": "2024-12-21T16:43:42.360Z"
+    },
+    "spaceId": "457312811",
+    "body": {
+        "export_view": {
+            "representation": "export_view",
+            "value": "<p><span class=\"confluence-embedded-file-wrapper\"><img class=\"confluence-embedded-image\" src=\"https://cmegroupclientsite.atlassian.net/wiki/download/attachments/457314312/scanratetiers.jpg?api=v2\"></span></p><p><u>Scan Rate Tiers</u></p><p>This report shows the Scan Rate Tiers for those Combined Commodities where Scan Rate Tiers are applicable.\u00a0 By defining different Scan Rate Tier in a Combined Commodity, Span allows the tiers to be margined separately, as if there were no correlation between them.</p><p><strong>Comb Comm: </strong>\u00a0Combined Commodity</p><p>The set of all eligible products used to generate a total requirement for each Exchange Complex within a portfolio.\u00a0 A Combined Commodity generally consists of all products of the same underlying physical. For example, at the CME, the Eurodollar combined commodity encompasses Mid-Curve options, Eurodollars and Eurodollar options.\u00a0</p><p><strong>Tier #:\u00a0 </strong>Either Overall, or broken down into tier numbers</p><p><strong>Start Period: </strong>The beginning date of the tier</p><p><strong>End Period: </strong>If other than Overall, the ending date of the tier</p><p><strong>Rate ID:\u00a0 </strong>An internal Scan Rate\u00a0ID assigned by Span.</p><p><strong>Price Scan:\u00a0 </strong>The price scan range for the Combined Commodity.\u00a0 The price scan range is equal to the current Maintenance Requirement for a Combined Commodity.\u00a0 Therefore in the current Maintenance Requirement on the ED contract is $700, then the ED Price Scan Range is $700.</p><p><strong>Vol Scan: </strong>\u00a0The Volatility Scan Range for the Combined Commodity. Just as there is a set price scan range, there is a set Volatility scan range for a Combined Commodity.\u00a0 The Volatility Scan is the amount by which the implied volatility is changed in each risk array scenario.</p>"
+        }
+    },
+    "status": "current",
+    "title": "Scan Rate Tiers",
+    "id": "457314312",
+    "_links": {
+        "editui": "/pages/resumedraft.action?draftId=457314312",
+        "webui": "/spaces/pubsub/pages/457314312/Scan+Rate+Tiers",
+        "edituiv2": "/spaces/pubsub/pages/edit-v2/457314312",
+        "tinyui": "/x/CBBCGw",
+        "base": "https://cmegroupclientsite.atlassian.net/wiki"
+    }
+}

@@ -1,0 +1,72 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "To \"unzip\" a ZIP file means to extract the data file contained inside the ZIP file.\u00a0 If you are using Windows XP or later, you don't need any additional software.\u00a0 Just double-click on the ZIP file to open it, select the SPAN file contained inside, right-mouse click and selectCopy, then go to the directory where you want to put the SPAN file andPasteit there."
+        },
+        {
+            "type": "link",
+            "text": "Use PC-SPAN",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411024/Use+PC-SPAN",
+            "data-linked-resource-id": "457411024",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "Getting SPAN\u00ae Risk Parameter Files",
+            "url": "#QuickTour-GettingSPAN\u00aeRiskParameterFiles",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Unzipping SPAN Files",
+            "url": "#QuickTour-UnzippingSPANFiles",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Loading SPAN Risk Parameter Files",
+            "url": "#QuickTour-LoadingSPANRiskParameterFiles",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Creating a Portfolio and Calculating its Performance Bond Requirement",
+            "url": "#QuickTour-CreatingaPortfolioandCalculatingitsPerformanceBondRequirement",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Preparing Reports",
+            "url": "#QuickTour-PreparingReports",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "use PC-SPAN",
+            "url": "https://cmegroupclientsite.atlassian.net/wiki/spaces/pubsub/pages/457411024/Use+PC-SPAN",
+            "data-linked-resource-id": "457411024",
+            "data-linked-resource-type": "page"
+        },
+        {
+            "type": "link",
+            "text": "ftp://ftp.cmegroup.com/pub/span/data",
+            "url": "ftp://ftp.cmegroup.com/pub/span/data",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "confluence_tables",
+            "text": []
+        }
+    ],
+    "page_id": "457313403",
+    "child_page_ids": [
+        "457411024"
+    ]
+}

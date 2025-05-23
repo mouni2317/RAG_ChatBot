@@ -1,0 +1,33 @@
+{
+    "parentId": "457083445",
+    "ownerId": "60653f79352e1e0069fb728f",
+    "lastOwnerId": null,
+    "createdAt": "2024-12-21T16:43:00.507Z",
+    "authorId": "60653f79352e1e0069fb728f",
+    "parentType": "page",
+    "position": 220514354,
+    "version": {
+        "number": 1,
+        "message": "",
+        "minorEdit": false,
+        "authorId": "60653f79352e1e0069fb728f",
+        "createdAt": "2024-12-21T16:43:02.145Z"
+    },
+    "spaceId": "457312811",
+    "body": {
+        "export_view": {
+            "representation": "export_view",
+            "value": ""
+        }
+    },
+    "status": "current",
+    "title": "Standard",
+    "id": "457083480",
+    "_links": {
+        "editui": "/pages/resumedraft.action?draftId=457083480",
+        "webui": "/spaces/pubsub/pages/457083480/Standard",
+        "edituiv2": "/spaces/pubsub/pages/edit-v2/457083480",
+        "tinyui": "/x/WIo_Gw",
+        "base": "https://cmegroupclientsite.atlassian.net/wiki"
+    }
+}

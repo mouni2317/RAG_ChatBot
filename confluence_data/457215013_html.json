@@ -1,0 +1,248 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "confluence_tables",
+            "text": [
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "1",
+                                "2",
+                                "AN",
+                                "X(2)",
+                                "Record ID - \"91\""
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "3",
+                                "4",
+                                "AN",
+                                "X(2)",
+                                "Exchange Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "5",
+                                "6",
+                                "AN",
+                                "X(2)",
+                                "Target Commodity (Product) Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "7",
+                                "12",
+                                "N",
+                                "9(6)",
+                                "Target Contract Month as CCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "13",
+                                "15",
+                                "AN",
+                                "X(3)",
+                                "Issuing Country Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "15",
+                                "16",
+                                "30",
+                                "AN",
+                                "X(15)",
+                                "CUSIP or ISIN or other primary instrument ID"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "31",
+                                "33",
+                                "AN",
+                                "X(3)",
+                                "Currency of Denomination - ISO code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "34",
+                                "34",
+                                "AN",
+                                "X",
+                                "Currency of Denomination - 1-byte code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "35",
+                                "42",
+                                "N",
+                                "9(8)",
+                                "Maturity Date as CCYYMMDD"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "43",
+                                "47",
+                                "N",
+                                "9(2)V9(3)",
+                                "Coupon Rate (in percent)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "9",
+                                "48",
+                                "56",
+                                "N",
+                                "9(2)V9(7)",
+                                "Physical Conversion Factor"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "24",
+                                "57",
+                                "80",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "1",
+                                "2",
+                                "AN",
+                                "X(2)",
+                                "Record ID - \"92\""
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "3",
+                                "4",
+                                "AN",
+                                "X(2)",
+                                "Exchange Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "5",
+                                "6",
+                                "AN",
+                                "X(2)",
+                                "Target Commodity (Product) Code (optional)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "7",
+                                "12",
+                                "N",
+                                "9(6)",
+                                "Target Contract Month as CCYYMM (optional)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "13",
+                                "15",
+                                "AN",
+                                "X(3)",
+                                "Issuing Country Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "15",
+                                "16",
+                                "30",
+                                "AN",
+                                "X(15)",
+                                "CUSIP or ISIN or other primary instrument ID"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "50",
+                                "31",
+                                "80",
+                                "AN",
+                                "X(50)",
+                                "Instrument Description"
+                            ],
+                            "links": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_id": "457215013",
+    "child_page_ids": []
+}

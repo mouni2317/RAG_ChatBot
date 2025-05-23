@@ -1,0 +1,34 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": ""
+        },
+        {
+            "type": "heading",
+            "text": "Exchange Rates Report"
+        },
+        {
+            "type": "heading",
+            "text": "Exch Cmplx:\u00a0\u00a0\u00a0 Exchange Complex"
+        },
+        {
+            "type": "heading",
+            "text": "From Currency:Each currency identified in the Span file or in the PC-Span program."
+        },
+        {
+            "type": "heading",
+            "text": "To Currency:The home currency to which all other currencies are being converted."
+        },
+        {
+            "type": "heading",
+            "text": "Conversion Rate:The rate at which each currency is being converted to the home currency."
+        },
+        {
+            "type": "confluence_tables",
+            "text": []
+        }
+    ],
+    "page_id": "457214950",
+    "child_page_ids": []
+}

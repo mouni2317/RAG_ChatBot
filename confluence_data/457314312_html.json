@@ -1,0 +1,38 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Comb Comm:Combined Commodity"
+        },
+        {
+            "type": "heading",
+            "text": "Tier #:Either Overall, or broken down into tier numbers"
+        },
+        {
+            "type": "heading",
+            "text": "Start Period:The beginning date of the tier"
+        },
+        {
+            "type": "heading",
+            "text": "End Period:If other than Overall, the ending date of the tier"
+        },
+        {
+            "type": "heading",
+            "text": "Rate ID:An internal Scan Rate\u00a0ID assigned by Span."
+        },
+        {
+            "type": "heading",
+            "text": "Price Scan:The price scan range for the Combined Commodity.\u00a0 The price scan range is equal to the current Maintenance Requirement for a Combined Commodity.\u00a0 Therefore in the current Maintenance Requirement on the ED contract is $700, then the ED Price Scan Range is $700."
+        },
+        {
+            "type": "heading",
+            "text": "Vol Scan:The Volatility Scan Range for the Combined Commodity. Just as there is a set price scan range, there is a set Volatility scan range for a Combined Commodity.\u00a0 The Volatility Scan is the amount by which the implied volatility is changed in each risk array scenario."
+        },
+        {
+            "type": "confluence_tables",
+            "text": []
+        }
+    ],
+    "page_id": "457314312",
+    "child_page_ids": []
+}

@@ -1,0 +1,975 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "For client account types when clearing firms are calculating requirements for individual accounts:Mfor Member Account,Hfor Hedger Account,Sfor Spec Account,Ofor Omnibus Account,Qfor Omnibus Hedge account."
+        },
+        {
+            "type": "heading",
+            "text": "In addition, in 2020 support will be added forRfor Heightened Risk Profile andXfor Non-Heightened Risk Profile.\u00a0 Also account typeOwill be redefined as meaning an Omnibus Account with a Heightened Risk Profile and account typeQwill be redefined as an omnibus account with a Non-Heightened Risk Profile."
+        },
+        {
+            "type": "heading",
+            "text": "Account typeFis used to specify a clearing firm account when a CCP is margining a clearing firm."
+        },
+        {
+            "type": "link",
+            "text": "(\"standard\") portfolio data file layout",
+            "url": "http://www.cme-ch.com/span/spanl202.htm",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Record type 1 - Header Record",
+            "url": "#ExpandedPortfolioDataFileLayout-Recordtype1-HeaderRecord",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Record type 2 - Portfolio Record",
+            "url": "#ExpandedPortfolioDataFileLayout-Recordtype2-PortfolioRecord",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Record type 3 - Position Record",
+            "url": "#ExpandedPortfolioDataFileLayout-Recordtype3-PositionRecord",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "link",
+            "text": "Record type 5 - Expanded Position Record",
+            "url": "#ExpandedPortfolioDataFileLayout-Recordtype5-ExpandedPositionRecord",
+            "data-linked-resource-id": null,
+            "data-linked-resource-type": null
+        },
+        {
+            "type": "confluence_tables",
+            "text": [
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "1",
+                                "1",
+                                "1",
+                                "AN",
+                                "X(1)",
+                                "Record ID - \"1\""
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "2",
+                                "3",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "4",
+                                "11",
+                                "N",
+                                "9(8)",
+                                "Business Date as YYYYMMDD"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "12",
+                                "12",
+                                "A",
+                                "X",
+                                "File identifier -Sfor final settlement,Efor early (preliminary) settlement,Gfor electronic (GLOBEX) trading hours, orIfor intra-day."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "13",
+                                "16",
+                                "N",
+                                "9(4)",
+                                "Business Time as HHMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "17",
+                                "24",
+                                "N",
+                                "9(8)",
+                                "File Creation Date as YYYYMMDD"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "25",
+                                "28",
+                                "N",
+                                "9(4)",
+                                "File Creation Time as HHMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "29",
+                                "29",
+                                "AN",
+                                "X(1)",
+                                "File format - \"E\" for \"expanded\".\u00a0 Blank, null or any value other than \"E\" implies standard format."
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "1",
+                                "1",
+                                "1",
+                                "AN",
+                                "X(1)",
+                                "Record ID - \"2\""
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "2",
+                                "4",
+                                "AN",
+                                "X(3)",
+                                "Clearing Member Firm"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "20",
+                                "5",
+                                "24",
+                                "AN",
+                                "X(20)",
+                                "Account Number / ID"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "25",
+                                "25",
+                                "A",
+                                "X",
+                                "Account Type.For client account types when clearing firms are calculating requirements for individual accounts:Mfor Member Account,Hfor Hedger Account,Sfor Spec Account,Ofor Omnibus Account,Qfor Omnibus Hedge account.In addition, in 2020 support will be added forRfor Heightened Risk Profile andXfor Non-Heightened Risk Profile.\u00a0 Also account typeOwill be redefined as meaning an Omnibus Account with a Heightened Risk Profile and account typeQwill be redefined as an omnibus account with a Non-Heightened Risk Profile.Account typeFis used to specify a clearing firm account when a CCP is margining a clearing firm."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "26",
+                                "30",
+                                "AN",
+                                "X(5)",
+                                "Segregation Type (Origin) -CUSTorHOUS"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "20",
+                                "31",
+                                "50",
+                                "AN",
+                                "X(20)",
+                                "Subaccount of: If this record is a Hedge or Spec Subaccount of an Omnibus Account, this field should contain the Omnibus Account number. The2record for the omnibus account must precede the2record for its subaccounts (or the omnibus account portfolio record must already be defined in the PC-SPAN database.)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "51",
+                                "51",
+                                "A",
+                                "X",
+                                "new Portfolio flag:YorN"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "12",
+                                "52",
+                                "63",
+                                "N",
+                                "9(10)V9(2)",
+                                "Ledger Balance, right justified, with two implied decimal places representing hundredths of a currency unit. For accounts only, not relevant to firms. If negative, with a leading minus sign. If this record is for a firm, enter zero."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "12",
+                                "64",
+                                "75",
+                                "N",
+                                "9(10)V9(2)",
+                                "Open Trade Equity, right justified, with two implied decimal places. For accounts only, not relevant to firms. If negative, with a leading minus sign. If this record is for a firm, enter zero."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "12",
+                                "76",
+                                "87",
+                                "N",
+                                "9(10)V9(2)",
+                                "Securities on Deposit, right justified, with two implied decimal places. For accounts only, not relevant to firms. If this record is for a firm, enter zero."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "88",
+                                "88",
+                                "A",
+                                "X",
+                                "Apply User Scaleups? Flag - eitherYorN. If it has been specified on theMaintain System Parametersscreen that User Scaleups apply only todesignatedaccounts, this field specifies whether scaleups apply to this particular account."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "89",
+                                "93",
+                                "AN",
+                                "X(5)",
+                                "Business Function:\u00a0 for SPAN 4 -- specifies the business function for which this position is defined"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "94",
+                                "98",
+                                "AN",
+                                "X(5)",
+                                "Clearing Member Firm -- for SPAN 4 -- provides the full five bytes for the clearing member firm ID"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "15",
+                                "99",
+                                "113",
+                                "AN",
+                                "X(15)",
+                                "Performance Bond Account ID:\u00a0 for SPAN 4 -- specifies the PB account"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "114",
+                                "118",
+                                "AN",
+                                "X(5)",
+                                "Position Segregation Type (Origin):\u00a0 for SPAN 4 -- further identifies the performance bond account to which this position pertains"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "119",
+                                "121",
+                                "AN",
+                                "X(3)",
+                                "Portfolio Currency - for example,USD,CAD, ...- Overall currency for PB requirement"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "122",
+                                "122",
+                                "AN",
+                                "X(1)",
+                                "Customer-Clearing Portfolio Use Long Option Value Flag-Nfor No, orYor any other value for Yes.Applies only to calculations for clearing-level customer-origin portfolios.Added for the Common Clearing Link to support specification of whether CBOT positions in customer-origin clearing portfolios should be margined net but without use of Long Option Value, or according to submitted spreads and with full use of Long Option Value.\u00a0 Set to Y if the firm wants CME-style customer-origin margining with full use of LOV, or CBT-style customer-origin margining without use of LOV."
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "1",
+                                "1",
+                                "1",
+                                "AN",
+                                "X(1)",
+                                "Record ID - \"3\""
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "2",
+                                "4",
+                                "AN",
+                                "X(3)",
+                                "Clearing Member Firm"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "20",
+                                "5",
+                                "24",
+                                "AN",
+                                "X(20)",
+                                "Account Number / ID"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "25",
+                                "27",
+                                "AN",
+                                "X(3)",
+                                "Exchange Acronym"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "28",
+                                "29",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "30",
+                                "35",
+                                "AN",
+                                "X(6)",
+                                "Combined Commodity Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "10",
+                                "36",
+                                "45",
+                                "AN",
+                                "X(10)",
+                                "Commodity (Product) Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "46",
+                                "48",
+                                "AN",
+                                "X(3)",
+                                "Contract Type -PHYfor Physical,FUTfor Future,CMBfor Combination,OOPfor Option on Physical,OOFfor Option on Future,OOCfor Option on Combination"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "49",
+                                "49",
+                                "A",
+                                "X",
+                                "Put / Call Code -PorC"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "50",
+                                "57",
+                                "AN",
+                                "9(6)X(2)",
+                                "Futures Contract Period asCCYYMMXXwhereXXis blank for standard monthly futures, a specific day of the month for futures expirations to the day,W1,W2etc. for weekly futures, or other identifier."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "58",
+                                "58",
+                                "AN",
+                                "X",
+                                "Account type override.\u00a0 Optional.\u00a0 Used to specify an account type for this position different from the account type for the account as a whole specified on the type \"2\" record.\u00a0 Relevant only for non-omnibus accounts.\u00a0 Allowable values areMfor member,Hfor hedge, orSfor spec."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "59",
+                                "66",
+                                "AN",
+                                "9(6)X(2)",
+                                "Option Contract Period asCCYYMMXXwhereXXis blank for standard monthly options, a specific day of the month for option expirations to the day,W1,W2etc. for weekly options, or other identifier."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "67",
+                                "67",
+                                "AN",
+                                "X(1)",
+                                "Strike price sign.\u00a0 + or -.\u00a0 Any value besides - means positive."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "68",
+                                "74",
+                                "N",
+                                "9(7)",
+                                "Strike Price"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "75",
+                                "82",
+                                "N",
+                                "9(8)",
+                                "Net Position, with leading minus sign if short. This field applies to account positions for non-omnibus accounts, or to clearing firm positions at clearing organizations (or for cross-margin agreements) which calculate performance bonds on a net position basis. (For omnibus accounts or gross-basis clearing firm positions, enter zero.)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "83",
+                                "90",
+                                "N",
+                                "9(8)",
+                                "Total Long Positions. Only for omnibus accounts or for clearing firm portfolios which are margined on a gross basis. (For all others, enter zeros or omit.)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "91",
+                                "98",
+                                "N",
+                                "9(8)",
+                                "Total Short Positions. Only for omnibus accounts or for clearing firm portfolios which are margined on a gross basis. (For all others, enter zeros or omit.)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "99",
+                                "106",
+                                "N",
+                                "9(8)",
+                                "Intra-commodity Spreadable Long Positions. Only for clearing firm portfolios which are margined on a gross basis. (For all others, enter zeros or omit.)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "107",
+                                "114",
+                                "N",
+                                "9(8)",
+                                "Intra-commodity Spreadable Short Positions. Only for clearing firm portfolios which are margined on a gross basis. (For all others, enter zeros or omit.)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "115",
+                                "122",
+                                "N",
+                                "9(8)",
+                                "Inter-commodity Spreadable Long Positions. Only for clearing firm portfolios which are margined on a gross basis. (For all others, enter zeros or omit.)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "123",
+                                "130",
+                                "N",
+                                "9(8)",
+                                "Inter-commodity Spreadable Short Positions. Only for clearing firm portfolios which are margined on a gross basis. (For all others, enter zeros or omit.)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "9",
+                                "131",
+                                "139",
+                                "N",
+                                "9(9)",
+                                "Product Family ID Number:\u00a0 for SPAN 4 -- specifies the unique internal ID number for this product family"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "9",
+                                "140",
+                                "148",
+                                "N",
+                                "9(9)",
+                                "Contract ID Number:\u00a0 for SPAN 4 -- specifies the unique internal ID number for this contract"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "149",
+                                "153",
+                                "AN",
+                                "X(5)",
+                                "Business Function:\u00a0 for SPAN 4 -- specifies the business function for which this position is defined"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "154",
+                                "158",
+                                "AN",
+                                "X(5)",
+                                "Clearing Member Firm -- for SPAN 4 -- provides the full five bytes for the clearing member firm ID"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "15",
+                                "159",
+                                "173",
+                                "AN",
+                                "X(15)",
+                                "Performance Bond Account ID:\u00a0 for SPAN 4 -- specifies the PB account"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "174",
+                                "178",
+                                "AN",
+                                "X(5)",
+                                "Position Segregation Type (Origin):\u00a0 for SPAN 4 -- further identifies the performance bond account to which this position pertains"
+                            ],
+                            "links": []
+                        }
+                    ]
+                },
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "1",
+                                "1",
+                                "1",
+                                "AN",
+                                "X(1)",
+                                "Record ID - \"5\""
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "2",
+                                "4",
+                                "AN",
+                                "X(3)",
+                                "Clearing Member Firm"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "20",
+                                "5",
+                                "24",
+                                "AN",
+                                "X(20)",
+                                "Account Number / ID"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "25",
+                                "27",
+                                "AN",
+                                "X(3)",
+                                "Exchange Acronym"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "28",
+                                "29",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "30",
+                                "35",
+                                "AN",
+                                "X(6)",
+                                "Combined Commodity Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "10",
+                                "36",
+                                "45",
+                                "AN",
+                                "X(10)",
+                                "Commodity (Product) Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "46",
+                                "48",
+                                "AN",
+                                "X(3)",
+                                "Contract Type -PHYfor Physical,FUTfor Future,CMBfor Combination,OOPfor Option on Physical,OOFfor Option on Future,OOCfor Option on Combination"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "49",
+                                "49",
+                                "A",
+                                "X",
+                                "Put / Call Code -PorC"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "50",
+                                "57",
+                                "AN",
+                                "9(6)X(2)",
+                                "Futures (Underlying) Contract Period asCCYYMMXXwhereXXis blank for standard monthly futures, a specific day of the month for futures expirations to the day,W1,W2etc. for weekly futures, or other identifier."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "12",
+                                "58",
+                                "69",
+                                "-",
+                                "-",
+                                "Filler. Reserved for future expansion in case of multiple expirations per day."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "70",
+                                "77",
+                                "AN",
+                                "9(6)X(2)",
+                                "Option Contract Period asCCYYMMXXwhereXXis blank for standard monthly options, a specific day of the month for option expirations to the day,W1,W2etc. for weekly options, or other identifier."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "78",
+                                "78",
+                                "AN",
+                                "X(1)",
+                                "Strike Price Sign.\u00a0 + or -.\u00a0 Any value besides - means normal positive."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "14",
+                                "79",
+                                "92",
+                                "N",
+                                "9(7)V9(7)",
+                                "Strike Price"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "93",
+                                "100",
+                                "N",
+                                "9(8)",
+                                "Net Position, with leading minus sign if short. This field applies to account positions for non-omnibus accounts, or to clearing firm positions at clearing organizations (or for cross-margin agreements) which calculate performance bonds on a net position basis. (For omnibus accounts or gross-basis clearing firm positions, enter zero.)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "101",
+                                "108",
+                                "N",
+                                "9(8)",
+                                "Total Long Positions. Only for omnibus accounts or for clearing firm portfolios which are margined on a gross basis. (For all others, enter zeros or omit.)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "109",
+                                "116",
+                                "N",
+                                "9(8)",
+                                "Total Short Positions. Only for omnibus accounts or for clearing firm portfolios which are margined on a gross basis. (For all others, enter zeros or omit.)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "117",
+                                "124",
+                                "N",
+                                "9(8)",
+                                "Intra-commodity Spreadable Long Positions. Only for clearing firm portfolios which are margined on a gross basis. (For all others, enter zeros or omit.)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "125",
+                                "132",
+                                "N",
+                                "9(8)",
+                                "Intra-commodity Spreadable Short Positions. Only for clearing firm portfolios which are margined on a gross basis. (For all others, enter zeros or omit.)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "133",
+                                "140",
+                                "N",
+                                "9(8)",
+                                "Inter-commodity Spreadable Long Positions. Only for clearing firm portfolios which are margined on a gross basis. (For all others, enter zeros or omit.)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "8",
+                                "141",
+                                "148",
+                                "N",
+                                "9(8)",
+                                "Inter-commodity Spreadable Short Positions. Only for clearing firm portfolios which are margined on a gross basis. (For all others, enter zeros or omit.)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "9",
+                                "149",
+                                "157",
+                                "N",
+                                "9(9)",
+                                "Product Family ID Number:\u00a0 for SPAN 4 -- specifies the unique internal ID number for this product family"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "9",
+                                "158",
+                                "166",
+                                "N",
+                                "9(9)",
+                                "Contract ID Number:\u00a0 for SPAN 4 -- specifies the unique internal ID number for this contract"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "167",
+                                "171",
+                                "AN",
+                                "X(5)",
+                                "Business Function:\u00a0 for SPAN 4 -- specifies the business function for which this position is defined"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "172",
+                                "176",
+                                "AN",
+                                "X(5)",
+                                "Clearing Member Firm -- for SPAN 4 -- provides the full five bytes for the clearing member firm ID"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "15",
+                                "177",
+                                "191",
+                                "AN",
+                                "X(15)",
+                                "Performance Bond Account ID:\u00a0 for SPAN 4 -- specifies the PB account"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "192",
+                                "196",
+                                "AN",
+                                "X(5)",
+                                "Position Segregation Type (Origin):\u00a0 for SPAN 4 -- further identifies the performance bond account to which this position pertains"
+                            ],
+                            "links": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_id": "457313617",
+    "child_page_ids": []
+}

@@ -1,320 +1,159 @@
-import random
-import ssl
-from typing import List
-from fastapi import FastAPI, HTTPException, UploadFile, File
-from fastapi.responses import HTMLResponse, JSONResponse
-from fastapi.staticfiles import StaticFiles
-import numpy as np
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from sentence_transformers import SentenceTransformer
-from app.document_processor import DocumentProcessor
-from app.DBServices.db_write_service import DBWriteService  # Import DBWriteService from the appropriate module
-import requests
-from bs4 import BeautifulSoup
-from urllib.parse import urljoin
+from typing import List, Dict, Any
 import os
 import json
-from concurrent.futures import ThreadPoolExecutor, as_completed
-from app.WebCrawler import WebCrawlerManager, ConfluenceStrategy, AllLinksStrategy
-from app.embeddings import create_faiss_index
-from app.llmservice import LLMService 
-from app.model_factory.factory import get_model
-from langchain_community.vectorstores.utils import filter_complex_metadata
 import uuid
+
 from langchain.vectorstores import Chroma
 from langchain.embeddings import SentenceTransformerEmbeddings
 from langchain.schema import Document
 
-app = FastAPI(title="RAG-based Chatbot", version="1.0")
-app.mount("/static", StaticFiles(directory=os.path.join(os.getcwd(), "app", "static")), name="static")
-
-# Disable Chroma telemetry
-os.environ["CHROMA_TELEMETRY_ANONYMOUS"] = "false"
-
-# Allow unverified SSL context
-ssl._create_default_https_context = ssl._create_unverified_context
-
-RESTRICTED_KEYWORDS = ['abc', 'abc company']
-
-class DocumentRequest(BaseModel):
-    path_or_url: str
-
-class QueryRequest(BaseModel):
-    question: str
-
-class QueryResponse(BaseModel):
-    response: str
-
-class AskRequest(BaseModel):
-    prompt: str
-
-class ChatMessage(BaseModel):
-    role: str  # 'user' or 'assistant'
-    content: str
-
-class ChatRequest(BaseModel):
-    messages: List[ChatMessage]
-
-def is_prompt_restricted(prompt: str, banned_words: List[str]) -> bool:
-    prompt_lower = prompt.lower()
-    return any(keyword in prompt_lower for keyword in banned_words)
-
-llm_service = LLMService()
-
 # Path to local sentence transformer model
 MODEL_DIR = "models/all-MiniLM-L6-v2"
 
-# Wrap the model with LangChain's embedding class
+# Initialize ChromaDB vector store and embedding model
+persist_directory = "./chroma_data"
 embedding_model = SentenceTransformerEmbeddings(model_name=MODEL_DIR)
 
-# Initialize ChromaDB vector store
-persist_directory = "/chroma_data"
+# Initialize ChromaDB client and collection
+# Note: Ensure the ChromaDB server is running or use an in-memory instance
+# For simplicity, this example uses a file-based persistent directory.
+# In a real application, you might connect to a separate Chroma server.
+
 vector_store = Chroma(persist_directory=persist_directory, embedding_function=embedding_model)
 
-@app.post("/add-document/")
-async def add_document():
-    """Add a document to the ChromaDB collection."""
-    try:
-        # Create a LangChain Document object with metadata
-        doc = Document(page_content="ABC")
+app = FastAPI(title="Embedding Service", version="1.0")
 
-        # Add the document to the vector store
-        vector_store.add_documents([doc])
 
-        return {"message": "Document added successfully"}
+class EmbeddingQuery(BaseModel):
+    query_text: str
+    k: int = 5
 
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
 
-@app.get("/get-similar-documents/")
-async def get_similar_documents(query: str, k: int = 5):
-    """Retrieve similar documents from the ChromaDB collection based on a query."""
+class DocumentData(BaseModel):
+    texts: List[str]
+    metadatas: List[Dict[str, Any]] = []
+    ids: List[str] = []
+
+
+# New model for requesting to insert Investopedia articles
+class InvestopediaInsertRequest(BaseModel):
+    file_path: str
+
+
+@app.post("/get-embeddings/")
+async def get_embeddings(query: EmbeddingQuery):
+    """Retrieve similar documents/embeddings from ChromaDB based on a query."""
     try:
         # Perform similarity search
-        results = vector_store.similarity_search(query, k=k)
+        results = vector_store.similarity_search(query.query_text, k=query.k)
 
         return {
             "results": [
-                {"content": doc.page_content, "metadata": doc.metadata}
-                for doc in results
+                {"content": doc.page_content, "metadata": doc.metadata} for doc in results
             ]
         }
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-    
 
 
-@app.post("/transfer-to-chroma")
-async def transfer_to_chroma():
-    """Fetch data from MongoDB and write to Chroma DB."""
+@app.post("/write-embeddings/")
+async def write_embeddings(data: DocumentData):
+    """Write documents/embeddings to ChromaDB."""
     try:
-        # Initialize MongoDB service
-        mongo_service = DBWriteService(db_type="mongo")
-        documents = mongo_service.db_writer.fetch_all()
+        docs = []
+        for i, text in enumerate(data.texts):
+            metadata = data.metadatas[i] if i < len(data.metadatas) else {}
+            doc_id = data.ids[i] if i < len(data.ids) else None
+            docs.append(Document(page_content=text, metadata=metadata, id=doc_id))
 
-        for doc in documents:
-            content = doc.get('content', '').strip()
+        # Add the documents to the vector store
+        vector_store.add_documents(docs)
 
-            if not content:
-                print(f"Skipping document with Page ID: {doc.get('page_id', '')} due to empty content.")
-                continue
-
-            # Metadata
-            page_id = str(doc.get('page_id', '')) or str(uuid.uuid4())
-            # Fallback to page_id if URL is missing or empty (confluence)
-            url = doc.get('url', '').strip() or page_id
-            metadata = {
-                'page_id': page_id,
-                'title': doc.get('title', ''),
-                'author': doc.get('author', 'Unknown'),
-                'published_date': doc.get('published_date', 'Unknown'),
-                'url': url
-            }
-
-            print(f"Writing document: {page_id}")
-            print(f"Metadata: {metadata}")
-
-            # Add to Chroma
-            vector_store.add_texts(texts=[content], metadatas=[metadata], ids=[page_id])
-
-        return {"message": "Data transferred to Chroma DB successfully"}
+        return {"message": f"Successfully added {len(docs)} documents to ChromaDB"}
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.get("/get-embeddings")
-async def get_embeddings(query: str, k: int = 5):
-    """Retrieve the top-k documents from Chroma similar to the query."""
-    try:
-        # Perform similarity search using the global vector_store
-        results = vector_store.similarity_search(query, k=k)
 
-        return {
-            "results": [
-                {
-                    "content": doc.page_content,
-                    "metadata": doc.metadata
+# New endpoint to handle large JSON file with Investopedia articles
+@app.post("/insert-investopedia-articles/")
+async def insert_investopedia_articles(request: InvestopediaInsertRequest):
+    """Read a large JSON file with a list of articles and add them to ChromaDB."""
+    file_path = request.file_path
+    inserted_count = 0
+    skipped_count = 0
+
+    if not os.path.exists(file_path):
+        raise HTTPException(status_code=400, detail=f"File not found: {file_path}")
+
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            articles = json.load(f)
+
+        if not isinstance(articles, list):
+            raise HTTPException(status_code=400, detail="JSON file should contain a list of articles")
+
+        texts_to_add = []
+        metadatas_to_add = []
+        ids_to_add = []
+
+        for article in articles:
+            try:
+                # Assuming the structure of each article matches the sample provided (Investopedia)
+                content = article.get("content", "").strip()
+                if not content:
+                    skipped_count += 1
+                    print(f"⚠️ Skipping article: Empty content.")
+                    continue
+
+                metadata = {
+                    "title": article.get("title", ""),
+                    "author": article.get("author", "Unknown"),
+                    "published_date": article.get("published_date", "Unknown"),
+                    "url": article.get("url", ""),
+                    # Add source file information
+                    "source_file": os.path.basename(file_path)
                 }
-                for doc in results
-            ]
+                # Generate a simple ID if not available (optional, Chroma can do this)
+                # Using a hash of content + url could be a more robust approach if unique IDs are needed
+                article_id = metadata.get('url', None) or str(uuid.uuid4()) # Use URL as ID if present, otherwise generate UUID
+                ids_to_add.append(article_id)
+                texts_to_add.append(content)
+                metadatas_to_add.append(metadata)
+                inserted_count += 1
+
+            except Exception as e:
+                skipped_count += 1
+                print(f"⚠️ Error processing article: {e}")
+                # Optionally log the article data that caused the error
+
+        # Add documents to Chroma in batches (Chroma handles this internally with add_texts)
+        if texts_to_add:
+            vector_store.add_texts(texts=texts_to_add, metadatas=metadatas_to_add, ids=ids_to_add)
+
+        return {
+            "message": "Finished processing Investopedia articles file.",
+            "inserted_count": inserted_count,
+            "skipped_count": skipped_count
         }
 
+    except FileNotFoundError:
+         raise HTTPException(status_code=400, detail=f"File not found: {file_path}")
+    except json.JSONDecodeError:
+        raise HTTPException(status_code=400, detail=f"Invalid JSON format in file: {file_path}")
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(status_code=500, detail=f"An error occurred: {str(e)}")
 
-
-@app.post("/upload")
-async def upload_document(doc: DocumentRequest):
-    """API Endpoint to handle file upload (TXT, JSON, CSV)."""
-    processor = DocumentProcessor(doc.path_or_url)
-    result = await processor.process()
-    return {"message": "Document processed and stored", **result}
-
-@app.get("/", response_class=HTMLResponse)
-async def read_index():
-    index_file_path = os.path.join(os.getcwd(), "app", "static", "index.html")
-    with open(index_file_path, "r") as f:
-        return f.read()
-
-@app.get("/info")
-async def get_info():
-    """Basic server info endpoint."""
-    return {"app_name": "RAG-based Chatbot", "version": "1.0"}
-
-@app.get("/webcrawl")
-async def webcrawl():
-    print(f"""Web crawling endpoint.""")
-    # For now, just return a placeholder response
-    # write to DB
-    base_url = 'https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/overview'
-    strategy = ConfluenceStrategy()
-    manager = WebCrawlerManager(base_url, strategy, max_workers=10)
-    manager.crawl()
-    # write to DB
-    #Refactor to handle by workers for event processing
-    db_service = DBWriteService(db_type="mongo")
-    db_service.process_event({"title": "Web crawling initiated", "content": "Crawling in progress..."})
-    return {"message": "Web crawling initiated"}
-
-@app.get("/webcrawl-all-links")
-async def webcrawl_all_links():
-    """Web crawling endpoint using AllLinksStrategy."""
-    try:
-        # Define the base URL for crawling
-        base_url = 'https://www.investopedia.com/articles/optioninvestor/02/091802.aspm' 
-
-        # Use AllLinksStrategy for parsing links
-        strategy = AllLinksStrategy()
-        manager = WebCrawlerManager(base_url, strategy, max_workers=10)
-
-        # Start crawling and collect scraped data
-        scraped_data = manager.crawl()  # Assume this returns a list of scraped objects
-
-        # Initialize DBWriteService
-        db_service = DBWriteService(db_type="mongo")  # Change to "chroma" if using ChromaWriter
-
-        # Process each scraped object
-        for data in scraped_data:
-            event = {
-                "texts": [data.get("content", "")],  # Replace "content" with the actual field containing text
-                "ids": [data.get("id", str(random.randint(1000, 9999)))],  # Generate a random ID if not present
-                "metadatas": [{"url": data.get("url", "")}]  # Add metadata like URL
-            }
-            db_service.process_event(event)
-
-        return {"message": "Web crawling using AllLinksStrategy completed successfully"}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-@app.post("/ask")
-async def ask(query: AskRequest):
-    prompt = query.prompt
-
-    # Check if the prompt contains restricted keywords
-    if is_prompt_restricted(prompt, RESTRICTED_KEYWORDS):
-        return {"response": "Sorry, this topic is restricted."}
-
-    try:
-        # Try RAG first
-        rag_response = llm_service.generate_response(prompt)
-        if rag_response and "not found in the provided data" not in rag_response.lower():
-            return {"response": rag_response}
-    except Exception as e:
-        print("RAG failed:", e)
-
-    # Fallback to Web Search if RAG fails
-    web_response = llm_service.fetch_web_answer(prompt)
-    if web_response:
-        return {"response": f"This information is retrieved from the web: {web_response}"}
-
-    # Fallback to LLM if web search also fails
-    try:
-        fallback = llm_service.generate_response_remote(prompt)
-        return {"response": fallback}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"LLM fallback failed: {e}")
-
-# === CHAT Endpoint ===
-@app.post("/chat")
-async def chat(chat_data: ChatRequest):
-    if not chat_data.messages:
-        raise HTTPException(status_code=400, detail="No messages provided")
-
-    last_message = chat_data.messages[-1]
-    if last_message.role != "user":
-        raise HTTPException(status_code=400, detail="Last message must be from user")
-
-    # Check if the prompt contains restricted keywords
-    if is_prompt_restricted(last_message.content, RESTRICTED_KEYWORDS):
-        return {"response": "Sorry, this topic is restricted."}
-
-    try:
-        response = llm_service._call_hf_chat([
-            {"role": msg.role, "content": msg.content} for msg in chat_data.messages
-        ])
-        return {"response": response}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Chat API failed: {e}")
-
-    
-@app.get("/get-embeddings")
-async def get_embeddings(query: str):
-    """Retrieve embeddings similar to the query."""
-    try:
-        # Initialize Chroma DB service
-        chroma_service = DBWriteService(db_type="chroma")
-        # Get embeddings
-        results = chroma_service.db_writer.get_embeddings(query)
-        return {"results": results}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-    
-@app.delete("/clean-chroma")
-async def clean_chroma():
-    """Delete all data from Chroma DB."""
-    try:
-        # Initialize Chroma DB service
-        chroma_service = DBWriteService(db_type="chroma")
-        
-        # Clear Chroma DB
-        chroma_service.db_writer.clear()  #not so useful rn, need to change
-        
-        return {"message": "Chroma DB cleaned successfully"}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-# Folder path
-FOLDER_PATH = 'C:\\Users\\mouni\\rag\\confluence_data'
 
 @app.post("/insert_html_json/")
 async def insert_html_json_files():
-    
-    db_write_service = DBWriteService(db_type="mongo")  
 
     inserted_files = []
     skipped_files = []
-
+    FOLDER_PATH = '/Users/shreyaspandey/Library/Mobile Documents/com~apple~CloudDocs/RAG_ChatBot/confluence_data'
     for filename in os.listdir(FOLDER_PATH):
         if filename.endswith('html.json'):
             file_path = os.path.join(FOLDER_PATH, filename)
@@ -322,10 +161,69 @@ async def insert_html_json_files():
                 with open(file_path, 'r', encoding='utf-8') as file:
                     data = json.load(file)
                     if data:
-                        db_write_service.process_event(data)
-                        inserted_files.append(filename)
+                        # Adapt parsing logic from the previous /insertData/ endpoint
+                        content_texts = []
+                        metadata = {}
+                        doc_id = None # Initialize doc_id
+
+                        if 'data' in data:  # Confluence format
+                            for entry in data.get('data', []):
+                                if entry.get('type') in ['heading', 'link'] and 'text' in entry:
+                                    content_texts.append(entry['text'])
+                            if 'confluence_tables' in data:
+                                for table in data['confluence_tables']:
+                                    if table and isinstance(table, dict):
+                                        table_content = str(table)
+                                        content_texts.append(table_content)
+
+                            combined_content = '\n'.join(content_texts)
+                            content_to_add = [combined_content] # Ensure texts is a list
+
+                            # Prepare metadata for Chroma
+                            metadata = {
+                                "title": data.get("title", ""),
+                                "author": data.get("author", "Unknown"),
+                                "published_date": data.get("published_date", "Unknown"),
+                                "url": data.get("url", ""),
+                                "file_name": filename # Add filename as metadata
+                            }
+                            # Use page_id as doc_id if available
+                            doc_id = data.get("page_id", None)
+
+                        elif 'content' in data:  # Investopedia format or similar structure
+                            content_to_add = [data.get("content", "")] # Ensure texts is a list
+
+                            # Prepare metadata for Chroma
+                            metadata = {
+                                "title": data.get("title", ""),
+                                "author": data.get("author", "Unknown"),
+                                "published_date": data.get("published_date", "Unknown"),
+                                "url": data.get("url", ""),
+                                "file_name": filename # Add filename as metadata
+                            }
+                            # No specific ID from this format, Chroma will generate one if doc_id is None
+                            doc_id = None
+                        else:
+                            # If format is not recognized, skip the file
+                            skipped_files.append(filename)
+                            print(f"⚠️ Skipping {filename}: Unrecognized data format")
+                            continue # Skip to the next file
+
+                        # Write to Chroma vector store
+                        if content_to_add and content_to_add[0].strip(): # Only add if content is not empty
+                             # Ensure metadatas is a list of dicts matching texts length
+                            metadatas_list = [metadata] if metadata else [{}]
+                            # Use add_texts which handles adding documents with generated IDs if none are provided
+                            vector_store.add_texts(texts=content_to_add, metadatas=metadatas_list, ids=[doc_id] if doc_id else None)
+                            inserted_files.append(filename)
+                        else:
+                            skipped_files.append(filename)
+                            print(f"⚠️ Skipping {filename}: Empty content after parsing")
+
                     else:
                         skipped_files.append(filename)
+                        print(f"⚠️ Skipping {filename}: Empty JSON data")
+
             except Exception as e:
                 skipped_files.append(filename)
                 print(f"⚠️ Error processing {filename}: {e}")
@@ -336,113 +234,12 @@ async def insert_html_json_files():
         "skipped_files": skipped_files
     }
 
+
 @app.post("/insertData/")
 async def insertData():
-    db_write_service = DBWriteService(db_type="mongo")  
+    # This endpoint is now redundant as insert_html_json_files handles writing to Chroma
+    return {"message": "This endpoint is deprecated. Use /insert_html_json/ instead."}
 
-    inserted_files = []
-    skipped_files = []
-
-    for filename in os.listdir(FOLDER_PATH):
-        if filename.endswith('html.json'):  # Assuming all json files are relevant
-            file_path = os.path.join(FOLDER_PATH, filename)
-            try:
-                with open(file_path, 'r', encoding='utf-8') as file:
-                    data = json.load(file)
-                    if data:
-                        # Determine if the file is Confluence or Investopedia based on its structure
-                        if 'data' in data:  # Confluence format
-                            content_texts = []
-                            # Process heading and link types
-                            for entry in data.get('data', []):
-                                if entry.get('type') in ['heading', 'link'] and 'text' in entry:
-                                    content_texts.append(entry['text'])
-                            
-                            # Check for confluence_tables and process them if present
-                            if 'confluence_tables' in data:
-                                for table in data['confluence_tables']:
-                                    # If there are actual table data, we process it
-                                    if table and isinstance(table, dict):
-                                        # Convert table into a readable string format (could be JSON or table-like string)
-                                        table_content = str(table)  
-                                        content_texts.append(table_content)
-                            
-                            # Combine all content into a single string (optional separator)
-                            combined_content = '\n'.join(content_texts)
-                            
-                            # Prepare the data in the same format for MongoDB
-
-                            confluence_data = {
-                                
-                                "title": data.get("title", ""),
-                                "author": data.get("author", "Unknown"),
-                                "published_date": data.get("published_date", "Unknown"),
-                                "content": combined_content,
-                                "url": data.get("url", ""),
-                                "page_id": data.get("page_id", ""),
-                                "child_page_ids": data.get("child_page_ids", [])
-                            }
-                            db_write_service.process_event(confluence_data)
-
-                        elif 'content' in data:  # Investopedia format
-                            # Directly map the Investopedia data to MongoDB schema
-                            investopedia_data = {
-                                "title": data.get("title", ""),
-                                "author": data.get("author", "Unknown"),
-                                "published_date": data.get("published_date", "Unknown"),
-                                "content": data.get("content", ""),
-                                "url": data.get("url", "")
-                            }
-                            db_write_service.process_event(investopedia_data)
-                        else:
-                            skipped_files.append(filename)
-
-                        inserted_files.append(filename)
-                    else:
-                        skipped_files.append(filename)
-            except Exception as e:
-                skipped_files.append(filename)
-                print(f"⚠️ Error processing {filename}: {e}")
-
-    return {
-        "inserted_files": inserted_files,
-        "skipped_files": skipped_files
-    }
-
-
-@app.get("/", response_class=HTMLResponse)
-async def home():
-    with open("app/static/index.html") as f:
-        return HTMLResponse(content=f.read())
-    
-MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
-
-@app.get("/download-model")
-async def download_model():
-    try:
-        if not os.path.exists(MODEL_DIR):
-            model = SentenceTransformer(MODEL_NAME)
-            model.save(MODEL_DIR)
-            return {"message": f"Model downloaded and saved to '{MODEL_DIR}'"}
-        else:
-            return {"message": f"Model already exists at '{MODEL_DIR}'"}
-    except Exception as e:
-        return JSONResponse(status_code=500, content={"error": str(e)})
-    
-
-model = SentenceTransformer(MODEL_DIR)  # Load from disk
-
-
-class TextsInput(BaseModel):
-    texts: List[str]
-
-
-@app.post("/test-embed")
-async def embed_texts(input: TextsInput):
-    embeddings = model.encode(input.texts)
-    embeddings = np.array(embeddings)  # Explicitly convert to numpy array
-    return {
-        "num_sentences": len(input.texts),
-        "vector_dim": embeddings.shape[1],
-        "embeddings": embeddings.tolist()
-    }
+@app.get("/")
+async def read_root():
+    return {"message": "Embedding service is running"}

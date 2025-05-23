@@ -1,0 +1,33 @@
+{
+    "parentId": "457083087",
+    "ownerId": "60653f79352e1e0069fb728f",
+    "createdAt": "2024-12-21T16:43:00.489Z",
+    "authorId": "60653f79352e1e0069fb728f",
+    "parentType": "page",
+    "position": 281249666,
+    "version": {
+        "number": 1,
+        "message": "",
+        "minorEdit": false,
+        "authorId": "60653f79352e1e0069fb728f",
+        "createdAt": "2024-12-21T16:43:02.134Z"
+    },
+    "body": {
+        "export_view": {
+            "representation": "export_view",
+            "value": "<p>Please see:</p><p><strong><a href=\"https://www.cmegroup.com/clearing/files/posfile.doc\" class=\"external-link\" rel=\"nofollow\">Word File</a></strong></p><p style=\"text-align: left;\"><strong><a href=\"https://www.cmegroup.com/clearing/files/posfile.rtf\" class=\"external-link\" rel=\"nofollow\">RTF</a></strong></p><p style=\"text-align: left;\"><strong><a href=\"https://www.cmegroup.com/clearing/files/posfile.xsd\" class=\"external-link\" rel=\"nofollow\">XSD File</a></strong></p><p style=\"text-align: left;\"><br/></p><p style=\"text-align: left;\"><br/></p><p style=\"text-align: left;\"><br/></p>"
+        }
+    },
+    "status": "current",
+    "title": "XML-based Position File",
+    "spaceId": "457312811",
+    "lastOwnerId": null,
+    "id": "457313850",
+    "_links": {
+        "editui": "/pages/resumedraft.action?draftId=457313850",
+        "webui": "/spaces/pubsub/pages/457313850/XML-based+Position+File",
+        "edituiv2": "/spaces/pubsub/pages/edit-v2/457313850",
+        "tinyui": "/x/Og5CGw",
+        "base": "https://cmegroupclientsite.atlassian.net/wiki"
+    }
+}

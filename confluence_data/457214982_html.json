@@ -1,0 +1,324 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Notes:"
+        },
+        {
+            "type": "confluence_tables",
+            "text": [
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "1",
+                                "2",
+                                "AN",
+                                "X",
+                                "Record ID - \"2 \""
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "3",
+                                "5",
+                                "AN",
+                                "X(3)",
+                                "Exchange Acronym"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "6",
+                                "6",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "7",
+                                "12",
+                                "AN",
+                                "X(6)",
+                                "Combined Commodity Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "13",
+                                "13",
+                                "N",
+                                "9",
+                                "Risk Exponent"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "14",
+                                "16",
+                                "AN",
+                                "X(3)",
+                                "Performance Bond Currency ISO Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "17",
+                                "17",
+                                "AN",
+                                "X",
+                                "Performance Bond Currency Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "18",
+                                "18",
+                                "AN",
+                                "X",
+                                "Option Margin Style (Valuation Method) --Pfor premium-style,Ffor futures-style, or blank -- if blank, premium-style is assumed."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "19",
+                                "19",
+                                "AN",
+                                "X",
+                                "Limit Option Value (Cap Available Net Option Value) Flag -Y,Nor blank -- if blank, no is assumed."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "20",
+                                "20",
+                                "AN",
+                                "X",
+                                "Combination Margining Method Flag -Sfor split-allocation,Dfor delta-split-allocation, or blank."
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "21",
+                                "22",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "23",
+                                "23",
+                                "AN",
+                                "X",
+                                "Calculation Algorithm Code (Sorblankfor standard SPAN,Lfor Liquidation processing)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "12",
+                                "24",
+                                "35",
+                                "AN",
+                                "X(12)",
+                                "Commodity (Product) Code 1"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "36",
+                                "40",
+                                "AN",
+                                "X(5)",
+                                "Contract Type 1 -FUT, PHY, CMB, OOF, OOP, OOC, STOCK, DEBT, OOS"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "14",
+                                "41",
+                                "54",
+                                "N",
+                                "9(14)",
+                                "Contract Value Factor 1 (Multiplier)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "55",
+                                "55",
+                                "N",
+                                "9",
+                                "Contract Value Factor 1 Decimal Locator"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "56",
+                                "56",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "12",
+                                "57",
+                                "68",
+                                "AN",
+                                "X(12)",
+                                "Commodity (Product) Code 2"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "69",
+                                "73",
+                                "AN",
+                                "X(5)",
+                                "Contract Type 2 -FUT, PHY, CMB, OOF, OOP, OOC, STOCK, DEBT, OOS"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "14",
+                                "74",
+                                "87",
+                                "N",
+                                "9(14)",
+                                "Contract Value Factor 2 (Multiplier)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "88",
+                                "88",
+                                "N",
+                                "9",
+                                "Contract Value Factor 2 Decimal Locator"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "89",
+                                "89",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "12",
+                                "90",
+                                "101",
+                                "AN",
+                                "X(12)",
+                                "Commodity (Product) Code 3"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "102",
+                                "106",
+                                "AN",
+                                "X(5)",
+                                "Contract Type 3 -FUT, PHY, CMB, OOF, OOP, OOC, STOCK, DEBT, OOS"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "14",
+                                "107",
+                                "120",
+                                "N",
+                                "9(14)",
+                                "Contract Value Factor 3 (Multiplier)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "121",
+                                "121",
+                                "N",
+                                "9",
+                                "Contract Value Factor 3 Decimal Locator"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "11",
+                                "122",
+                                "132",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_id": "457214982",
+    "child_page_ids": []
+}

@@ -1,0 +1,258 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Notes:"
+        },
+        {
+            "type": "confluence_tables",
+            "text": [
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "1",
+                                "2",
+                                "AN",
+                                "X(2)",
+                                "Record ID - \"E \""
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "3",
+                                "8",
+                                "AN",
+                                "X(3)",
+                                "Combined Commodity Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "5",
+                                "9",
+                                "13",
+                                "N",
+                                "9(5)",
+                                "Spread Priority"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "7",
+                                "14",
+                                "20",
+                                "N",
+                                "9(7)",
+                                "Charge Rate"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "21",
+                                "24",
+                                "N",
+                                "9(4)",
+                                "Leg 1 Contract Month asYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "25",
+                                "27",
+                                "AN",
+                                "X(3)",
+                                "Leg 1 Remaining Part of Contract Period"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "28",
+                                "33",
+                                "N",
+                                "9(2)V9(4)",
+                                "Leg 1 Delta Per Spread Ratio"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "34",
+                                "34",
+                                "A",
+                                "A",
+                                "Leg 1 Market Side (AorB)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "35",
+                                "38",
+                                "N",
+                                "9(4)",
+                                "Leg 2 Contract Month asYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "39",
+                                "41",
+                                "AN",
+                                "X(3)",
+                                "Leg 2 Remaining Part of Contract Period"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "42",
+                                "47",
+                                "N",
+                                "9(2)V9(4)",
+                                "Leg 2 Delta Per Spread Ratio"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "48",
+                                "48",
+                                "A",
+                                "A",
+                                "Leg 2 Market Side (AorB)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "49",
+                                "52",
+                                "N",
+                                "9(4)",
+                                "Leg 3 Contract Month asYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "53",
+                                "55",
+                                "AN",
+                                "X(3)",
+                                "Leg 3 Remaining Part of Contract Period"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "56",
+                                "61",
+                                "N",
+                                "9(2)V9(4)",
+                                "Leg 3 Delta Per Spread Ratio"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "62",
+                                "62",
+                                "A",
+                                "A",
+                                "Leg 3 Market Side (AorB)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "63",
+                                "66",
+                                "N",
+                                "9(4)",
+                                "Leg 4 Contract Month asYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "3",
+                                "67",
+                                "69",
+                                "AN",
+                                "X(3)",
+                                "Leg 4 Remaining Part of Contract Period"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "70",
+                                "75",
+                                "N",
+                                "9(2)V9(4)",
+                                "Leg 4 Delta Per Spread Ratio"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "76",
+                                "76",
+                                "A",
+                                "A",
+                                "Leg 4 Market Side (AorB)"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "77",
+                                "80",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_id": "457215179",
+    "child_page_ids": []
+}

@@ -1,0 +1,82 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Products"
+        },
+        {
+            "type": "heading",
+            "text": "Comb Comm:Combined Commodity"
+        },
+        {
+            "type": "heading",
+            "text": "Exch:\u00a0 Exchange"
+        },
+        {
+            "type": "heading",
+            "text": "Type:"
+        },
+        {
+            "type": "heading",
+            "text": "ID:"
+        },
+        {
+            "type": "heading",
+            "text": "Code:"
+        },
+        {
+            "type": "heading",
+            "text": "Name:"
+        },
+        {
+            "type": "heading",
+            "text": "Curr:"
+        },
+        {
+            "type": "heading",
+            "text": "Cntr Val Factor:"
+        },
+        {
+            "type": "heading",
+            "text": "Price Dec Loc:"
+        },
+        {
+            "type": "heading",
+            "text": "Price Format Code:"
+        },
+        {
+            "type": "heading",
+            "text": "Val Meth:"
+        },
+        {
+            "type": "heading",
+            "text": "Price Meth:"
+        },
+        {
+            "type": "heading",
+            "text": "Setl Meth:"
+        },
+        {
+            "type": "heading",
+            "text": "Strike Curr:"
+        },
+        {
+            "type": "heading",
+            "text": "Strike Dec Loc:"
+        },
+        {
+            "type": "heading",
+            "text": "Strike Format Code:"
+        },
+        {
+            "type": "heading",
+            "text": "Cab:"
+        },
+        {
+            "type": "confluence_tables",
+            "text": []
+        }
+    ],
+    "page_id": "457084023",
+    "child_page_ids": []
+}

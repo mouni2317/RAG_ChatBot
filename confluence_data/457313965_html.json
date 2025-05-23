@@ -1,0 +1,26 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Comb Comm:Combined Commodity"
+        },
+        {
+            "type": "heading",
+            "text": "Tier #:Shows the overall and individual tiers"
+        },
+        {
+            "type": "heading",
+            "text": "Start Period:The beginning date of the tier"
+        },
+        {
+            "type": "heading",
+            "text": "End Period:The ending date of the tier"
+        },
+        {
+            "type": "confluence_tables",
+            "text": []
+        }
+    ],
+    "page_id": "457313965",
+    "child_page_ids": []
+}

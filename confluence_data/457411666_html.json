@@ -1,0 +1,368 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Notes:"
+        },
+        {
+            "type": "confluence_tables",
+            "text": [
+                {
+                    "headers": [
+                        "Length",
+                        "From",
+                        "To",
+                        "Datatype",
+                        "Format",
+                        "Description and Comments"
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                "2",
+                                "1",
+                                "2",
+                                "AN",
+                                "X",
+                                "Record ID - \"3 \""
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "3",
+                                "8",
+                                "AN",
+                                "X(6)",
+                                "Combined Commodity Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "9",
+                                "10",
+                                "AN",
+                                "X(2)",
+                                "Intracommodity (Intermonth) Spread Charge Method Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "11",
+                                "12",
+                                "N",
+                                "9(2)",
+                                "Tier 1 Tier Number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "13",
+                                "18",
+                                "N",
+                                "9(6)",
+                                "Tier 1 Starting Contract Month asCCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "19",
+                                "24",
+                                "N",
+                                "9(6)",
+                                "Tier 1 Ending Contract Month asCCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "25",
+                                "26",
+                                "N",
+                                "9(2)",
+                                "Tier 2 Tier Number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "27",
+                                "32",
+                                "N",
+                                "9(6)",
+                                "Tier 2 Starting Contract Month asCCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "33",
+                                "38",
+                                "N",
+                                "9(6)",
+                                "Tier 2 Ending Contract Month asCCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "39",
+                                "40",
+                                "N",
+                                "9(2)",
+                                "Tier 3 Tier Number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "41",
+                                "46",
+                                "N",
+                                "9(6)",
+                                "Tier 3 Starting Contract Month asCCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "47",
+                                "52",
+                                "N",
+                                "9(6)",
+                                "Tier 3 Ending Contract Month asCCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "53",
+                                "54",
+                                "N",
+                                "9(2)",
+                                "Tier 4 Tier Number"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "55",
+                                "60",
+                                "N",
+                                "9(6)",
+                                "Tier 4 Starting Contract Month asCCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "6",
+                                "61",
+                                "66",
+                                "N",
+                                "9(6)",
+                                "Tier 4 Ending Contract Month asCCYYMM"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "67",
+                                "68",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "69",
+                                "72",
+                                "N",
+                                "9(4)",
+                                "Initial to Maintenance Ratio -- Member Accounts"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "73",
+                                "73",
+                                "N",
+                                "9",
+                                "Member Accounts Ratio Decimal Locator"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "74",
+                                "77",
+                                "N",
+                                "9(4)",
+                                "Initial to Maintenance Ratio -- Hedger Accounts"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "78",
+                                "78",
+                                "N",
+                                "9",
+                                "Hedger Accounts Ratio Decimal Locator"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "4",
+                                "79",
+                                "82",
+                                "N",
+                                "9(4)",
+                                "Initial to Maintenance Ratio -- Speculator Accounts"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "1",
+                                "83",
+                                "83",
+                                "N",
+                                "9",
+                                "Speculator Accounts Ratio Decimal Locator"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "84",
+                                "85",
+                                "AN",
+                                "X(2)",
+                                "Tier 1 Starting Contract Day or Week Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "86",
+                                "87",
+                                "AN",
+                                "X(2)",
+                                "Tier 1 Ending Contract Day or Week Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "88",
+                                "89",
+                                "AN",
+                                "X(2)",
+                                "Tier 2 Starting Contract Day or Week Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "90",
+                                "91",
+                                "AN",
+                                "X(2)",
+                                "Tier 2 Ending Contract Day or Week Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "92",
+                                "93",
+                                "AN",
+                                "X(2)",
+                                "Tier 3 Starting Contract Day or Week Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "94",
+                                "95",
+                                "AN",
+                                "X(2)",
+                                "Tier 3 Ending Contract Day or Week Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "96",
+                                "97",
+                                "AN",
+                                "X(2)",
+                                "Tier 4 Starting Contract Day or Week Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "2",
+                                "98",
+                                "99",
+                                "AN",
+                                "X(2)",
+                                "Tier 4 Ending Contract Day or Week Code"
+                            ],
+                            "links": []
+                        },
+                        {
+                            "cells": [
+                                "33",
+                                "100",
+                                "132",
+                                "-",
+                                "-",
+                                "Filler"
+                            ],
+                            "links": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_id": "457411666",
+    "child_page_ids": []
+}

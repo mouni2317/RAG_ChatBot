@@ -1,0 +1,26 @@
+{
+    "data": [
+        {
+            "type": "heading",
+            "text": "Comb Comm:Combined Commodity"
+        },
+        {
+            "type": "heading",
+            "text": "Tier #\u00a0 -Either Overall, or broken down into tier numbers"
+        },
+        {
+            "type": "heading",
+            "text": "Start Period:If other than Overall, the beginning date of the tier"
+        },
+        {
+            "type": "heading",
+            "text": "End Period:If other than Overall, the ending date of the tier"
+        },
+        {
+            "type": "confluence_tables",
+            "text": []
+        }
+    ],
+    "page_id": "457083698",
+    "child_page_ids": []
+}
