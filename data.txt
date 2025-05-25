@@ -1,0 +1,154 @@
+Query: What is span risk
+
+TheStandard Portfolio Analysis of Risk (SPAN)system is a sophisticated methodology that calculates performance bond requirements by analyzing the "what-ifs" of virtually any market scenario. Continually enhanced and elaborated, the SPAN methodology can be used to evaluate risk for the broadest possible range of derivative and physical instruments. Although originally designed for use with derivatives, its extraordinary capabilities have led to its extensive use in assessing risk for many different types of financial instruments.
+PC-SPAN
+SPAN Risk Manager
+SPAN Risk Manager Clearing
+System Requirements
+Quick Installation
+Quick Tour
+Use PC-SPAN
+User Tips
+Calculating Performance Bond Requirements
+Defining Portfolios
+Defining Positions
+Loading SPAN Risk Parameter Files
+PC-SPAN Reports
+PC-SPAN Interfaces and Utilities
+Component Interface for Version 4 of PC-SPAN, SPAN Risk Manager, and SPAN Risk Manager Clearing
+Option Pricing Models Interfaces and Methods
+Running PC-SPAN Reports and Export Datafiles in Batch
+Script Language for PC-SPAN v.4.05 and SPAN Risk Manager
+Using PC-SPAN version 4.02 for TRAKRS
+Layout Guides
+Additional XML formats recognized by PC-SPAN
+Standard Portfolio Data File Layout
+Expanded Portfolio Data File Layout
+Daily Adjustment History Files
+Paris Expanded SPAN File Format for MATIF and Monep Products
+Risk Parameter File Layouts for the Positional Formats
+Standard
+Type 1 Records - Standard
+Type 0 Records - Standard
+Type 4 Record - Standard
+Type 5 Record - Standard
+Type 2 Record - Standard
+Type 3 Record - Standard
+Type 9 Records - Standard
+Type B Record - Standard
+Type 6 Record  - Standard
+Type 8 Records - Standard
+Type R Record - Standard
+Type C Record - Standard
+Type E Record - Standard
+Type V Record - Standard
+Type X Record - Standard and Expanded
+Type S Record - Standard
+Type Z Record - Standard and Expanded
+Type Y Record - Standard and Expanded
+Expanded
+Type V - Expanded
+Type T - Paris Expanded
+Type 8 - Expanded
+Type 2 - Paris Expanded
+Type 9 - Paris Expanded
+Type R - Expanded
+Type 9 - Expanded
+Type 1 Records - Expanded and Paris
+Type B - Paris Expanded
+Type 3 - Paris Expanded
+Type P Record - Standard and Expanded
+Type B - Expanded
+Type 5 - Expanded
+Type 5 - Paris Expanded
+Type 6 - Paris Expanded
+Type 8 - Paris Expanded
+Type C - Expanded Format and Paris Expanded
+Type P - Paris Expanded
+Type S - Expanded Format and Paris Expanded
+Type 2 - Expanded
+Type 4 - Paris Expanded
+Type T Record - Standard and Expanded
+Type 6 - Expanded
+Type 3 - Expanded
+Type 4 - Expanded
+Currency Codes Recognized
+XML-based Position File
+XML-based Risk Parameter File
+Portfolio Reports
+Intercommodity Spreading Tier Requirements Report
+Intracommodity Spreading Tier Requirements Report
+Spreads Detail Report
+Short Option Minimum Tier Requirements Report
+PB Requirements Report
+Period Deltas Report
+Scanning Tier Requirements Report
+Positions Report
+PB Requirements Summary
+PB Requirement Listing
+Scan Risk Contributions Report
+SPAN Risk Manager
+SPAN Risk Manager Functions
+SPAN Risk Manager - Option Pricing Models
+Main Exposure
+Multicommodity Analysis
+Risk Parameters Reports
+Combined Commodities
+Risk Arrays
+Contracts
+Intra Tiers
+Intra Spreads
+Spot Periods
+Scan Tiers
+Exchange Rates
+Risk Arrays - Standard
+Inter Tiers
+SOM Tiers
+Rate IDs
+Inter Exchange Spreads
+Risk Scenarios
+Scan Rate Tiers
+Inter Spreads
+Products
+Products by Combined Commodity
+PC-SPAN 4.5 Historical Build Notes
+
+---
+
+SPAN Risk Manager Functions
+SPAN Risk Manager - Option Pricing Models
+Main Exposure
+Multicommodity Analysis
+
+---
+
+PC-SPAN version 4 is an easy-to-use Windows program that allows you to load SPAN risk parameter files for exchanges and clearing organizations of interest, define portfolios, calculate margins, and view or print results. Version 4 was first made available in 1999. The latest build of version 4 is numbered as610.
+Minimum System Requirements
+
+---
+
+Firm:The firm or entity as entered into Span
+Account:The specified Portfolio for the above firm.  There can be many portfolios for a single firm.
+Seg:  Segregated Account:Specifies whether an account is of Customer or House origin.
+PB Class:Specifies the different levels of performance bond requirements.  This allows an exchange or clearing organization to divide it's performance bond requirement into different, acceptable forms of collateral.
+Curr:The currency used for each product and for the overall portfolio.  Span gives the option of using different currencies for overall portfolio requirements and  for each product's performance bond requirements.
+SpanReq:The requirement derived by Span which reflects the hypothetical single-day exposure given the Exchange or Clearing Organization's.  It is calculated by taking the Scan Risk and adding to it any intracommodity, spot or Short Option Minimum charges, and deducting any intercommodity or interexchange credits.
+Maint:  Maintenance Requirement
+Init:  Initial Requirement
+NOV :    Available Net Option Value
+Total Span Requirement:Equal to the Span Requirement less the Available Net Option Value.
+
+---
+
+Component Interface for Version 4 of PC-SPAN, SPAN Risk Manager, and SPAN Risk Manager Clearing
+Option Pricing Models Interfaces and Methods
+Running PC-SPAN Reports and Export Datafiles in Batch
+Script Language for PC-SPAN v.4.05 and SPAN Risk Manager
+Using PC-SPAN version 4.02 for TRAKRS
+
+Sources:
+Source: 457313347_html.json, Title: 
+Source: 457083187_html.json, Title: 
+Source: 457082909_html.json, Title: 
+Source: 457214888_html.json, Title: 
+Source: 457313476_html.json, Title: 
