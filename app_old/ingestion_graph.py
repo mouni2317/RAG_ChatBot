@@ -6,7 +6,7 @@ from langchain.document_loaders import TextLoader # Using TextLoader as a simple
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 # Import the ChromaService
-from app.services.chroma_service import ChromaService
+from app_old.services.chroma_service import ChromaService
 
 # Define the graph state
 class GraphState(TypedDict):

@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 # Reuse the existing model
-from app.ingestion_graph import ingestion_graph, GraphState # Import the graph and state
+from app_old.ingestion_graph import ingestion_graph, GraphState # Import the graph and state
 
 router = APIRouter()
 class InvestopediaInsertRequest(BaseModel):

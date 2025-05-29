@@ -1,7 +1,7 @@
 
 from sentence_transformers import SentenceTransformer
 from .model_factory.factory import get_model
-from app.app_config import CONFIG 
+from app_old.app_config import CONFIG 
 
 # embedding_model = get_model("embedding", "sentence-transformers/all-MiniLM-L6-v2", "huggingface")
 LOCAL_MODEL_PATH = "models/all-MiniLM-L6-v2"  # Update this path as needed

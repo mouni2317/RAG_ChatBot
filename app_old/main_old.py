@@ -7,16 +7,16 @@ from fastapi.staticfiles import StaticFiles
 import numpy as np
 from pydantic import BaseModel
 from sentence_transformers import SentenceTransformer
-from app.document_processor import DocumentProcessor
-from app.DBServices.db_write_service import DBWriteService  # Import DBWriteService from the appropriate module
+from app_old.document_processor import DocumentProcessor
+from app_old.DBServices.db_write_service import DBWriteService  # Import DBWriteService from the appropriate module
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import os
 import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from app.WebCrawler import WebCrawlerManager, ConfluenceStrategy, AllLinksStrategy
-from app.model_factory.factory import get_model
+from app_old.WebCrawler import WebCrawlerManager, ConfluenceStrategy, AllLinksStrategy
+from app_old.model_factory.factory import get_model
 from langchain_community.vectorstores.utils import filter_complex_metadata
 import uuid
 from langchain.vectorstores import Chroma

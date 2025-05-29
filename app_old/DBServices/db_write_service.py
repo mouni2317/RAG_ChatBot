@@ -1,7 +1,7 @@
-from app.DBServices.db_factory import get_db_writer  # factory method for DB writers
+from app_old.DBServices.db_factory import get_db_writer  # factory method for DB writers
 import logging
 import random
-from app.DBServices.chroma_writer import ChromaWriter
+from app_old.DBServices.chroma_writer import ChromaWriter
 
 logging.basicConfig(level=logging.INFO)
 

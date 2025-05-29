@@ -1,8 +1,8 @@
 from typing import List, Optional
-from app.model_factory.factory import get_model
-from app.DBServices.chroma_writer import ChromaWriter
+from app_old.model_factory.factory import get_model
+from app_old.DBServices.chroma_writer import ChromaWriter
 import requests
-from app.app_config import CONFIG
+from app_old.app_config import CONFIG
 
 API_URL = "https://router.huggingface.co/fireworks-ai/inference/v1/chat/completions"
 headers = {"Authorization": f"Bearer {CONFIG.HUGGING_FACE_API_KEY}"}

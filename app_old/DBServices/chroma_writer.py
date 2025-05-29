@@ -1,6 +1,6 @@
 from langchain.embeddings.base import Embeddings
 from typing import Optional
-from app.DBServices.client_provider import ChromaClientLC
+from app_old.DBServices.client_provider import ChromaClientLC
 from langchain.vectorstores import Chroma
 
 class ChromaWriter:

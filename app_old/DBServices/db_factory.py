@@ -1,8 +1,8 @@
 # db_factory.py
-from app.DBServices.chroma_writer import ChromaWriter
+from app_old.DBServices.chroma_writer import ChromaWriter
 # from postgres_writer import PostgresWriter  # future expansion
 # from dynamodb_writer import DynamoDBWriter  # optional
-from app.embeddings import embedding_model
+from app_old.embeddings import embedding_model
 
 def get_db_writer(db_type):
     if db_type == "chroma":
