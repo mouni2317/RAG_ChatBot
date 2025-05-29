@@ -16,3 +16,4 @@ chromadb
 python-multipart
 six
 google-cloud-storage
+langchain-core

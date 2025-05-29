@@ -8,6 +8,7 @@ import uuid
 from langchain.vectorstores import Chroma
 from langchain.embeddings import SentenceTransformerEmbeddings
 from langchain.schema import Document
+from app.routers import ingestion_graph_router
 
 # Path to local sentence transformer model
 MODEL_DIR = "models/all-MiniLM-L6-v2"
@@ -23,8 +24,10 @@ embedding_model = SentenceTransformerEmbeddings(model_name=MODEL_DIR)
 
 vector_store = Chroma(persist_directory=persist_directory, embedding_function=embedding_model)
 
-app = FastAPI(title="Embedding Service", version="1.0")
+app = FastAPI(title="Embedding and Ingestion Service", version="1.0")
 
+# Include the routers
+app.include_router(ingestion_graph_router.router, prefix="")
 
 class EmbeddingQuery(BaseModel):
     query_text: str
@@ -236,7 +239,7 @@ async def insertData():
 
 @app.get("/")
 async def read_root():
-    return {"message": "Embedding service is running"}
+    return {"message": "Embedding and Ingestion service is running"}
 
 class QuestionRequest(BaseModel):
     query: str
